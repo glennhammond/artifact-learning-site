@@ -1,6 +1,7 @@
 import { Section } from "../../design-system/Section";
 import { MetadataRow } from "../../design-system/MetadataRow";
 import { ecosystem, ecosystemIntro } from "../../content/shared";
+import "./ArtifactTech.css";
 
 export function ArtifactTech() {
   return (
@@ -9,8 +10,10 @@ export function ArtifactTech() {
       kicker="Artifact"
       heading="An emerging technical ecosystem"
       intro={ecosystemIntro}
+      width="content"
+      density="compact"
     >
-      <div>
+      <div className="home-tech-list">
         {ecosystem.map((item, i) => (
           <MetadataRow
             key={item.name}

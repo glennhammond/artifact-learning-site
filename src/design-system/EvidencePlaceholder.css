@@ -1,0 +1,20 @@
+.ds-evidence {
+  border: var(--border-thickness) solid var(--color-border);
+  background: var(--color-bg-raised);
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-evidence__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ds-evidence__caption {
+  padding: var(--space-3) var(--space-4);
+  border-block-start: var(--border-thickness) solid var(--color-border);
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  color: var(--color-text-subtle);
+}

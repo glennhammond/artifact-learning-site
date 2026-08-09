@@ -34,7 +34,8 @@ export function Nav() {
               </li>
             ))}
           </ul>
-          <NavLink href="#contact" onClick={() => setOpen(false)}>
+          <span className="home-nav__divider" aria-hidden="true" />
+          <NavLink href="#contact" onClick={() => setOpen(false)} className="home-nav__contact">
             Contact
           </NavLink>
         </nav>

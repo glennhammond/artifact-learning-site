@@ -1,26 +1,52 @@
-.home-capability-grid {
+.home-capability-index {
+  border-block-start: var(--border-thickness) solid var(--color-border);
+}
+
+.home-capability-row {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-7) var(--space-6);
+  gap: var(--space-3);
+  padding-block: var(--space-6);
+  padding-inline-start: var(--space-5);
+  border-block-end: var(--border-thickness) solid var(--color-border);
+  border-inline-start: var(--border-thickness-focus) solid transparent;
+  transition: border-inline-start-color var(--duration-state) var(--ease-in-out),
+    background-color var(--duration-state) var(--ease-in-out);
+}
+
+.home-capability-row:hover {
+  border-inline-start-color: var(--color-signal);
+  background: color-mix(in oklch, var(--color-bg-raised), transparent 0%);
 }
 
 @media (min-width: 700px) {
-  .home-capability-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .home-capability-row {
+    grid-template-columns: minmax(90px, 1fr) 4fr;
+    align-items: baseline;
+    gap: var(--space-6);
+  }
+
+  /* Alternate indentation on the body column — a staggered rhythm rather
+     than four/five identical rows (brief §15). */
+  .home-capability-row:nth-child(even) .home-capability-row__body {
+    margin-inline-start: var(--space-8);
   }
 }
 
-@media (min-width: 1200px) {
-  .home-capability-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.home-capability-row__index {
+  font-family: var(--type-display);
+  font-weight: var(--weight-display);
+  font-size: clamp(2rem, 1.5rem + 2vw, 3.25rem);
+  line-height: 1;
+  color: var(--color-border);
 }
 
-.home-capability h3 {
-  margin-block: var(--space-2) var(--space-3);
+.home-capability-row__body h3 {
+  margin-block-end: var(--space-2);
 }
 
-.home-capability p:last-child {
+.home-capability-row__body p {
   color: var(--color-text-secondary);
   font-size: var(--text-small);
+  max-width: 48ch;
 }

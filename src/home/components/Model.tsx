@@ -15,6 +15,8 @@ export function Model() {
       kicker="The Artifact model"
       heading="A loop, not a hand-off"
       tone="ink"
+      density="expansive"
+      className="home-model"
     >
       <LoopDiagram layers={modelLayers} platform={platform} />
       <p className="home-model__caption">{modelCaption}</p>

@@ -1,28 +1,16 @@
 .ds-work-feature {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-6);
-  margin-block-end: var(--space-8);
+  gap: var(--space-7);
+  margin-block-end: var(--space-9);
 }
 
 @media (min-width: 700px) {
   .ds-work-feature {
-    grid-template-columns: 5fr 7fr;
+    /* the figure carries real visual weight — "the work is the imagery" */
+    grid-template-columns: 7fr 5fr;
     align-items: start;
   }
-}
-
-.ds-work-feature__figure {
-  aspect-ratio: 4 / 3;
-  border: var(--border-thickness) solid var(--color-border);
-  border-radius: var(--radius-panel);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-subtle);
-  font-family: var(--type-ui);
-  font-size: var(--text-ui);
-  background: var(--color-bg-raised);
 }
 
 .ds-work-feature__body h3 {

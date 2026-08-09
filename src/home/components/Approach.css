@@ -1,25 +1,89 @@
-.home-lifecycle {
+.home-approach-timeline {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-block-start: var(--space-2);
+}
+
+.home-approach-timeline__spine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(clamp(1.75rem, 1.4rem + 1.4vw, 2.75rem) + 14px);
+  height: var(--border-thickness);
+  background: var(--color-border);
+}
+
+.home-approach-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--space-3) var(--space-2);
+  gap: var(--space-3);
+  flex: 1;
+  text-align: center;
+}
+
+.home-approach-step__index {
+  font-family: var(--type-display);
+  font-weight: var(--weight-display);
+  font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.75rem);
+  line-height: 1;
+  color: var(--color-text-subtle);
+}
+
+.home-approach-step__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-node);
+  background: var(--color-bg);
+  border: var(--border-thickness-focus) solid var(--color-text);
+  z-index: 1;
+}
+
+/* The step whose job is to change the other four — the one Signal moment
+   in the sequence (brief §16: "relationship to the Artifact signal/event
+   language"). */
+.home-approach-step__dot[data-terminal="true"] {
+  border-color: var(--color-signal);
+  background: var(--color-signal);
+}
+
+.home-approach-step__name {
   font-family: var(--type-ui);
+  font-weight: var(--weight-ui-strong);
   font-size: var(--text-ui-nav);
 }
 
-.home-lifecycle li {
+.home-approach-return {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-}
-
-.home-lifecycle__arrow {
-  color: var(--color-text-subtle);
-  margin-inline-start: var(--space-2);
-}
-
-.home-lifecycle__caption {
-  margin-block-start: var(--space-5);
+  gap: var(--space-3);
+  margin-block-start: var(--space-8);
   color: var(--color-text-secondary);
   max-width: var(--measure);
+}
+
+.home-approach-return__mark {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  border: var(--border-thickness) dashed var(--color-signal);
+  border-radius: var(--radius-node);
+}
+
+@media (max-width: 620px) {
+  .home-approach-timeline {
+    flex-wrap: wrap;
+    row-gap: var(--space-6);
+  }
+
+  .home-approach-timeline__spine {
+    display: none;
+  }
+
+  .home-approach-step {
+    flex: 1 1 40%;
+  }
 }

@@ -1,36 +1,48 @@
 .home-hero {
-  padding-block: clamp(3rem, 6vw + 1rem, 8rem) var(--section-y);
+  padding-block: clamp(3.5rem, 7vw + 1rem, 7rem) var(--section-y-expansive);
+  border-block-end: var(--border-thickness) solid var(--color-border);
 }
 
 .home-hero__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-7);
+  gap: var(--space-8);
 }
 
 @media (min-width: 960px) {
   .home-hero__grid {
-    /* asymmetric 12-column split, ~60/40 */
+    /* asymmetric 12-column split ~58/42, aligned to a shared baseline
+       rather than bottom-anchored, so the two columns read as one
+       composed unit instead of two disconnected blocks */
     grid-template-columns: 7fr 5fr;
-    align-items: end;
+    align-items: start;
   }
 }
 
 .home-hero__headline .kicker {
-  margin-block-end: var(--space-4);
+  margin-block-end: var(--space-5);
 }
 
 .home-hero__headline h1 {
-  max-width: 16ch;
+  /* Each authored fragment in Hero.tsx is short enough to hold its own
+     line without an additional width-driven wrap at any of the required
+     widths (verified 375–1728px+). */
+  max-width: 20ch;
 }
 
 .home-hero__aside {
-  max-width: 34ch;
+  display: flex;
+  flex-direction: column;
+  max-width: 32ch;
 }
 
 @media (min-width: 960px) {
   .home-hero__aside {
-    padding-block-end: var(--space-2);
+    /* aligns the standfirst's cap-height roughly to the headline's second
+       line rather than floating at the top of the row */
+    margin-block-start: clamp(0.5rem, 6vw, 3.25rem);
+    padding-inline-start: var(--space-7);
+    border-inline-start: var(--border-thickness) solid var(--color-border);
   }
 }
 
@@ -45,4 +57,8 @@
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-5);
+}
+
+.home-hero__trace {
+  margin-block-start: var(--space-8);
 }

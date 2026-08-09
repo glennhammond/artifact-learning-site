@@ -1,0 +1,32 @@
+.ds-event-trace {
+  display: flex;
+  gap: var(--space-3);
+  padding-inline-start: var(--space-3);
+}
+
+.ds-event-trace__mark {
+  flex: none;
+  width: 2px;
+  background: var(--color-signal);
+  border-radius: 1px;
+}
+
+.ds-event-trace__body {
+  font-family: var(--type-data);
+  font-size: var(--text-data);
+  line-height: var(--leading-ui);
+}
+
+.ds-event-trace__verb {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.ds-event-trace__detail {
+  color: var(--color-text-secondary);
+}
+
+.ds-event-trace__time {
+  color: var(--color-text-subtle);
+  margin-block-start: var(--space-1);
+}

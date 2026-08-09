@@ -6,3 +6,5 @@ export { Section } from "./Section";
 export { LoopDiagram } from "./LoopDiagram";
 export { DataStrip } from "./DataStrip";
 export { WorkFeature, WorkList } from "./WorkFeature";
+export { EventTrace } from "./EventTrace";
+export { EvidencePlaceholder } from "./EvidencePlaceholder";

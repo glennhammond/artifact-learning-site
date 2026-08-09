@@ -2,6 +2,16 @@
   padding-block: var(--section-y);
 }
 
+/* Section rhythm (Phase 2.2 §9) — density varies deliberately rather than
+   every section sharing the same top/bottom padding. */
+.ds-section--compact {
+  padding-block: var(--section-y-compact);
+}
+
+.ds-section--expansive {
+  padding-block: var(--section-y-expansive);
+}
+
 .ds-section--paper {
   background: var(--color-bg);
   color: var(--color-text);

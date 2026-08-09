@@ -1,10 +1,17 @@
 .container {
   width: 100%;
-  max-width: var(--container-max);
   margin-inline: auto;
-  padding-inline: var(--content-padding-inline);
+  padding-inline: var(--page-gutter);
+}
+
+.container--page {
+  max-width: var(--page-max);
+}
+
+.container--content {
+  max-width: var(--content-max);
 }
 
 .container--narrow {
-  max-width: calc(var(--measure) + 2 * var(--content-padding-inline));
+  max-width: calc(var(--measure) + 2 * var(--page-gutter));
 }

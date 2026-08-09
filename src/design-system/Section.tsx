@@ -3,13 +3,17 @@ import { Container } from "../components/layout/Container";
 import { Reveal } from "../components/layout/Reveal";
 import "./Section.css";
 
+type SectionWidth = "page" | "content" | "narrow";
+type SectionDensity = "compact" | "default" | "expansive";
+
 interface SectionProps {
   id: string;
   kicker?: string;
   heading?: ReactNode;
   headingId?: string;
   intro?: ReactNode;
-  narrow?: boolean;
+  width?: SectionWidth;
+  density?: SectionDensity;
   tone?: "paper" | "ink";
   children: ReactNode;
   className?: string;
@@ -28,7 +32,8 @@ export function Section({
   heading,
   headingId,
   intro,
-  narrow = false,
+  width = "page",
+  density = "default",
   tone = "paper",
   children,
   className = "",
@@ -37,10 +42,10 @@ export function Section({
   return (
     <section
       id={id}
-      className={`ds-section ds-section--${tone} ${tone === "ink" ? "on-ink" : ""} ${className}`.trim()}
+      className={`ds-section ds-section--${tone} ds-section--${density} ${tone === "ink" ? "on-ink" : ""} ${className}`.trim()}
       aria-labelledby={heading ? resolvedHeadingId : undefined}
     >
-      <Container narrow={narrow}>
+      <Container width={width}>
         <Reveal as="div" className="ds-fade">
           {(kicker || heading) && (
             <div className="ds-section__head">

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Button } from "./Button";
 import { DataStrip } from "./DataStrip";
+import { EvidencePlaceholder } from "./EvidencePlaceholder";
 import type { Project } from "../content/shared";
 import "./WorkFeature.css";
 
@@ -22,9 +23,7 @@ interface WorkFeatureProps {
 export function WorkFeature({ project, stages, evidenceLine, evidenceCaveat, figure }: WorkFeatureProps) {
   return (
     <article className="ds-work-feature">
-      <div className="ds-work-feature__figure" role="img" aria-label="Evidence image placeholder">
-        {figure ?? <span>Evidence image placeholder</span>}
-      </div>
+      <div className="ds-work-feature__figure">{figure ?? <EvidencePlaceholder />}</div>
       <div className="ds-work-feature__body">
         <p className="kicker">{project.eyebrow}</p>
         <h3>{project.question}</h3>

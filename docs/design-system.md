@@ -58,12 +58,32 @@ always Ink-on-Signal regardless of surface, per v0.2's confirmed accessible comb
 
 ## Layout & geometry
 
-- Asymmetric 12-column grid (`--grid-columns`), page max-width `--container-max` (1320px), reading
-  measure `--measure` (66ch).
-- Breakpoints: 480 / 700 / 960 / 1200 / 1560 (documented in `tokens.css`, used literally in media
-  queries — no custom-media build plugin).
-- Panels, images and diagrams: `0px` radius (`--radius-panel`). Controls: `2px` (`--radius-control`).
-  Nodes/status indicators only: `50%` (`--radius-node`). No pill-shaped components.
+Three containment tiers (Phase 2.2 §4 — `Container` / `Section`'s `width` prop), not one shared
+max-width for every section:
+
+| Tier | Max width | Used by |
+|---|---|---|
+| `page` | `--page-max` (1440px) | nav, hero, Work, the dark Model section, footer |
+| `content` | `--content-max` (1180px) | Problem, Approach, the ecosystem section |
+| `narrow` | reading measure + gutter (~66ch) | the final CTA |
+
+The gutter (`--page-gutter`) is fluid — `clamp(1.5rem, 1rem + 2.2vw, 4rem)` — and keeps growing past the
+old fixed cap, so outer whitespace increases gracefully on very wide screens instead of the grid
+stretching edge to edge (verified: gutters grow from 144px at 1728px viewport to 560px at 2560px, while
+the page grid itself locks at 1440px). Breakpoints: 480 / 700 / 960 / 1200 / 1560 (documented in
+`tokens.css`, used literally in media queries — no custom-media build plugin). Panels, images and
+diagrams: `0px` radius (`--radius-panel`). Controls: `2px` (`--radius-control`). Nodes/status indicators
+only: `50%` (`--radius-node`). No pill-shaped components.
+
+Section rhythm varies deliberately (Phase 2.2 §9) via `Section`'s `density` prop — `compact`
+(`--section-y-compact`), `default` (`--section-y`) or `expansive` (`--section-y-expansive`, used only by
+the Model section) — rather than every section sharing one padding value.
+
+**Note:** `src/components/layout/Container.tsx` previously never imported its own stylesheet
+(`Container.css`), so every `.container` element — across both the homepage and the archive — rendered
+completely unstyled (100% viewport width, zero padding) since Phase 1. This was the root cause of most
+of the Phase 2.2 containment complaints and was fixed as part of this pass; see the Phase 2.2 final
+report for detail.
 
 ## Motion
 
@@ -103,6 +123,8 @@ always Ink-on-Signal regardless of surface, per v0.2's confirmed accessible comb
 | `LoopDiagram` | the signature system visual — circular (default) + stacked (compact) variants |
 | `DataStrip` | labelled mono event/data panel, with an "active"/consequential state |
 | `WorkFeature` / `WorkList` | the one full featured case study + short text-led secondary list |
+| `EventTrace` | a single genuine-looking learning event in mono — the hero's data artefact |
+| `EvidencePlaceholder` | a designed interface-fragment stand-in for real work imagery, not a flat box |
 
 Import from `src/design-system` (barrel export). Components read semantic tokens only — no component
 hardcodes a hex value, an OKLCH literal outside `tokens.css`, or a concept-specific class name.

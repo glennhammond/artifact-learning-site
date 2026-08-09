@@ -98,11 +98,26 @@
   --space-10: 8rem;
 
   --section-y: clamp(3rem, 4vw + 1.5rem, 7rem);
-  --content-padding-inline: clamp(1.25rem, 4vw, 3rem);
 
-  /* ============ LAYOUT ============ */
+  /* Section-rhythm variants (Phase 2.2 §9) — sections alternate density
+     rather than sharing one uniform padding-block value. */
+  --section-y-compact: clamp(2rem, 2.5vw + 1rem, 3.5rem);
+  --section-y-expansive: clamp(4rem, 6vw + 2rem, 9rem);
+
+  /* ============ LAYOUT ============
+     Three containment tiers (Phase 2.2 §4): page (the editorial grid max —
+     nav, hero, the dark model section, Work), content (inset — Approach,
+     ecosystem; quieter sections that shouldn't claim the full grid width)
+     and narrow (reading measure — long-form prose, the final CTA). The
+     gutter is fluid and keeps growing past the old fixed 3rem cap, so
+     outer whitespace increases gracefully on very wide screens instead of
+     the page grid feeling like it stretches edge to edge. */
+  --page-gutter: clamp(1.5rem, 1rem + 2.2vw, 4rem);
+  --page-max: 1440px;
+  --content-max: 1180px;
   --measure: 66ch;
-  --container-max: 1320px;
+  --content-padding-inline: var(--page-gutter);
+  --container-max: var(--page-max);
   --grid-columns: 12;
   --gutter: var(--space-5);
 

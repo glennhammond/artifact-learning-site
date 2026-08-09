@@ -3,22 +3,23 @@ import { lifecycle, lifecycleCaption } from "../../content/shared";
 import "./Approach.css";
 
 export function Approach() {
+  const lastIndex = lifecycle.length - 1;
   return (
-    <Section id="approach" kicker="Approach" heading="A working lifecycle">
-      <ol className="home-lifecycle">
+    <Section id="approach" kicker="Approach" heading="A working lifecycle" width="content" density="compact">
+      <div className="home-approach-timeline">
+        <span className="home-approach-timeline__spine" aria-hidden="true" />
         {lifecycle.map((step, i) => (
-          <li key={step.name}>
-            <span className="kicker">{step.index}</span>
-            <span>{step.name}</span>
-            {i < lifecycle.length - 1 && (
-              <span className="home-lifecycle__arrow" aria-hidden="true">
-                →
-              </span>
-            )}
-          </li>
+          <div className="home-approach-step" key={step.name}>
+            <span className="home-approach-step__index">{step.index}</span>
+            <span className="home-approach-step__dot" data-terminal={i === lastIndex} />
+            <span className="home-approach-step__name">{step.name}</span>
+          </div>
         ))}
-      </ol>
-      <p className="home-lifecycle__caption">{lifecycleCaption}</p>
+      </div>
+      <p className="home-approach-return">
+        <span className="home-approach-return__mark" aria-hidden="true" />
+        {lifecycleCaption}
+      </p>
     </Section>
   );
 }

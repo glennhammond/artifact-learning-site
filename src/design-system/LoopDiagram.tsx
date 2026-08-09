@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState, type CSSProperties } from "react";
 import type { ModelLayer } from "../content/shared";
 import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
 import "./LoopDiagram.css";
@@ -32,8 +32,8 @@ export function LoopDiagram({ layers, platform }: LoopDiagramProps) {
   const titleId = `${uid}-loop-title`;
   const descId = `${uid}-loop-desc`;
   const arrowId = `${uid}-loop-arrow`;
-  const size = 280;
-  const radius = 104;
+  const size = 440;
+  const radius = 164;
   const center = size / 2;
 
   const points = layers.map((layer, i) => {
@@ -116,14 +116,14 @@ export function LoopDiagram({ layers, platform }: LoopDiagramProps) {
           </circle>
         </svg>
 
-        <div className="ds-loop__nodes" style={{ width: size, height: size }}>
+        <div className="ds-loop__nodes">
           {points.map((p, i) => (
             <button
               key={p.layer.name}
               type="button"
               className="ds-loop__node"
               data-active={active === i}
-              style={{ left: p.x, top: p.y }}
+              style={{ "--nx": p.x / size, "--ny": p.y / size } as CSSProperties}
               onMouseEnter={() => activateNode(i)}
               onFocus={() => activateNode(i)}
               onClick={() => activateNode(i)}
@@ -165,6 +165,25 @@ export function LoopDiagram({ layers, platform }: LoopDiagramProps) {
       <p className="ds-loop__desc" aria-live="polite">
         <strong>{layers[active].name}.</strong> {layers[active].description}
       </p>
+
+      {/* Always-present, works without motion or interaction (brief §11) —
+          the interactive description above is a shortcut to this, not a
+          replacement for it. */}
+      <dl className="ds-loop__legend">
+        {layers.map((layer, i) => (
+          <div
+            key={layer.name}
+            className="ds-loop__legend-item"
+            data-active={active === i}
+            onMouseEnter={() => setActive(i)}
+          >
+            <dt>
+              <span className="kicker">{layer.index}</span> {layer.name}
+            </dt>
+            <dd>{layer.description}</dd>
+          </div>
+        ))}
+      </dl>
     </div>
   );
 }
