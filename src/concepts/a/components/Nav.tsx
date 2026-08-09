@@ -40,8 +40,9 @@ export function Nav() {
         </nav>
       </Container>
       <p className="visually-hidden">
-        This page is one of three exploratory Artifact Learning homepage concepts.{" "}
-        <Link to="/">Return to the concept index.</Link>
+        This page is an archived Phase 1 exploratory concept, superseded by the consolidated
+        homepage.{" "}
+        <Link to="/archive">Return to the archive index.</Link>
       </p>
     </header>
   );

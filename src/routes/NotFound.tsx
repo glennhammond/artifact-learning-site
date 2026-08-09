@@ -16,7 +16,7 @@ export function NotFound() {
       <div>
         <h1>Page not found</h1>
         <p>
-          <Link to="/">Return to the concept index</Link>
+          <Link to="/">Return to the homepage</Link>
         </p>
       </div>
     </main>

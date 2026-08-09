@@ -1,4 +1,4 @@
-import { modelLayers } from "../../../content/shared";
+import { legacyModelLayers as modelLayers } from "../../../content/legacyModel";
 
 /** Decorative, non-interactive ring used in the hero — the full interactive version lives in the Model section. */
 export function LoopPreview() {

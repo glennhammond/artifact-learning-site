@@ -1,0 +1,48 @@
+.home-hero {
+  padding-block: clamp(3rem, 6vw + 1rem, 8rem) var(--section-y);
+}
+
+.home-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+}
+
+@media (min-width: 960px) {
+  .home-hero__grid {
+    /* asymmetric 12-column split, ~60/40 */
+    grid-template-columns: 7fr 5fr;
+    align-items: end;
+  }
+}
+
+.home-hero__headline .kicker {
+  margin-block-end: var(--space-4);
+}
+
+.home-hero__headline h1 {
+  max-width: 16ch;
+}
+
+.home-hero__aside {
+  max-width: 34ch;
+}
+
+@media (min-width: 960px) {
+  .home-hero__aside {
+    padding-block-end: var(--space-2);
+  }
+}
+
+.home-hero__standfirst {
+  font-size: var(--text-lead);
+  color: var(--color-text-secondary);
+  margin-block-end: var(--space-6);
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5);
+}

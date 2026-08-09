@@ -9,8 +9,8 @@ export function Footer() {
         <span className="a-footer__wordmark">Artifact Learning</span>
         <span>artifactlearning.com · artifactlearning.com.au</span>
         <span>
-          Concept A — Editorial Product Studio ·{" "}
-          <Link to="/">All concepts</Link>
+          Concept A — Editorial Product Studio (archived) ·{" "}
+          <Link to="/archive">All archived concepts</Link>
         </span>
       </Container>
     </footer>

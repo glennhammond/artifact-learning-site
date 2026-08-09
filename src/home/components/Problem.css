@@ -1,0 +1,25 @@
+.home-problem__body {
+  font-size: var(--text-lead);
+  color: var(--color-text-secondary);
+  max-width: var(--measure);
+  margin-block-end: var(--space-7);
+}
+
+.home-problem__strips {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 700px) {
+  .home-problem__strips {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.home-problem__caveat {
+  margin-block-start: var(--space-3);
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  color: var(--color-text-subtle);
+}

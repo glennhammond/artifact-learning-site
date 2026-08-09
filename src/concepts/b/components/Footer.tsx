@@ -9,7 +9,8 @@ export function Footer() {
         <span className="b-footer__wordmark">Artifact_Learning</span>
         <span>artifactlearning.com · artifactlearning.com.au</span>
         <span>
-          Concept B — Digital Learning Laboratory · <Link to="/">All concepts</Link>
+          Concept B — Digital Learning Laboratory (archived) ·{" "}
+          <Link to="/archive">All archived concepts</Link>
         </span>
       </Container>
     </footer>

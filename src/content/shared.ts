@@ -12,7 +12,10 @@ export const hero = {
   headline: "Digital learning as a product, not a course.",
   standfirst:
     "Artifact applies modern digital product practice — design, delivery, measurement, improvement — to organisational learning. Not a course. A product, held to the same standard as the rest of your digital estate.",
-  cta: "See how we work",
+  cta: "Explore the approach",
+  ctaHref: "#approach",
+  ctaSecondary: "See selected work",
+  ctaSecondaryHref: "#work",
 };
 
 export const problem = {
@@ -26,6 +29,12 @@ export interface ModelLayer {
   description: string;
 }
 
+/**
+ * Refined v0.2 model: Experience → Signals → Data → Insight → Improvement,
+ * looping back to Experience. Platform is deliberately not a stage in this
+ * sequence — see `platform` below — it is the environment the loop runs on,
+ * not a cause of anything downstream (v0.2 §10).
+ */
 export const modelLayers: ModelLayer[] = [
   {
     index: "01",
@@ -35,26 +44,36 @@ export const modelLayers: ModelLayer[] = [
   },
   {
     index: "02",
-    name: "Platform",
+    name: "Signals",
     description:
-      "Moodle, LMS environments, learning portals. Where the experience lives and is delivered.",
+      "The meaningful events inside that experience — a decision, a choice, a completion — captured as they happen.",
   },
   {
     index: "03",
     name: "Data",
     description:
-      "xAPI, a Learning Record Store, structured learning events. What can be observed.",
+      "xAPI, a Learning Record Store, structured learning events. What can be observed once signals are captured.",
   },
   {
     index: "04",
     name: "Insight",
-    description:
-      "Reporting, interpretation, evaluation — feeding back into the next iteration of the experience.",
+    description: "Reporting, interpretation and evaluation — what the data actually means.",
+  },
+  {
+    index: "05",
+    name: "Improvement",
+    description: "What changes in the next iteration of the experience because of what was learned.",
   },
 ];
 
+export const platform = {
+  name: "Platform",
+  description:
+    "Moodle, LMS environments, learning portals — the environment and infrastructure the loop runs on, not a stage inside it.",
+};
+
 export const modelCaption =
-  "Insight informs the next iteration of the experience — not a report that sits on a shelf.";
+  "Insight and Improvement feed back into Experience — a loop, not a hand-off. Platform is the ground it all runs on, not a step in the sequence.";
 
 export const readoutPanels = {
   before: {
@@ -78,6 +97,9 @@ export interface Project {
   framing: string;
   status?: string;
 }
+
+/** The case-study chain — v0.2 §09: problem-led, evidence at the end. Outcome is shown only where known. */
+export const caseStudyStages = ["Problem", "Context", "Decisions", "Experience", "System", "Evidence"];
 
 export const featuredProject: Project = {
   eyebrow: "Case study — placeholder",

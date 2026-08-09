@@ -1,24 +1,24 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./ConceptIndex.css";
+import "./ArchiveIndex.css";
 
 const concepts = [
   {
-    path: "/concept-a",
+    path: "/archive/concept-a",
     label: "Concept A",
     name: "Editorial Product Studio",
     description:
       "Quiet authority. Disciplined typography, restrained interaction, generous whitespace, editorial pacing. Near-monochrome with a single muted accent.",
   },
   {
-    path: "/concept-b",
+    path: "/archive/concept-b",
     label: "Concept B",
     name: "Digital Learning Laboratory",
     description:
       "Instrumentation made visible. Dark graphite surface, a persistent animated systems loop, and the fullest — still honest — view of the Artifact ecosystem.",
   },
   {
-    path: "/concept-c",
+    path: "/archive/concept-c",
     label: "Concept C",
     name: "Editorial + Experimental Hybrid",
     description:
@@ -26,23 +26,27 @@ const concepts = [
   },
 ];
 
-export function ConceptIndex() {
+export function ArchiveIndex() {
   useEffect(() => {
-    document.title = "Artifact Learning — Concept Review Index";
+    document.title = "Artifact Learning — Archived Phase 1 Concepts";
   }, []);
 
   return (
     <div className="concept-index">
       <p className="concept-index__banner">
-        Internal review build — not the public Artifact Learning website
+        Archived Phase 1 exploration — superseded by the consolidated homepage at{" "}
+        <Link to="/">artifactlearning.com</Link>
       </p>
       <div className="concept-index__inner">
-        <h1>Artifact Learning — homepage concepts</h1>
+        <h1>Artifact Learning — archived homepage concepts</h1>
         <p className="concept-index__intro">
-          Three genuinely different homepage directions for Artifact Learning, built for design
-          review. Same underlying proposition throughout — variation is in composition, visual
-          language, interaction model and personality, not in the claims being made. Colour and
-          typography choices shown here are exploratory, not final brand decisions.
+          The three exploratory homepage directions built for the Phase 1 design review. They have
+          been superseded by the consolidated homepage at <Link to="/">/</Link>, built against{" "}
+          <em>Artifact Learning Brand Identity &amp; Digital Design Language v0.2</em>. Kept here for
+          reference only — colour and typography shown in these three prototypes were exploratory
+          and are not the current brand system. See{" "}
+          <code>docs/consolidation-decision.md</code> for what was kept, adapted, removed or added
+          from each.
         </p>
         <div className="concept-index__grid">
           {concepts.map((concept) => (
@@ -54,8 +58,9 @@ export function ConceptIndex() {
           ))}
         </div>
         <p className="concept-index__docs">
-          Supporting documents: <code>docs/strategy.md</code> (Phase 1A working strategy) and{" "}
-          <code>docs/wireframes/</code> (mid-fidelity wireframes for each direction).
+          Supporting documents: <code>docs/strategy.md</code> (Phase 1A working strategy),{" "}
+          <code>docs/wireframes/</code> (mid-fidelity wireframes) and{" "}
+          <code>docs/consolidation-decision.md</code> (Phase 2 Keep/Adapt/Remove/New record).
         </p>
       </div>
     </div>

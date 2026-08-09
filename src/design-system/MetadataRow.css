@@ -1,0 +1,36 @@
+.ds-metadata-row {
+  padding-block: var(--space-4);
+  border-block-end: var(--border-thickness) solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ds-metadata-row:last-child {
+  border-block-end: none;
+}
+
+.ds-metadata-row__head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.ds-metadata-row__index {
+  min-width: 1.5rem;
+}
+
+.ds-metadata-row__name {
+  font-family: var(--type-heading);
+  font-weight: var(--weight-heading-alt);
+  font-size: var(--text-h3);
+  color: var(--color-text);
+}
+
+.ds-metadata-row__note {
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  color: var(--color-text-secondary);
+  max-width: var(--measure);
+}

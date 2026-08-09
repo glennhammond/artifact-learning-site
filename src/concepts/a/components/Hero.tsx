@@ -14,7 +14,7 @@ export function Hero() {
           <div className="a-hero__aside">
             <p className="a-hero__standfirst">{hero.standfirst}</p>
             <a className="btn-quiet" href="#problem">
-              {hero.cta} <span aria-hidden="true">↓</span>
+              See how we work <span aria-hidden="true">↓</span>
             </a>
           </div>
         </div>

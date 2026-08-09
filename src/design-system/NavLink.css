@@ -1,0 +1,20 @@
+.ds-nav-link {
+  font-family: var(--type-ui);
+  font-size: var(--text-ui-nav);
+  font-weight: var(--weight-ui);
+  color: var(--color-text);
+  text-decoration: none;
+  padding-block: var(--space-2);
+  border-block-end: var(--border-thickness) solid transparent;
+  transition: border-color var(--duration-state) var(--ease-in-out),
+    color var(--duration-state) var(--ease-in-out);
+}
+
+.ds-nav-link:hover {
+  border-block-end-color: var(--color-text);
+}
+
+.ds-nav-link[aria-current="true"] {
+  color: var(--color-text);
+  border-block-end-color: var(--color-signal);
+}

@@ -1,5 +1,6 @@
 @import "./reset.css";
 @import "./tokens.css";
+@import "./fonts.css";
 
 html {
   scroll-behavior: smooth;
@@ -14,8 +15,42 @@ html {
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: var(--font-body);
-  font-size: 1rem;
+  font-family: var(--type-body);
+  font-weight: var(--weight-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--type-heading);
+  line-height: var(--leading-heading);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: var(--text-display);
+  font-weight: var(--weight-display);
+}
+
+h2 {
+  font-size: var(--text-h2);
+  font-weight: var(--weight-heading);
+}
+
+h3 {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-heading-alt);
+}
+
+.kicker {
+  font-family: var(--type-ui);
+  font-size: var(--text-kicker);
+  font-weight: var(--weight-ui-strong);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
 }
 
 a:focus-visible,
@@ -24,7 +59,7 @@ input:focus-visible,
 [tabindex]:focus-visible {
   outline: none;
   box-shadow: var(--focus-ring);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-control);
 }
 
 .visually-hidden {

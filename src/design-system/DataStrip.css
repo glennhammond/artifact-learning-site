@@ -1,0 +1,24 @@
+.ds-data-strip {
+  border: var(--border-thickness) solid var(--color-border);
+  border-radius: var(--radius-panel);
+  padding: var(--space-5);
+  background: var(--color-bg-raised);
+}
+
+.ds-data-strip--active {
+  border-color: var(--color-text);
+  border-width: var(--border-thickness-focus);
+}
+
+.ds-data-strip__label {
+  margin-block-end: var(--space-3);
+}
+
+.ds-data-strip__lines {
+  font-family: var(--type-data);
+  font-size: var(--text-data);
+  line-height: var(--leading-ui);
+  color: var(--color-text);
+  white-space: pre-wrap;
+  word-break: break-word;
+}

@@ -1,0 +1,24 @@
+.home-footer {
+  padding-block: var(--space-6);
+  border-block-start: var(--border-thickness) solid var(--color-border);
+}
+
+.home-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  color: var(--color-text-secondary);
+}
+
+.home-footer__wordmark {
+  font-family: var(--type-heading);
+  font-weight: var(--weight-heading);
+  color: var(--color-text);
+}
+
+.home-footer a {
+  color: var(--color-text-secondary);
+}

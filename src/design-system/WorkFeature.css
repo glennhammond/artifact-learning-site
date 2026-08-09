@@ -1,0 +1,94 @@
+.ds-work-feature {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-block-end: var(--space-8);
+}
+
+@media (min-width: 700px) {
+  .ds-work-feature {
+    grid-template-columns: 5fr 7fr;
+    align-items: start;
+  }
+}
+
+.ds-work-feature__figure {
+  aspect-ratio: 4 / 3;
+  border: var(--border-thickness) solid var(--color-border);
+  border-radius: var(--radius-panel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-subtle);
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  background: var(--color-bg-raised);
+}
+
+.ds-work-feature__body h3 {
+  margin-block-start: var(--space-2);
+}
+
+.ds-work-feature__framing {
+  margin-block-start: var(--space-4);
+  color: var(--color-text-secondary);
+  max-width: var(--measure);
+}
+
+.ds-work-feature__stages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block-start: var(--space-5);
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  color: var(--color-text-subtle);
+}
+
+.ds-work-feature__stage-sep {
+  margin-inline-start: var(--space-2);
+}
+
+.ds-work-feature__evidence {
+  margin-block-start: var(--space-5);
+  max-width: 28rem;
+}
+
+.ds-work-feature__caveat {
+  margin-block-start: var(--space-2);
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  color: var(--color-text-subtle);
+}
+
+.ds-work-feature__body > .ds-btn {
+  margin-block-start: var(--space-5);
+}
+
+.ds-work-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-work-list li {
+  padding-block: var(--space-4);
+  border-block-start: var(--border-thickness) solid var(--color-border);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.ds-work-list__title {
+  font-family: var(--type-heading);
+  font-weight: var(--weight-heading-alt);
+  font-size: var(--text-h3);
+}
+
+.ds-work-list__status {
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
