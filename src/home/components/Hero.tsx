@@ -9,7 +9,7 @@ export function Hero() {
     <section id="top" className="home-hero" aria-label="Introduction">
       <Container>
         <div className="home-hero__grid">
-          <div className="home-hero__headline">
+          <div className="home-hero__primary">
             <p className="kicker">{hero.eyebrow}</p>
             {/* Authored three-line break for hero.headline — short fragments that
                 hold their line at any viewport/display-scale combination, rather
@@ -21,8 +21,6 @@ export function Hero() {
               <br />
               not a course.
             </h1>
-          </div>
-          <div className="home-hero__aside">
             <p className="home-hero__standfirst">{hero.standfirst}</p>
             <p className="home-hero__standfirst home-hero__standfirst--secondary">
               {hero.standfirstSecondary}
@@ -31,21 +29,13 @@ export function Hero() {
               <Button variant="primary" href={hero.ctaHref}>
                 {hero.cta}
               </Button>
-              <Button variant="text" href={hero.ctaSecondaryHref}>
-                {hero.ctaSecondary} <span aria-hidden="true">→</span>
-              </Button>
             </div>
           </div>
-        </div>
 
-        <div className="home-hero__trace-row">
-          <EventTraceList
-            className="home-hero__trace"
-            events={heroTrace.events}
-            meta={heroTrace.meta}
-            caption={heroTrace.caption}
-          />
-          <p className="home-hero__trace-statement">{heroTrace.statement}</p>
+          <div className="home-hero__trace-plane">
+            <EventTraceList events={heroTrace.events} meta={heroTrace.meta} caption={heroTrace.caption} />
+            <p className="home-hero__trace-statement">{heroTrace.statement}</p>
+          </div>
         </div>
       </Container>
     </section>

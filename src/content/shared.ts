@@ -8,10 +8,13 @@
 
 export const nav = [
   { label: "Work", href: "#work" },
-  { label: "What we do", href: "#capability" },
+  { label: "Capabilities", href: "#capability" },
   { label: "Approach", href: "#approach" },
-  { label: "Artifact", href: "#artifact-tech" },
+  { label: "Ecosystem", href: "#artifact-tech" },
 ];
+
+/** Differentiated with restraint (outline, not a filled button) — v0.4 §1. */
+export const navCta = { label: "Start a conversation", href: "#contact" };
 
 // ---- 2. Hero ----
 
@@ -19,13 +22,11 @@ export const hero = {
   eyebrow: "Artifact Learning",
   headline: "Digital learning as a product, not a course.",
   standfirst:
-    "Artifact designs and builds digital learning with the rigour expected of modern digital products: clear user experience, robust technology, meaningful measurement and continuous improvement.",
+    "Artifact designs and builds digital learning with the discipline of modern digital products: intentional experience design, robust implementation, meaningful evidence and continuous improvement.",
   standfirstSecondary:
-    "From learning strategy and interaction design to Rise, Storyline, React, learning platforms, xAPI and analytics, the technology follows the problem.",
+    "From learning strategy and interaction design to Rise, Storyline, React, Moodle, xAPI and analytics, the technology follows the problem.",
   cta: "Explore the approach",
   ctaHref: "#approach",
-  ctaSecondary: "See selected work",
-  ctaSecondaryHref: "#work",
 };
 
 export interface TraceEvent {
@@ -36,16 +37,18 @@ export interface TraceEvent {
 export const heroTrace = {
   events: [
     { name: "experience.started" },
-    { name: "scenario.presented" },
+    { name: "decision.presented" },
     { name: "decision.responded", active: true },
-    { name: "feedback.viewed" },
+    { name: "feedback.presented" },
   ] satisfies TraceEvent[],
   meta: [
-    { label: "registration", value: "af-7c21" },
     { label: "experience", value: "vendor-risk-01" },
+    { label: "choice", value: "escalate" },
+    { label: "registration", value: "af-7c21" },
+    { label: "state", value: "observed" },
   ],
   caption: "Illustrative learning-event trace",
-  statement: "A learning experience can produce more evidence than a completion record.",
+  statement: "A learning experience can be observed, not just completed.",
 };
 
 // ---- 3. Problem / differentiation ----

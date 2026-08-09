@@ -9,14 +9,17 @@ interface EventTraceListProps {
 }
 
 /**
- * A vertical trace of learning events along a thin rail — the hero's data
- * artefact (content doc v0.3 §2). Only the active/consequential event is
- * marked in Signal; the rest read as quiet, genuine-looking instrumentation
- * rather than a fake terminal.
+ * A vertical trace of learning events along a thin rail — a substantial
+ * editorial/technical artefact integrated into the hero (v0.4 §3), not a
+ * dashboard or console. Only the active/consequential event is marked in
+ * Signal; the rest read as quiet, genuine-looking instrumentation. The
+ * label sits above the trace like a caption on a figure, giving the
+ * artefact its own identity within the composition.
  */
 export function EventTraceList({ events, meta, caption, className = "" }: EventTraceListProps) {
   return (
     <div className={`ds-trace-list ${className}`.trim()}>
+      {caption && <p className="ds-trace-list__label kicker">{caption}</p>}
       <ul className="ds-trace-list__events">
         {events.map((event) => (
           <li key={event.name} data-active={event.active}>
@@ -35,7 +38,6 @@ export function EventTraceList({ events, meta, caption, className = "" }: EventT
           ))}
         </dl>
       )}
-      {caption && <p className="ds-trace-list__caption kicker">{caption}</p>}
     </div>
   );
 }

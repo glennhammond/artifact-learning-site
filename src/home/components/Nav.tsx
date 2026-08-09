@@ -1,16 +1,20 @@
 import { useState } from "react";
 import { Container } from "../../components/layout/Container";
 import { NavLink } from "../../design-system/NavLink";
-import { nav } from "../../content/shared";
+import { Button } from "../../design-system/Button";
+import { useScrolled } from "../../hooks/useScrolled";
+import { nav, navCta } from "../../content/shared";
 import "./Nav.css";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
+  const scrolled = useScrolled();
 
   return (
-    <header className="home-nav">
+    <header className="home-nav" data-scrolled={scrolled}>
       <Container className="home-nav__inner">
         <a href="#top" className="home-nav__wordmark">
+          <span className="home-nav__mark" aria-hidden="true" />
           Artifact
         </a>
 
@@ -34,10 +38,9 @@ export function Nav() {
               </li>
             ))}
           </ul>
-          <span className="home-nav__divider" aria-hidden="true" />
-          <NavLink href="#contact" onClick={() => setOpen(false)} className="home-nav__contact">
-            Contact
-          </NavLink>
+          <Button variant="secondary" href={navCta.href} className="home-nav__cta" onClick={() => setOpen(false)}>
+            {navCta.label}
+          </Button>
         </nav>
       </Container>
     </header>

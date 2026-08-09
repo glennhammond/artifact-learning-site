@@ -1,14 +1,19 @@
 .ds-trace-list {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.ds-trace-list__label {
+  padding-inline-start: var(--space-5);
 }
 
 .ds-trace-list__events {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-5);
   padding-inline-start: var(--space-5);
 }
 
@@ -17,8 +22,8 @@
   content: "";
   position: absolute;
   left: 3px;
-  top: 4px;
-  bottom: 4px;
+  top: 6px;
+  bottom: 6px;
   width: var(--border-thickness);
   background: var(--color-border);
 }
@@ -29,16 +34,16 @@
   align-items: baseline;
   gap: var(--space-3);
   font-family: var(--type-data);
-  font-size: var(--text-data);
+  font-size: var(--text-small);
   color: var(--color-text-subtle);
 }
 
 .ds-trace-list__dot {
   position: absolute;
   left: calc(-1 * var(--space-5) + 1px);
-  top: 5px;
-  width: 6px;
-  height: 6px;
+  top: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: var(--radius-node);
   background: var(--color-text-subtle);
 }
@@ -46,10 +51,10 @@
 /* The one active/consequential event — the single Signal moment in the trace */
 li[data-active="true"] .ds-trace-list__dot {
   background: var(--color-signal);
-  width: 8px;
-  height: 8px;
-  left: calc(-1 * var(--space-5));
-  top: 4px;
+  width: 9px;
+  height: 9px;
+  left: calc(-1 * var(--space-5) - 1px);
+  top: 5px;
 }
 
 li[data-active="true"] .ds-trace-list__name {
@@ -58,11 +63,13 @@ li[data-active="true"] .ds-trace-list__name {
 }
 
 .ds-trace-list__meta {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--space-5);
+  row-gap: var(--space-2);
   padding-inline-start: var(--space-5);
-  border-inline-start: var(--border-thickness) solid var(--color-border);
+  padding-block-start: var(--space-5);
+  border-block-start: var(--border-thickness) solid var(--color-border);
 }
 
 .ds-trace-list__meta div {
@@ -82,8 +89,5 @@ li[data-active="true"] .ds-trace-list__name {
 
 .ds-trace-list__meta dd {
   color: var(--color-text-secondary);
-}
-
-.ds-trace-list__caption {
-  padding-inline-start: var(--space-5);
+  overflow-wrap: anywhere;
 }
