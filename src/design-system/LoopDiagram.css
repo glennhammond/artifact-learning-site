@@ -151,11 +151,29 @@
 
 /* ---- Description panel + static legend + breakpoint swap ---- */
 
+.ds-loop__active {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
 .ds-loop__desc {
   max-width: var(--measure);
   text-align: center;
   font-size: var(--text-lead);
   min-height: 3em;
+}
+
+.ds-loop__artefact {
+  width: 100%;
+  max-width: 22rem;
+}
+
+.ds-loop__artefact .ds-data-strip {
+  padding: var(--space-4);
 }
 
 .ds-loop__legend {

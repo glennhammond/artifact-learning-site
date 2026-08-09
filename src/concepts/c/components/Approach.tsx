@@ -1,6 +1,6 @@
 import { Container } from "../../../components/layout/Container";
 import { Reveal } from "../../../components/layout/Reveal";
-import { lifecycle, lifecycleCaption } from "../../../content/shared";
+import { legacyLifecycle as lifecycle, legacyLifecycleCaption as lifecycleCaption } from "../../../content/legacy";
 import "./Approach.css";
 
 export function Approach() {

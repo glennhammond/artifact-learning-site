@@ -1,6 +1,6 @@
 import { Container } from "../../../components/layout/Container";
 import { Reveal } from "../../../components/layout/Reveal";
-import { legacyModelLayers as modelLayers, legacyModelCaption as modelCaption } from "../../../content/legacyModel";
+import { legacyModelLayers as modelLayers, legacyModelCaption as modelCaption } from "../../../content/legacy";
 import { LoopDiagram } from "./LoopDiagram";
 import "./Model.css";
 

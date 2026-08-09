@@ -1,5 +1,5 @@
 import { Container } from "../../../components/layout/Container";
-import { finalCta } from "../../../content/shared";
+import { legacyFinalCta as finalCta } from "../../../content/legacy";
 import "./FinalCta.css";
 
 export function FinalCta() {

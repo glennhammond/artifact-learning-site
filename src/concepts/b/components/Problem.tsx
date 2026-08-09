@@ -1,6 +1,6 @@
 import { Container } from "../../../components/layout/Container";
 import { Reveal } from "../../../components/layout/Reveal";
-import { problem, readoutPanels } from "../../../content/shared";
+import { legacyProblem as problem, legacyReadoutPanels as readoutPanels } from "../../../content/legacy";
 import "./Problem.css";
 
 export function Problem() {

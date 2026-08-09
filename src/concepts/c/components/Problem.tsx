@@ -1,6 +1,6 @@
 import { Container } from "../../../components/layout/Container";
 import { Reveal } from "../../../components/layout/Reveal";
-import { problem } from "../../../content/shared";
+import { legacyProblem as problem } from "../../../content/legacy";
 
 export function Problem() {
   return (

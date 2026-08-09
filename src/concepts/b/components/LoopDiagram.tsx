@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { legacyModelLayers as modelLayers } from "../../../content/legacyModel";
+import { legacyModelLayers as modelLayers } from "../../../content/legacy";
 import "./LoopDiagram.css";
 
 /**

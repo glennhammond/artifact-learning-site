@@ -1,95 +1,185 @@
 /**
- * Copy shared verbatim across all three homepage concepts.
- * Variation between concepts A/B/C should come from composition, visual
- * language, interaction and density — not from rewriting the underlying
- * claims each time. All content here is provisional working copy for a
- * design-review prototype, not final marketing copy. No client outcomes,
- * metrics or names are invented anywhere in this file.
+ * Homepage content — Artifact Learning Homepage Content & Visual Direction
+ * v0.3. This is provisional working copy for a design-review build, not
+ * final marketing copy. No client outcomes, metrics or names are invented
+ * anywhere in this file; interface/event/data examples are illustrative
+ * design content unless explicitly noted otherwise.
  */
+
+export const nav = [
+  { label: "Work", href: "#work" },
+  { label: "What we do", href: "#capability" },
+  { label: "Approach", href: "#approach" },
+  { label: "Artifact", href: "#artifact-tech" },
+];
+
+// ---- 2. Hero ----
 
 export const hero = {
   eyebrow: "Artifact Learning",
   headline: "Digital learning as a product, not a course.",
   standfirst:
-    "Artifact applies modern digital product practice — design, delivery, measurement, improvement — to organisational learning. Not a course. A product, held to the same standard as the rest of your digital estate.",
+    "Artifact designs and builds digital learning with the rigour expected of modern digital products: clear user experience, robust technology, meaningful measurement and continuous improvement.",
+  standfirstSecondary:
+    "From learning strategy and interaction design to Rise, Storyline, React, learning platforms, xAPI and analytics, the technology follows the problem.",
   cta: "Explore the approach",
   ctaHref: "#approach",
   ctaSecondary: "See selected work",
   ctaSecondaryHref: "#work",
 };
 
+export interface TraceEvent {
+  name: string;
+  active?: boolean;
+}
+
+export const heroTrace = {
+  events: [
+    { name: "experience.started" },
+    { name: "scenario.presented" },
+    { name: "decision.responded", active: true },
+    { name: "feedback.viewed" },
+  ] satisfies TraceEvent[],
+  meta: [
+    { label: "registration", value: "af-7c21" },
+    { label: "experience", value: "vendor-risk-01" },
+  ],
+  caption: "Illustrative learning-event trace",
+  statement: "A learning experience can produce more evidence than a completion record.",
+};
+
+// ---- 3. Problem / differentiation ----
+
 export const problem = {
-  headline: "Completion is a very small part of the picture.",
-  body: "Most organisations know whether somebody completed their training. Far fewer know what happened inside the experience, or what people can actually do afterwards. Conventional learning technology is built to report enrolment, completion, pass/fail and score — and stops there.",
+  eyebrow: "Beyond completion",
+  headline: "Completion tells you that someone finished. Not what happened.",
+  body: "A conventional learning record might tell you that somebody completed a module, scored 82% and spent 14 minutes in it.",
+  bodySecondary:
+    "That can be useful. But it does not necessarily tell you which decisions they made, where they struggled, what support they used or what should change in the experience.",
+  bodyTertiary:
+    "Artifact designs measurement around the learning purpose, capturing meaningful signals where they can help us understand and improve the product.",
+  closing: "Completion is one signal. The question is what else matters.",
+};
+
+export const readoutPanels = {
+  before: {
+    label: "What a completion report might show",
+    lines: ["STATUS       completed", "SCORE        82%", "DURATION     14m 02s"],
+  },
+  transitionLabel: "Useful, but incomplete.",
+  after: {
+    label: "What an instrumented experience can also show",
+    groups: [
+      ["scenario.presented"],
+      ["decision.responded", "choice.escalate", "response_time  4.1s"],
+      ["feedback.viewed"],
+      ["decision.retried", "choice.escalate"],
+      ["outcome.correct", "attempt        2"],
+    ],
+  },
+  caveat: "Illustrative events only. Not client data.",
+};
+
+// ---- 4. Editorial transition — "Design it. Observe it. Improve it." ----
+
+export const transitionDesignObserve = {
+  words: ["Design it.", "Observe it.", "Improve it."],
+  supporting: "Digital learning does not have to end at publish.",
+};
+
+// ---- 5. Artifact model ----
+
+export const modelIntro = {
+  eyebrow: "The Artifact model",
+  headline: "A loop, not a hand-off.",
+  body: "Digital learning should not stop when the experience is published. Artifact treats the experience, the signals it produces and the decisions that follow as parts of the same product cycle.",
 };
 
 export interface ModelLayer {
   index: string;
   name: string;
-  description: string;
+  definition: string;
+  detail: string;
+  artefact: string[];
 }
 
 /**
- * Refined v0.2 model: Experience → Signals → Data → Insight → Improvement,
+ * Refined model: Experience → Signals → Data → Insight → Improvement,
  * looping back to Experience. Platform is deliberately not a stage in this
  * sequence — see `platform` below — it is the environment the loop runs on,
- * not a cause of anything downstream (v0.2 §10).
+ * not a cause of anything downstream.
  */
 export const modelLayers: ModelLayer[] = [
   {
     index: "01",
     name: "Experience",
-    description:
-      "Rise, Storyline, React, video, custom interaction. What the learner actually sees and does.",
+    definition: "What the learner sees, decides and does.",
+    detail: "Rise, Storyline, React, video and custom interaction can all sit here.",
+    artefact: ["scenario: vendor-risk", "decision: escalation"],
   },
   {
     index: "02",
     name: "Signals",
-    description:
-      "The meaningful events inside that experience — a decision, a choice, a completion — captured as they happen.",
+    definition: "The meaningful events generated by the experience.",
+    detail:
+      "A choice, a response, a retry, use of support, completion of a task or another interaction worth observing.",
+    artefact: ["decision.responded", "feedback.viewed"],
   },
   {
     index: "03",
     name: "Data",
-    description:
-      "xAPI, a Learning Record Store, structured learning events. What can be observed once signals are captured.",
+    definition: "Structured records of those events.",
+    detail:
+      "Learning events can be captured consistently, mapped to standards such as xAPI where appropriate and stored for later use.",
+    artefact: ["verb       responded", "result     escalation", "duration   PT4.1S"],
   },
   {
     index: "04",
     name: "Insight",
-    description: "Reporting, interpretation and evaluation — what the data actually means.",
+    definition: "Interpretation of the evidence that is available.",
+    detail: "Patterns, questions and observations that may help explain how the experience is working.",
+    artefact: ["Repeated hesitation at decision 03"],
   },
   {
     index: "05",
     name: "Improvement",
-    description: "What changes in the next iteration of the experience because of what was learned.",
+    definition: "What changes because of what we learned.",
+    detail:
+      "The next iteration might change the experience, its content, interaction design, instrumentation or supporting system.",
+    artefact: ["Clarify evidence available before decision"],
   },
 ];
 
 export const platform = {
   name: "Platform",
-  description:
-    "Moodle, LMS environments, learning portals — the environment and infrastructure the loop runs on, not a stage inside it.",
+  definition: "Platform is the environment beneath the loop.",
+  detail:
+    "Moodle, an LMS, a learning portal or another delivery environment can host and support the experience without becoming the logic of the learning itself.",
 };
 
-export const modelCaption =
-  "Insight and Improvement feed back into Experience — a loop, not a hand-off. Platform is the ground it all runs on, not a step in the sequence.";
+export const modelCaption = "Insight returns to experience.";
 
-export const readoutPanels = {
-  before: {
-    label: "What a completion report shows",
-    lines: ["STATUS     completed", "SCORE      82%", "TIME       14m 02s"],
-  },
-  after: {
-    label: "What an instrumented experience can also show",
-    lines: [
-      "decision.presented   scenario: vendor-risk-01",
-      "decision.responded   choice: escalate · 4.1s",
-      "decision.completed   outcome: correct · attempt 1",
-    ],
-  },
-  caveat: "Illustrative event shapes — not output from a real client project.",
+// ---- 6/7/8. Selected work ----
+
+export const workIntro = {
+  eyebrow: "Selected work",
+  headline: "The decision matters as much as the deliverable.",
+  intro:
+    "Artifact work is framed around the problem, the constraints and the decisions behind the experience, not simply the software used to build it.",
 };
+
+export interface CaseStudyStage {
+  name: string;
+  definition: string;
+}
+
+export const caseStudyStages: CaseStudyStage[] = [
+  { name: "Problem", definition: "Inconsistent learning experiences and repeated design decisions." },
+  { name: "Decisions", definition: "Define reusable visual, interaction and accessibility patterns." },
+  { name: "Experience", definition: "Apply those patterns across different learning contexts." },
+  { name: "System", definition: "Reusable components, tokens and implementation guidance." },
+  { name: "Evidence", definition: "Document only what can genuinely be demonstrated." },
+];
 
 export interface Project {
   eyebrow: string;
@@ -98,133 +188,207 @@ export interface Project {
   status?: string;
 }
 
-/** The case-study chain — v0.2 §09: problem-led, evidence at the end. Outcome is shown only where known. */
-export const caseStudyStages = ["Problem", "Context", "Decisions", "Experience", "System", "Evidence"];
-
-export const featuredProject: Project = {
-  eyebrow: "Case study — placeholder",
+export const featuredProject: Project & { tags: string[]; cta: string; imageNote: string } = {
+  eyebrow: "eLearning design system",
   question:
-    "How do you keep digital learning consistent and accessible across an organisation, without redesigning every experience from scratch?",
+    "How do you create consistent, accessible digital learning across an organisation without redesigning every experience from scratch?",
   framing:
-    "Placeholder project framing for design review — describes the kind of problem a case study would document, not a real client engagement. No outcomes are stated because none have occurred here.",
+    "A reusable eLearning design system provides a shared foundation for interface design, interaction, accessibility and development. Instead of solving the same visual and technical problems repeatedly, teams can begin with established patterns and concentrate on the learning problem itself.",
+  tags: ["Learning design", "UX/UI", "Design system", "Rise", "React"],
+  cta: "Explore the case study",
+  imageNote: "Representative project layout pending final case-study assets.",
 };
 
 export const secondaryProjects: Project[] = [
   {
-    eyebrow: "Placeholder",
+    eyebrow: "Compliance learning",
     question:
-      "A blended compliance experience where the pass/fail record hid a real comprehension gap.",
-    framing: "Problem framing only — placeholder for design review.",
-    status: "in build",
+      "What changes when mandatory learning is designed around decisions rather than information delivery?",
+    framing:
+      "Scenario structure, meaningful choices and feedback can place required information inside the decisions learners may need to make.",
+    status: "Case study in development",
   },
   {
-    eyebrow: "Placeholder",
-    question:
-      "Rebuilding an onboarding programme around what new starters actually needed to decide, not what was easiest to script.",
-    framing: "Problem framing only — placeholder for design review.",
-    status: "shipped",
+    eyebrow: "Learning platform experience",
+    question: "How can an LMS feel more like a learning product and less like a catalogue of courses?",
+    framing:
+      "Information architecture, navigation, course discovery and interface consistency shape the learning experience before a course even opens.",
+    status: "Case study in development",
   },
 ];
+
+// ---- 9. Capabilities ----
+
+export const capabilityIntro = {
+  eyebrow: "What we do",
+  headline: "Four capabilities. One practice.",
+  intro:
+    "Artifact connects disciplines that are often separated across strategy, design, development, platforms and measurement. The combination matters more than the software list.",
+};
 
 export interface CapabilityGroup {
   index: string;
   name: string;
-  terms: string[];
+  question: string;
+  copy: string;
 }
 
 export const capabilityGroups: CapabilityGroup[] = [
   {
     index: "01",
     name: "Learning experience design",
-    terms: [
-      "strategy",
-      "instructional design",
-      "UX",
-      "scenario design",
-      "assessment",
-      "prototyping",
-    ],
+    question: "What should the learner need to understand, decide or do?",
+    copy: "Learning strategy, learning architecture, instructional design, scenario design, UX, assessment and prototyping. The work begins with the required performance or decision, not with a screen template.",
   },
   {
     index: "02",
     name: "Digital learning development",
-    terms: ["Rise", "Storyline", "React", "custom HTML/JS", "multimedia"],
+    question: "What is the right way to build the experience?",
+    copy: "Rise, Storyline, React, HTML/CSS/JavaScript, custom interaction, multimedia and video. The tool is selected for the experience rather than forcing every experience into the same authoring model.",
   },
   {
     index: "03",
     name: "Learning platforms & systems",
-    terms: ["Moodle", "LMS UX", "learning portals", "design systems", "components"],
+    question: "Where does the experience live, and how does it fit into the wider environment?",
+    copy: "Moodle, LMS UX, learning portals, information architecture, reusable components and design systems. The platform should support the experience rather than dictate it.",
   },
   {
     index: "04",
     name: "Measurement & learning analytics",
-    terms: ["measurement planning", "xAPI", "LRS", "learning events", "evaluation"],
+    question: "What evidence should the experience produce?",
+    copy: "Measurement planning, structured learning events, xAPI, Learning Record Stores, reporting, evaluation and iteration. Measurement should begin with the questions worth answering, not with collecting every interaction simply because it is possible.",
   },
 ];
+
+// ---- 10. Editorial transition — "The tool follows the problem." ----
+
+export const transitionToolFollows = {
+  statement: "The tool follows the problem.",
+  supporting:
+    "Not every experience needs custom React. Not every interaction needs xAPI. Not every learning problem needs a course.",
+  tools: [
+    { name: "RISE", when: "when structure and speed matter" },
+    { name: "STORYLINE", when: "when interaction and logic matter" },
+    { name: "REACT", when: "when the experience needs to go further" },
+    { name: "MOODLE", when: "when the wider environment matters" },
+  ],
+};
+
+// ---- 11. Approach ----
+
+export const approachIntro = {
+  eyebrow: "Approach",
+  headline: "From problem to evidence, then back again.",
+  intro: "Artifact uses a working lifecycle rather than a one-off production pipeline.",
+};
 
 export interface LifecycleStep {
   index: string;
   name: string;
+  statement: string;
+  detail: string;
 }
 
 export const lifecycle: LifecycleStep[] = [
-  { index: "01", name: "Discover" },
-  { index: "02", name: "Design" },
-  { index: "03", name: "Build & Instrument" },
-  { index: "04", name: "Measure" },
-  { index: "05", name: "Improve" },
+  {
+    index: "01",
+    name: "Discover",
+    statement: "Understand the problem before designing the learning.",
+    detail:
+      "Audience, performance, context, constraints, existing evidence and the environment in which the behaviour occurs.",
+  },
+  {
+    index: "02",
+    name: "Design",
+    statement: "Shape the experience and decide what matters enough to observe.",
+    detail: "Learning architecture, content, scenario design, UX, interaction, assessment and measurement intent.",
+  },
+  {
+    index: "03",
+    name: "Build & Instrument",
+    statement: "Create the experience and capture the events worth observing.",
+    detail: "Development, multimedia, integration, accessibility and structured event instrumentation.",
+  },
+  {
+    index: "04",
+    name: "Measure",
+    statement: "Review the evidence without claiming more than it supports.",
+    detail: "Completion, interaction data, learner behaviour within the experience and other available sources.",
+  },
+  {
+    index: "05",
+    name: "Improve",
+    statement: "Use what was learned to refine the product.",
+    detail:
+      "Change the content, UX, interaction, instrumentation or supporting system where the evidence suggests it is useful.",
+  },
 ];
 
-export const lifecycleCaption =
-  "A working lifecycle, not a one-off delivery — each stage is designed to feed the next.";
+export const lifecycleCaption = "Publishing is not the end of the process.";
+
+// ---- 12. Artifact ecosystem ----
+
+export const ecosystemIntroHeading = {
+  eyebrow: "Artifact",
+  headline: "Building the tools behind the practice.",
+  paragraphs: [
+    "Artifact is also developing a small technical ecosystem to support how learning experiences are designed, instrumented and understood.",
+    "Some parts already exist. Others are deliberately still in development. The website describes each at the stage it genuinely occupies.",
+  ],
+};
 
 export interface EcosystemItem {
   name: string;
-  status: "in development" | "in design" | "concept";
-  note: string;
+  descriptor: string;
+  status: string;
 }
 
 export const ecosystem: EcosystemItem[] = [
   {
     name: "Artifact Framework",
-    status: "in development",
-    note: "Engineering foundation, design tokens, tooling.",
+    descriptor:
+      "The engineering foundation. React architecture, application patterns, design tokens and tooling for structured learning experiences.",
+    status: "In development",
   },
   {
     name: "Artifact Components",
-    status: "in design",
-    note: "Reusable learning interactions — one component specified so far.",
+    descriptor:
+      "Reusable learning interactions. Purpose-built interaction patterns that can be reused without turning every learning experience into the same interface.",
+    status: "In design",
   },
   {
     name: "Artifact Events",
-    status: "in design",
-    note: "A structured learning-event model — shapes researched, not yet built.",
+    descriptor:
+      "A consistent model for meaningful learning events. A structured internal event language separating the experience from the eventual analytics / xAPI implementation.",
+    status: "In development",
   },
   {
     name: "Artifact xAPI",
-    status: "in design",
-    note: "xAPI mapping researched against the spec and ADL verb registry, not yet implemented.",
+    descriptor:
+      "Mapping events to an interoperable learning-data standard. A layer for translating appropriate Artifact events into xAPI statements without coupling every component directly to xAPI.",
+    status: "In development",
   },
   {
     name: "Artifact Inspector",
-    status: "concept",
-    note: "A learning-event and xAPI debugging tool — specified, not started.",
+    descriptor: "See what the experience is emitting. An emerging debugging and inspection tool for learning-event and xAPI behaviour during development.",
+    status: "Concept",
   },
 ];
 
-export const ecosystemIntro =
-  "Artifact is also becoming the foundation for a small technical ecosystem — a component framework, a structured learning-event model, and xAPI instrumentation, built to support the practice's own work. Most of it is still in design, and it's described here at the stage it actually is.";
+// ---- 13. Final commercial statement ----
+
+export const commercialStatement = {
+  statement: "Learning problems deserve product thinking.",
+  supporting:
+    "Whether the need is a single learning experience, an eLearning design system, a better platform experience or stronger evidence about what happens inside the learning, Artifact brings the strategy, design and technology together.",
+};
+
+// ---- 14. Final CTA ----
 
 export const finalCta = {
   headline: "Working on a digital learning problem worth taking seriously?",
+  supporting: "Tell us what needs to change, what you know already and what you are trying to understand.",
   action: "Tell us what you're trying to solve",
   email: "hello@artifactlearning.com",
-  emailNote: "Placeholder address for this design-review build.",
+  emailNote: "Provisional address — not yet established or verified.",
 };
-
-export const nav = [
-  { label: "Work", href: "#work" },
-  { label: "Model", href: "#model" },
-  { label: "Approach", href: "#approach" },
-  { label: "Artifact", href: "#artifact-tech" },
-];

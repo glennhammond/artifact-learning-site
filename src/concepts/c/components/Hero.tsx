@@ -1,5 +1,5 @@
 import { Container } from "../../../components/layout/Container";
-import { hero } from "../../../content/shared";
+import { legacyHero as hero } from "../../../content/legacy";
 import { LoopGlyph } from "./LoopGlyph";
 import "./Hero.css";
 

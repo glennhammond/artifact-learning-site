@@ -10,6 +10,7 @@ export function FinalCta() {
       <Container narrow>
         <Reveal as="div" className="ds-fade">
           <h2 id="cta-heading">{finalCta.headline}</h2>
+          <p className="home-cta__supporting">{finalCta.supporting}</p>
           <div className="home-cta__actions">
             <Button variant="primary" href={`mailto:${finalCta.email}`}>
               {finalCta.action} <span aria-hidden="true">→</span>

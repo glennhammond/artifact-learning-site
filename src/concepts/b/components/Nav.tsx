@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container } from "../../../components/layout/Container";
-import { nav } from "../../../content/shared";
+import { legacyNav as nav } from "../../../content/legacy";
 import "./Nav.css";
 
 export function Nav() {

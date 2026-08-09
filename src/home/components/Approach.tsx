@@ -1,11 +1,18 @@
 import { Section } from "../../design-system/Section";
-import { lifecycle, lifecycleCaption } from "../../content/shared";
+import { lifecycle, lifecycleCaption, approachIntro } from "../../content/shared";
 import "./Approach.css";
 
 export function Approach() {
   const lastIndex = lifecycle.length - 1;
   return (
-    <Section id="approach" kicker="Approach" heading="A working lifecycle" width="content" density="compact">
+    <Section
+      id="approach"
+      kicker={approachIntro.eyebrow}
+      heading={approachIntro.headline}
+      intro={approachIntro.intro}
+      width="content"
+      density="compact"
+    >
       <div className="home-approach-timeline">
         <span className="home-approach-timeline__spine" aria-hidden="true" />
         {lifecycle.map((step, i) => (
@@ -20,6 +27,19 @@ export function Approach() {
         <span className="home-approach-return__mark" aria-hidden="true" />
         {lifecycleCaption}
       </p>
+
+      <dl className="home-approach-legend">
+        {lifecycle.map((step) => (
+          <div className="home-approach-legend__item" key={step.name}>
+            <dt>
+              <span className="kicker">{step.index}</span> {step.name}
+            </dt>
+            <dd>
+              <strong>{step.statement}</strong> {step.detail}
+            </dd>
+          </div>
+        ))}
+      </dl>
     </Section>
   );
 }

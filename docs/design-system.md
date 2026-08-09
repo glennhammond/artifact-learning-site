@@ -118,13 +118,14 @@ report for detail.
 | `Button` | primary (Signal fill), secondary (bordered), text (underline) — all states |
 | `NavLink` | primary nav item, quiet by default, Signal underline for the active anchor |
 | `Tag` | small label/status pill, neutral or Signal tone |
-| `MetadataRow` | index + name + status + note — the ecosystem list pattern |
 | `Section` | kicker + heading + one-shot reveal + light/dark tone switch |
-| `LoopDiagram` | the signature system visual — circular (default) + stacked (compact) variants |
-| `DataStrip` | labelled mono event/data panel, with an "active"/consequential state |
-| `WorkFeature` / `WorkList` | the one full featured case study + short text-led secondary list |
-| `EventTrace` | a single genuine-looking learning event in mono — the hero's data artefact |
-| `EvidencePlaceholder` | a designed interface-fragment stand-in for real work imagery, not a flat box |
+| `LoopDiagram` | the signature system visual — circular (default) + stacked (compact) variants, per-node illustrative artefact on selection |
+| `DataStrip` | labelled mono event/data panel, with "active" (Signal-marked) and "muted" states |
+| `WorkFeature` / `WorkList` | the one full featured case study (definitions, tags, composite figure) + short text-led secondary list |
+| `EventTraceList` | a vertical rail of learning events, one marked active in Signal — the hero's data artefact |
+| `WorkComposite` | a multi-artefact stand-in for real work imagery — primary crop + overlapping detail crop + token specimen rail, at different scales |
+
+`ArtifactTech` and `Capability` (in `src/home/components/`) each render five/four *distinct* per-item visual specimens defined inline rather than a shared generic card — a component tree, live component previews, a mono event object, a flow diagram and a locally-dark inspector fragment for the ecosystem; a fidelity progression, three build-context crops, a system map and another progression for the capabilities. See `docs/consolidation-decision.md`-style reasoning inline in those files' comments — content drives the composition rather than forcing every pattern into one generic card API (v0.3 content doc, "Final implementation principles").
 
 Import from `src/design-system` (barrel export). Components read semantic tokens only — no component
 hardcodes a hex value, an OKLCH literal outside `tokens.css`, or a concept-specific class name.
@@ -150,6 +151,7 @@ Insights, Lab, and public deployment (brief §34).
 
 The three Phase 1 exploratory concepts are preserved at `/archive/concept-a`, `/archive/concept-b` and
 `/archive/concept-c` (index at `/archive`) for reference, using a frozen copy of their original content
-(`src/content/legacyModel.ts`) so they keep reading as what was actually reviewed in Phase 1, independent
-of changes to the live v0.2 model in `src/content/shared.ts`. They are not part of the design system
-above and should not be used as a reference for new work.
+(`src/content/legacy.ts`) so they keep reading as what was actually reviewed in Phase 1, independent of
+changes to the live homepage content in `src/content/shared.ts` — which has now been rewritten twice
+(the v0.2 model refinement, and the v0.3 content pass) without the archive drifting either time. They
+are not part of the design system above and should not be used as a reference for new work.

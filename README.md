@@ -51,8 +51,8 @@ src/
                                  Reads tokens only; no hardcoded colour or concept-specific styling.
   home/                         The consolidated homepage (the primary `/` route) and its sections.
   content/shared.ts             Live copy and content for the consolidated homepage.
-  content/legacyModel.ts        Frozen Phase 1 content used only by the archived concepts, so they
-                                 don't silently drift when the live design system content changes.
+  content/legacy.ts             Frozen Phase 1 content used only by the archived concepts, so they
+                                 don't silently drift when the live homepage content changes.
   concepts/a|b|c/                Archived Phase 1 concepts, now served under /archive/*. Self-contained:
                                  own theme tokens, own components. Not part of the design system.
   components/layout/            Framework-agnostic layout primitives (Container, SkipLink, Reveal)

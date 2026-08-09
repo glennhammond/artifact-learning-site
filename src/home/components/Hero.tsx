@@ -1,7 +1,7 @@
 import { Container } from "../../components/layout/Container";
 import { Button } from "../../design-system/Button";
-import { EventTrace } from "../../design-system/EventTrace";
-import { hero } from "../../content/shared";
+import { EventTraceList } from "../../design-system/EventTraceList";
+import { hero, heroTrace } from "../../content/shared";
 import "./Hero.css";
 
 export function Hero() {
@@ -24,6 +24,9 @@ export function Hero() {
           </div>
           <div className="home-hero__aside">
             <p className="home-hero__standfirst">{hero.standfirst}</p>
+            <p className="home-hero__standfirst home-hero__standfirst--secondary">
+              {hero.standfirstSecondary}
+            </p>
             <div className="home-hero__actions">
               <Button variant="primary" href={hero.ctaHref}>
                 {hero.cta}
@@ -32,13 +35,17 @@ export function Hero() {
                 {hero.ctaSecondary} <span aria-hidden="true">→</span>
               </Button>
             </div>
-            <EventTrace
-              className="home-hero__trace"
-              verb="experience.started"
-              detail="scenario: vendor-risk-01"
-              timestamp="2026-08-09T10:42:03Z"
-            />
           </div>
+        </div>
+
+        <div className="home-hero__trace-row">
+          <EventTraceList
+            className="home-hero__trace"
+            events={heroTrace.events}
+            meta={heroTrace.meta}
+            caption={heroTrace.caption}
+          />
+          <p className="home-hero__trace-statement">{heroTrace.statement}</p>
         </div>
       </Container>
     </section>

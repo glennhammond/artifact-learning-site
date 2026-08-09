@@ -1,3 +1,119 @@
+.home-tech-intro {
+  color: var(--color-text-secondary);
+  max-width: 62ch;
+  margin-block-end: var(--space-3);
+}
+
 .home-tech-list {
-  margin-block-start: var(--space-2);
+  margin-block-start: var(--space-7);
+}
+
+.home-tech-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  padding-block: var(--space-6);
+  border-block-end: var(--border-thickness) solid var(--color-border);
+}
+
+.home-tech-list > .home-tech-row:first-child {
+  border-block-start: var(--border-thickness) solid var(--color-border);
+}
+
+@media (min-width: 780px) {
+  .home-tech-row {
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: var(--space-7);
+  }
+}
+
+.home-tech-row__head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.home-tech-row__head h3 {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-heading-alt);
+}
+
+.home-tech-row__descriptor {
+  margin-block-start: var(--space-3);
+  color: var(--color-text-secondary);
+  font-size: var(--text-small);
+  max-width: 52ch;
+}
+
+.home-tech-row__specimen {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (min-width: 780px) {
+  .home-tech-row__specimen {
+    justify-content: flex-end;
+  }
+}
+
+.home-tech-specimen {
+  font-size: var(--text-small);
+}
+
+.home-tech-specimen--mono {
+  font-family: var(--type-data);
+  font-size: var(--text-data);
+  line-height: var(--leading-ui);
+  color: var(--color-text-secondary);
+  background: var(--color-bg-raised);
+  border: var(--border-thickness) solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+}
+
+.home-tech-components {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.home-tech-flow {
+  font-family: var(--type-data);
+  font-size: var(--text-data);
+  color: var(--color-text-secondary);
+}
+
+.home-tech-flow__arrow {
+  color: var(--color-text-subtle);
+}
+
+/* The inspector specimen legitimately reintroduces the dark technical
+   surface, bounded to itself — same token-remap pattern as the Model
+   section, scoped locally rather than to the whole page. */
+.home-tech-inspector {
+  --color-bg: var(--color-ink);
+  --color-text: var(--color-paper);
+  --color-text-secondary: var(--color-text-subtle);
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: var(--border-thickness) solid var(--color-border);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 220px;
+}
+
+.home-tech-inspector p {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  font-family: var(--type-data);
+  font-size: var(--text-data);
+}
+
+.home-tech-inspector .kicker {
+  flex: none;
 }

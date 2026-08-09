@@ -1,4 +1,4 @@
-import { legacyModelLayers as modelLayers } from "../../../content/legacyModel";
+import { legacyModelLayers as modelLayers } from "../../../content/legacy";
 
 /**
  * Static quiet loop diagram — four nodes, one highlighted return arrow from

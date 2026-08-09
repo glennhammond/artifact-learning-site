@@ -1,6 +1,6 @@
 import { Container } from "../../../components/layout/Container";
 import { Reveal } from "../../../components/layout/Reveal";
-import { ecosystem, ecosystemIntro } from "../../../content/shared";
+import { legacyEcosystem as ecosystem, legacyEcosystemIntro as ecosystemIntro } from "../../../content/legacy";
 import "./ArtifactTech.css";
 
 export function ArtifactTech() {

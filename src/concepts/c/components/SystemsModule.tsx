@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Container } from "../../../components/layout/Container";
 import { Reveal } from "../../../components/layout/Reveal";
-import { legacyModelLayers as modelLayers, legacyModelCaption as modelCaption } from "../../../content/legacyModel";
+import { legacyModelLayers as modelLayers, legacyModelCaption as modelCaption } from "../../../content/legacy";
 import "./SystemsModule.css";
 
 /**

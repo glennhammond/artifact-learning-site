@@ -1,6 +1,6 @@
 import { Container } from "../../../components/layout/Container";
 import { Reveal } from "../../../components/layout/Reveal";
-import { capabilityGroups } from "../../../content/shared";
+import { legacyCapabilityGroups as capabilityGroups } from "../../../content/legacy";
 import "./Capability.css";
 
 export function Capability() {

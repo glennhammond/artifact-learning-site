@@ -1,6 +1,6 @@
 import { Section } from "../../design-system/Section";
 import { LoopDiagram } from "../../design-system/LoopDiagram";
-import { modelLayers, modelCaption, platform } from "../../content/shared";
+import { modelLayers, modelCaption, modelIntro, platform } from "../../content/shared";
 import "./Model.css";
 
 /**
@@ -12,8 +12,9 @@ export function Model() {
   return (
     <Section
       id="model"
-      kicker="The Artifact model"
-      heading="A loop, not a hand-off"
+      kicker={modelIntro.eyebrow}
+      heading={modelIntro.headline}
+      intro={modelIntro.body}
       tone="ink"
       density="expansive"
       className="home-model"

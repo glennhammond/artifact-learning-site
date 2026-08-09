@@ -3,11 +3,14 @@ import { SkipLink } from "../components/layout/SkipLink";
 import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
 import { Problem } from "./components/Problem";
+import { TransitionDesignObserve } from "./components/TransitionDesignObserve";
 import { Model } from "./components/Model";
 import { Work } from "./components/Work";
 import { Capability } from "./components/Capability";
+import { TransitionToolFollows } from "./components/TransitionToolFollows";
 import { Approach } from "./components/Approach";
 import { ArtifactTech } from "./components/ArtifactTech";
+import { CommercialStatement } from "./components/CommercialStatement";
 import { FinalCta } from "./components/FinalCta";
 import { Footer } from "./components/Footer";
 
@@ -15,7 +18,8 @@ import { Footer } from "./components/Footer";
  * The consolidated Artifact Learning homepage — the primary v0.x foundation
  * this phase produces. See docs/consolidation-decision.md for what survived
  * from Concepts A/B/C and why, and docs/design-system.md for the token and
- * component reference this page is built from.
+ * component reference this page is built from. Content per "Artifact
+ * Learning Homepage Content & Visual Direction v0.3".
  */
 export function Home() {
   useEffect(() => {
@@ -29,11 +33,14 @@ export function Home() {
       <main id="main">
         <Hero />
         <Problem />
+        <TransitionDesignObserve />
         <Model />
         <Work />
         <Capability />
+        <TransitionToolFollows />
         <Approach />
         <ArtifactTech />
+        <CommercialStatement />
         <FinalCta />
       </main>
       <Footer />

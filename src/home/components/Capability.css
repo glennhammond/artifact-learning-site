@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-3);
-  padding-block: var(--space-6);
+  padding-block: var(--space-7);
   padding-inline-start: var(--space-5);
   border-block-end: var(--border-thickness) solid var(--color-border);
   border-inline-start: var(--border-thickness-focus) solid transparent;
@@ -16,13 +16,12 @@
 
 .home-capability-row:hover {
   border-inline-start-color: var(--color-signal);
-  background: color-mix(in oklch, var(--color-bg-raised), transparent 0%);
 }
 
 @media (min-width: 700px) {
   .home-capability-row {
     grid-template-columns: minmax(90px, 1fr) 4fr;
-    align-items: baseline;
+    align-items: start;
     gap: var(--space-6);
   }
 
@@ -41,12 +40,88 @@
   color: var(--color-border);
 }
 
-.home-capability-row__body h3 {
-  margin-block-end: var(--space-2);
+.home-capability-row__question {
+  font-family: var(--type-heading);
+  font-weight: var(--weight-heading-alt);
+  font-size: var(--text-h3);
+  color: var(--color-text);
+  max-width: 42ch;
 }
 
-.home-capability-row__body p {
+.home-capability-row__body h3 {
+  margin-block: var(--space-3) var(--space-2);
+  font-size: var(--text-body);
+  font-weight: var(--weight-ui-strong);
+  font-family: var(--type-ui);
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.home-capability-row__copy {
   color: var(--color-text-secondary);
   font-size: var(--text-small);
-  max-width: 48ch;
+  max-width: 52ch;
+}
+
+/* ---- per-capability artefacts ---- */
+
+.home-capability-progression {
+  margin-block-start: var(--space-5);
+  font-family: var(--type-data);
+  font-size: var(--text-data);
+  color: var(--color-text-subtle);
+}
+
+.home-capability-progression__arrow {
+  color: var(--color-border);
+}
+
+.home-capability-crops {
+  display: flex;
+  gap: var(--space-4);
+  margin-block-start: var(--space-5);
+}
+
+.home-capability-crop {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 84px;
+}
+
+.home-capability-crop svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-capability-map {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-block-start: var(--space-5);
+}
+
+.home-capability-map__node {
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  font-weight: var(--weight-ui-strong);
+  border: var(--border-thickness) solid var(--color-border);
+  padding: var(--space-2) var(--space-3);
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.home-capability-map__arrow {
+  color: var(--color-text-subtle);
+  font-size: var(--text-small);
+  padding-inline-start: var(--space-3);
+}
+
+.home-capability-map__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }

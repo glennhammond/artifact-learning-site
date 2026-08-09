@@ -1,11 +1,12 @@
 import { useEffect, useId, useRef, useState, type CSSProperties } from "react";
 import type { ModelLayer } from "../content/shared";
 import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
+import { DataStrip } from "./DataStrip";
 import "./LoopDiagram.css";
 
 interface LoopDiagramProps {
   layers: ModelLayer[];
-  platform: { name: string; description: string };
+  platform: { name: string; definition: string; detail: string };
 }
 
 function prefersReducedMotion() {
@@ -13,16 +14,20 @@ function prefersReducedMotion() {
 }
 
 /**
- * The signature system visual — v0.2 §18 Direction 1 (circular loop, Platform
- * as a base plane) as the primary diagram, with a Direction 2 (layered
- * stack) compact fallback for narrow layouts, swapped by CSS `display` at
- * the nav-collapse breakpoint so only one set of controls is ever in the tab
+ * The signature system visual — Direction 1 (circular loop, Platform as a
+ * base plane) as the primary diagram, with a Direction 2 (layered stack)
+ * compact fallback for narrow layouts, swapped by CSS `display` at the
+ * nav-collapse breakpoint so only one set of controls is ever in the tab
  * order at a time.
  *
- * Motion follows v0.2 §11: a single dot travels the ring once when the
- * diagram is revealed (280ms/node, ease-out) — never a continuous loop —
- * and replays once when a node is activated. Reduced motion drops the
- * travel entirely; the loop-back arrow is drawn statically either way.
+ * Selecting a node reveals its definition, detail and one representative
+ * illustrative artefact — content doc v0.3 §5's "optionally reveal one
+ * representative event or artefact associated with it."
+ *
+ * Motion: a single dot travels the ring once when the diagram is revealed
+ * (280ms/node, ease-out) — never a continuous loop — and replays once when
+ * a node is activated. Reduced motion drops the travel entirely; the
+ * loop-back arrow is drawn statically either way.
  */
 export function LoopDiagram({ layers, platform }: LoopDiagramProps) {
   const [active, setActive] = useState(0);
@@ -63,18 +68,19 @@ export function LoopDiagram({ layers, platform }: LoopDiagramProps) {
   };
 
   const summary = layers.map((l) => l.name).join(" → ") + " → " + layers[0].name;
+  const activeLayer = layers[active];
 
   return (
     <div className="ds-loop" ref={ref}>
       <p className="visually-hidden">
-        System model: {summary}, looping continuously. {platform.name} is the environment this loop
-        runs on, not a stage within it. {layers[active].name}: {layers[active].description}
+        System model: {summary}, looping continuously. {platform.definition} {activeLayer.name}:{" "}
+        {activeLayer.definition} {activeLayer.detail}
       </p>
 
       {/* Direction 1 — circular loop, Platform as base plane (default) */}
       <div className="ds-loop__circular">
         <div className="ds-loop__plane" aria-hidden="true">
-          <span className="kicker">{platform.name} — environment / infrastructure</span>
+          <span className="kicker">{platform.definition}</span>
         </div>
         <svg
           viewBox={`0 0 ${size} ${size}`}
@@ -162,9 +168,14 @@ export function LoopDiagram({ layers, platform }: LoopDiagramProps) {
         </div>
       </div>
 
-      <p className="ds-loop__desc" aria-live="polite">
-        <strong>{layers[active].name}.</strong> {layers[active].description}
-      </p>
+      <div className="ds-loop__active" aria-live="polite">
+        <p className="ds-loop__desc">
+          <strong>{activeLayer.definition}</strong> {activeLayer.detail}
+        </p>
+        <div className="ds-loop__artefact">
+          <DataStrip label={`${activeLayer.name} — illustrative artefact`} lines={activeLayer.artefact} />
+        </div>
+      </div>
 
       {/* Always-present, works without motion or interaction (brief §11) —
           the interactive description above is a shortcut to this, not a
@@ -180,7 +191,9 @@ export function LoopDiagram({ layers, platform }: LoopDiagramProps) {
             <dt>
               <span className="kicker">{layer.index}</span> {layer.name}
             </dt>
-            <dd>{layer.description}</dd>
+            <dd>
+              {layer.definition} {layer.detail}
+            </dd>
           </div>
         ))}
       </dl>

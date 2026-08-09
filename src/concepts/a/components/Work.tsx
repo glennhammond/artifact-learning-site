@@ -1,6 +1,6 @@
 import { Container } from "../../../components/layout/Container";
 import { Reveal } from "../../../components/layout/Reveal";
-import { featuredProject, secondaryProjects } from "../../../content/shared";
+import { legacyFeaturedProject as featuredProject, legacySecondaryProjects as secondaryProjects } from "../../../content/legacy";
 import "./Work.css";
 
 export function Work() {
