@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Home } from "./home/Home";
 import { ArchiveIndex } from "./routes/ArchiveIndex";
 import { ConceptA } from "./concepts/a/ConceptA";
@@ -14,6 +14,10 @@ export default function App() {
       <Route path="/archive/concept-a" element={<ConceptA />} />
       <Route path="/archive/concept-b" element={<ConceptB />} />
       <Route path="/archive/concept-c" element={<ConceptC />} />
+      {/* Old Phase 1 top-level paths — redirect to their new /archive location rather than 404 */}
+      <Route path="/concept-a" element={<Navigate to="/archive/concept-a" replace />} />
+      <Route path="/concept-b" element={<Navigate to="/archive/concept-b" replace />} />
+      <Route path="/concept-c" element={<Navigate to="/archive/concept-c" replace />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
