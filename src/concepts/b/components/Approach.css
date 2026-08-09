@@ -1,0 +1,20 @@
+.b-pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+}
+
+.b-pipeline__step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--b-text-secondary);
+}
+
+.b-pipeline__caption {
+  margin-block-start: var(--space-5);
+  color: var(--b-text-secondary);
+  max-width: 50ch;
+}

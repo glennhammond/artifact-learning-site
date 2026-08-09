@@ -1,0 +1,24 @@
+.b-problem__body {
+  color: var(--b-text-secondary);
+  max-width: var(--measure);
+  margin-block-start: var(--space-3);
+}
+
+.b-readouts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+.b-readouts__caveat {
+  margin-block-start: var(--space-4);
+  font-size: 0.8125rem;
+  color: var(--b-text-secondary);
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .b-readouts {
+    grid-template-columns: 1fr;
+  }
+}

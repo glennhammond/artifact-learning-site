@@ -1,0 +1,22 @@
+.a-footer {
+  padding-block: var(--space-6);
+}
+
+.a-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: 0.8125rem;
+  color: var(--a-text-secondary);
+}
+
+.a-footer__wordmark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--a-text);
+}
+
+.a-footer a {
+  color: var(--a-text-secondary);
+}

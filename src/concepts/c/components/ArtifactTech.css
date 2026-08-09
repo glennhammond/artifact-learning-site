@@ -1,0 +1,21 @@
+.c-tech__intro {
+  color: var(--c-text-secondary);
+  max-width: var(--measure);
+  margin-block-end: var(--space-6);
+}
+
+.c-tech-list li {
+  display: flex;
+  justify-content: space-between;
+  padding-block: var(--space-3);
+  border-block-start: 1px solid var(--c-border);
+  font-size: 0.9375rem;
+}
+
+.c-tech-list__status {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-text-secondary);
+}

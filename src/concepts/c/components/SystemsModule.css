@@ -1,0 +1,79 @@
+.c-module {
+  background: var(--c-module-bg);
+  color: var(--c-module-text);
+  border-radius: var(--radius-md);
+  padding: var(--space-7);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.c-module__diagram {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+}
+
+.c-module__diagram svg {
+  position: absolute;
+  inset: 0;
+}
+
+.c-module__nodes {
+  position: absolute;
+  inset: 0;
+}
+
+.c-module__node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: var(--c-module-bg);
+  border: 1px solid var(--c-module-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-2);
+  font-size: 0.75rem;
+  color: var(--c-module-text-secondary);
+  white-space: nowrap;
+}
+
+.c-module__node[data-active="true"] {
+  border-color: var(--c-module-accent);
+  color: var(--c-module-accent);
+}
+
+.c-module__kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-module-text-secondary);
+  margin-block-end: var(--space-2);
+}
+
+.c-module__detail p:last-child {
+  max-width: 40ch;
+  color: var(--c-module-text);
+}
+
+.c-module__caption {
+  margin-block-start: var(--space-4);
+  font-size: 0.875rem;
+  color: var(--c-text-secondary);
+  max-width: 50ch;
+}
+
+@media (max-width: 700px) {
+  .c-module {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-module__pulse {
+    display: none;
+  }
+}

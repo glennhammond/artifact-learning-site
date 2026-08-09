@@ -1,0 +1,59 @@
+/*
+  Concept B — Digital Learning Laboratory.
+  Dark graphite "instrument" surface, mono type used as a working material,
+  two restrained technical accents (amber for status/CTA, teal for the data
+  highlight). Exploratory palette, not a final brand decision.
+*/
+.concept-b {
+  --b-bg: #14171a;
+  --b-bg-raised: #1b1f23;
+  --b-text: #f3f4f5;
+  --b-text-secondary: #a8afb7;
+  --b-border: #2b3136;
+  --b-accent: #d1893f;
+  --b-accent-contrast: #14171a;
+  --b-data: #5fb3a3;
+
+  background: var(--b-bg);
+  color: var(--b-text);
+}
+
+.concept-b .kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--b-text-secondary);
+}
+
+.concept-b a {
+  color: var(--b-accent);
+}
+
+.concept-b .btn-outline {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--b-text);
+  border: 1px solid var(--b-accent);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-5);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+}
+
+.concept-b .btn-outline:hover {
+  background: var(--b-accent);
+  color: var(--b-accent-contrast);
+}
+
+.concept-b h1,
+.concept-b h2,
+.concept-b h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}

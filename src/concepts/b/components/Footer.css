@@ -1,0 +1,17 @@
+.b-footer {
+  padding-block: var(--space-6);
+}
+
+.b-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--b-text-secondary);
+}
+
+.b-footer a {
+  color: var(--b-text-secondary);
+}

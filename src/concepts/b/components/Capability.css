@@ -1,0 +1,35 @@
+.b-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-inline-start: 1px solid var(--b-border);
+}
+
+.b-capability {
+  padding: var(--space-5);
+  border-inline-end: 1px solid var(--b-border);
+  border-block: 1px solid var(--b-border);
+  margin-inline-start: -1px;
+}
+
+.b-capability h3 {
+  font-size: 1rem;
+  margin-block: var(--space-2);
+}
+
+.b-capability p:last-child {
+  color: var(--b-text-secondary);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 960px) {
+  .b-capability-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .b-capability-grid {
+    grid-template-columns: 1fr;
+  }
+}

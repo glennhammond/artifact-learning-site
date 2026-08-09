@@ -1,0 +1,50 @@
+/*
+  Concept A — Editorial Product Studio.
+  Near-monochrome light surface, one quiet muted-navy accent used only for
+  links, focus states and the CTA. Exploratory, not a final brand palette.
+*/
+.concept-a {
+  --a-bg: var(--neutral-0);
+  --a-bg-raised: var(--neutral-50);
+  --a-text: var(--neutral-900);
+  --a-text-secondary: var(--neutral-600);
+  --a-border: var(--neutral-200);
+  --a-accent: #2e3f6b;
+  --a-accent-contrast: #ffffff;
+
+  background: var(--a-bg);
+  color: var(--a-text);
+}
+
+.concept-a .kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--a-text-secondary);
+}
+
+.concept-a a {
+  color: var(--a-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.concept-a .btn-quiet {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--a-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-bottom: 1px solid currentColor;
+  padding-block-end: 2px;
+}
+
+.concept-a h1,
+.concept-a h2,
+.concept-a h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}

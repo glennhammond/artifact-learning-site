@@ -1,0 +1,22 @@
+.c-footer {
+  padding-block: var(--space-6);
+}
+
+.c-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: 0.8125rem;
+  color: var(--c-text-secondary);
+}
+
+.c-footer__wordmark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+.c-footer a {
+  color: var(--c-text-secondary);
+}

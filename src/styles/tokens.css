@@ -1,0 +1,93 @@
+/*
+  Shared foundation tokens — the layer every concept inherits.
+  Spacing, motion, breakpoints and structural rules stay constant across
+  concepts A/B/C so the three prototypes remain comparable and maintainable.
+  Colour and display typography are intentionally NOT fixed here in a
+  brand-final way — each concept layers its own accent/typeface tokens in
+  its own stylesheet (see each concept's theme.css file). Nothing here is a
+  final Artifact brand decision; see docs/strategy.md.
+*/
+
+:root {
+  /* ---- Typeface trio (shared across all three concepts; usage intensity
+     differs per concept, the files do not). Provisional — see docs/strategy.md
+     §7. Loaded via Google Fonts in index.html for this prototype phase;
+     production would self-host. ---- */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* ---- Neutral ramp (shared "paper" system, cool/graphite, NOT GH's warm palette) ---- */
+  --neutral-0: #ffffff;
+  --neutral-50: #f6f7f8;
+  --neutral-100: #eceef0;
+  --neutral-200: #d8dbdf;
+  --neutral-300: #b8bec4;
+  --neutral-400: #8b939c;
+  --neutral-500: #656e78;
+  --neutral-600: #4a5158;
+  --neutral-700: #363b41;
+  --neutral-800: #22262a;
+  --neutral-900: #131517;
+
+  /* ---- Semantic base (light surface; each concept may remap) ---- */
+  --color-bg: var(--neutral-0);
+  --color-bg-raised: var(--neutral-50);
+  --color-text: var(--neutral-900);
+  --color-text-secondary: var(--neutral-600);
+  --color-text-tertiary: var(--neutral-500);
+  --color-border: var(--neutral-200);
+  --color-border-strong: var(--neutral-300);
+  --color-focus: #1857e0;
+
+  /* ---- Spacing scale (4px base) — shared across all concepts ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* Fluid section rhythm */
+  --section-y: clamp(3rem, 4vw + 1.5rem, 7rem);
+  --content-padding-inline: clamp(1.25rem, 4vw, 3rem);
+
+  /* ---- Container widths ---- */
+  --measure: 66ch;
+  --container-max: 1320px;
+
+  /* ---- Motion (respects reduced motion at the token layer) ---- */
+  --duration-fast: 140ms;
+  --duration-base: 240ms;
+  --duration-slow: 600ms;
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /* ---- Structure ---- */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --focus-ring: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-focus);
+
+  /* ---- Z-index scale ---- */
+  --z-nav: 100;
+  --z-skip-link: 200;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 1ms;
+    --duration-base: 1ms;
+    --duration-slow: 1ms;
+  }
+}
+
+/* Breakpoints (documented, used literally in media queries — no custom-media support without a build plugin):
+   480  – small phone
+   700  – large phone / small tablet
+   960  – tablet / nav collapse
+   1200 – desktop
+   1560 – large desktop
+*/
