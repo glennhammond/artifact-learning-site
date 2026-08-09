@@ -1,0 +1,39 @@
+{
+  "pkg": "artifact-learning-site",
+  "globalName": "Artifact",
+  "shape": "package",
+  "entry": ".design-sync/entry.ts",
+  "componentSrcMap": {
+    "Button": "src/design-system/Button.tsx",
+    "Tag": "src/design-system/Tag.tsx",
+    "NavLink": "src/design-system/NavLink.tsx",
+    "Section": "src/design-system/Section.tsx",
+    "LoopDiagram": "src/design-system/LoopDiagram.tsx",
+    "DataStrip": "src/design-system/DataStrip.tsx",
+    "WorkFeature": "src/design-system/WorkFeature.tsx",
+    "WorkList": "src/design-system/WorkFeature.tsx",
+    "EventTraceList": "src/design-system/EventTraceList.tsx",
+    "WorkComposite": "src/design-system/WorkComposite.tsx",
+    "Container": "src/components/layout/Container.tsx",
+    "SkipLink": "src/components/layout/SkipLink.tsx",
+    "Reveal": "src/components/layout/Reveal.tsx",
+    "VisuallyHidden": "src/components/layout/VisuallyHidden.tsx"
+  },
+  "dtsPropsFor": {
+    "Button": "  variant?: \"primary\" | \"secondary\" | \"text\";\n  children: React.ReactNode;\n  className?: string;\n  /** Renders an <a> when href is provided; otherwise a <button type=\"button\">. */\n  href?: string;\n  onClick?: (event: React.MouseEvent) => void;\n  disabled?: boolean;\n  target?: string;\n  rel?: string;\n  \"aria-disabled\"?: boolean | \"true\" | \"false\";",
+    "Tag": "  children: React.ReactNode;\n  tone?: \"neutral\" | \"signal\";\n  mono?: boolean;\n  className?: string;",
+    "NavLink": "  children: React.ReactNode;\n  href?: string;\n  className?: string;\n  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;\n  target?: string;\n  rel?: string;",
+    "Section": "  id: string;\n  kicker?: string;\n  heading?: React.ReactNode;\n  headingId?: string;\n  intro?: React.ReactNode;\n  width?: \"page\" | \"content\" | \"narrow\";\n  density?: \"compact\" | \"default\" | \"expansive\";\n  tone?: \"paper\" | \"ink\";\n  children: React.ReactNode;\n  className?: string;",
+    "LoopDiagram": "  /** The five model stages, rendered as a circular loop (wide) / stacked fallback (narrow). */\n  layers: Array<{\n    index: string;\n    name: string;\n    definition: string;\n    detail: string;\n    artefact: string[];\n  }>;\n  /** The foundation the loop runs on — shown as a base plane, not a stage. */\n  platform: { name: string; definition: string; detail: string };",
+    "DataStrip": "  label: string;\n  lines: string[];\n  /** Marks the strip carrying the meaningful contrast — a single Signal corner mark. */\n  active?: boolean;\n  /** Recedes the strip representing the limited/status-quo view. */\n  muted?: boolean;",
+    "WorkFeature": "  project: {\n    eyebrow: string;\n    question: string;\n    framing: string;\n    status?: string;\n    tags: string[];\n    cta: string;\n    imageNote: string;\n  };\n  stages: Array<{ name: string; definition: string }>;",
+    "WorkList": "  projects: Array<{\n    eyebrow: string;\n    question: string;\n    framing: string;\n    status?: string;\n  }>;",
+    "EventTraceList": "  events: Array<{ name: string; active?: boolean }>;\n  meta?: Array<{ label: string; value: string }>;\n  caption?: string;\n  className?: string;",
+    "WorkComposite": "  /** Accessible label for the SVG placeholder composite; also shown as its caption. */\n  label?: string;",
+    "Container": "  as?: React.ElementType;\n  children: React.ReactNode;\n  className?: string;\n  /** @deprecated use width=\"narrow\" */\n  narrow?: boolean;\n  width?: \"page\" | \"content\" | \"narrow\";",
+    "SkipLink": "  /** Element id to jump to. */\n  targetId?: string;",
+    "Reveal": "  as?: \"div\" | \"section\" | \"article\";\n  children: React.ReactNode;\n  className?: string;\n  revealClassName?: string;\n  id?: string;",
+    "VisuallyHidden": "  children: React.ReactNode;"
+  },
+  "readmeHeader": ".design-sync/conventions.md"
+}
