@@ -1,0 +1,222 @@
+.ds-loop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-7);
+}
+
+/* ---- Direction 1: circular loop, Platform as base plane ---- */
+
+.ds-loop__circular {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.ds-loop__plane {
+  position: absolute;
+  bottom: -22px;
+  width: min(82%, 380px);
+  height: 64px;
+  background: var(--color-bg-raised);
+  border: var(--border-thickness) solid var(--color-border);
+  border-radius: 999px 999px 0 0 / 40px 40px 0 0;
+  border-bottom: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-block-end: var(--space-3);
+}
+
+.ds-loop__svg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  max-width: 440px;
+}
+
+.ds-loop__nodes {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1;
+}
+
+.ds-loop__node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border-radius: var(--radius-node);
+  min-width: 68px;
+  min-height: 68px;
+  justify-content: center;
+  color: var(--color-text);
+  background: var(--color-bg-raised);
+  border: var(--border-thickness) solid var(--color-border);
+  transition: border-color var(--duration-state) var(--ease-in-out),
+    box-shadow var(--duration-state) var(--ease-in-out);
+}
+
+.ds-loop__node span:last-child {
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  font-weight: var(--weight-ui-strong);
+  white-space: nowrap;
+}
+
+.ds-loop__node:hover {
+  border-color: var(--color-text);
+}
+
+/* Selected/active state — a legitimate, single use of Signal (v0.2 §04) */
+.ds-loop__node[data-active="true"] {
+  border-color: var(--color-signal);
+  border-width: var(--border-thickness-focus);
+  box-shadow: 0 0 0 5px color-mix(in oklch, var(--color-signal), transparent 75%);
+}
+
+/* Percentage-based node coordinates so the whole diagram (ring + nodes)
+   scales together with .ds-loop__svg's responsive width instead of nodes
+   staying pinned to the 440px logical SVG size. Set inline via style attr
+   as --nx/--ny (0–1) by LoopDiagram.tsx. */
+.ds-loop__node {
+  left: calc(var(--nx) * 100%);
+  top: calc(var(--ny) * 100%);
+}
+
+/* ---- Direction 2: layered stack, Platform as foundation (compact fallback) ---- */
+
+.ds-loop__stacked {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.ds-loop__stack-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.ds-loop__stack-node {
+  flex: 1 1 100px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  align-items: flex-start;
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-thickness) solid var(--color-border);
+  border-radius: var(--radius-control);
+  background: var(--color-bg-raised);
+  color: var(--color-text);
+  min-height: 44px;
+  text-align: left;
+}
+
+.ds-loop__stack-node span:last-child {
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  font-weight: var(--weight-ui-strong);
+}
+
+.ds-loop__stack-node[data-active="true"] {
+  border-color: var(--color-signal);
+  border-width: var(--border-thickness-focus);
+}
+
+.ds-loop__stack-return {
+  text-align: center;
+}
+
+.ds-loop__stack-platform {
+  border: var(--border-thickness) solid var(--color-border);
+  border-radius: var(--radius-control);
+  padding: var(--space-3) var(--space-4);
+  text-align: center;
+  opacity: 0.85;
+  background: var(--color-bg-raised);
+}
+
+/* ---- Description panel + static legend + breakpoint swap ---- */
+
+.ds-loop__active {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.ds-loop__desc {
+  max-width: var(--measure);
+  text-align: center;
+  font-size: var(--text-lead);
+  min-height: 3em;
+}
+
+.ds-loop__artefact {
+  width: 100%;
+  max-width: 22rem;
+}
+
+.ds-loop__artefact .ds-data-strip {
+  padding: var(--space-4);
+}
+
+.ds-loop__legend {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-6) var(--space-5);
+  padding-block-start: var(--space-6);
+  border-block-start: var(--border-thickness) solid var(--color-border);
+}
+
+.ds-loop__legend-item dt {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-family: var(--type-ui);
+  font-weight: var(--weight-ui-strong);
+  font-size: var(--text-ui-nav);
+  color: var(--color-text-subtle);
+  transition: color var(--duration-state) var(--ease-in-out);
+}
+
+.ds-loop__legend-item dd {
+  margin-block-start: var(--space-2);
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+}
+
+.ds-loop__legend-item[data-active="true"] dt {
+  color: var(--color-signal);
+}
+
+@media (max-width: 700px) {
+  .ds-loop__circular {
+    display: none;
+  }
+
+  .ds-loop__stacked {
+    display: flex;
+  }
+
+  .ds-loop__legend {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,36 @@
+.b-hero {
+  padding-block-start: clamp(2.5rem, 6vw, 5.5rem);
+  padding-block-end: var(--section-y);
+}
+
+.b-hero__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.b-hero h1 {
+  font-size: clamp(1.9rem, 1.2rem + 3vw, 3.25rem);
+  line-height: 1.08;
+  margin-block: var(--space-4);
+  max-width: 15ch;
+}
+
+.b-hero__standfirst {
+  color: var(--b-text-secondary);
+  max-width: 42ch;
+  margin-block-end: var(--space-6);
+}
+
+@media (max-width: 960px) {
+  .b-hero__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .b-loop__pulse {
+    display: none;
+  }
+}

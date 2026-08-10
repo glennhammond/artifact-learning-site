@@ -1,0 +1,84 @@
+/*
+  Signal is reserved for the primary button fill only — the one place on the
+  page where colour marks the single primary action (v0.2 §04, §08).
+  Secondary and text variants stay in Ink; nothing here uses a second accent.
+*/
+
+.ds-btn {
+  font-family: var(--type-ui);
+  font-weight: var(--weight-ui-strong);
+  font-size: var(--text-ui);
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  cursor: pointer;
+  border: var(--border-thickness) solid transparent;
+  border-radius: var(--radius-control);
+  transition: background-color var(--duration-state) var(--ease-in-out),
+    border-color var(--duration-state) var(--ease-in-out),
+    color var(--duration-state) var(--ease-in-out);
+}
+
+.ds-btn--primary {
+  background: var(--color-signal);
+  color: var(--color-ink);
+  padding: var(--space-4) var(--space-5);
+  min-height: 44px;
+}
+
+.ds-btn--primary:hover {
+  background: color-mix(in oklch, var(--color-signal), var(--color-ink) 12%);
+}
+
+.ds-btn--primary:active {
+  background: color-mix(in oklch, var(--color-signal), var(--color-ink) 20%);
+}
+
+.ds-btn--secondary {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-text);
+  padding: calc(var(--space-4) - var(--border-thickness)) var(--space-5);
+  min-height: 44px;
+}
+
+.ds-btn--secondary:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.ds-btn--text {
+  position: relative;
+  padding: 0 0 2px;
+  color: var(--color-text);
+  border-bottom: var(--border-thickness) solid currentColor;
+  border-radius: 0;
+  font-weight: var(--weight-body-strong);
+  font-family: var(--type-body);
+  font-size: var(--text-body);
+}
+
+/* Expands the tap target to the 24px WCAG 2.2 AA minimum without changing
+   the visible underline size (v0.2 restraint principle — no visible padding). */
+.ds-btn--text::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+}
+
+.ds-btn--text:hover {
+  color: var(--color-text-secondary);
+}
+
+.ds-btn[disabled],
+.ds-btn[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Secondary and text variants read var(--color-text)/var(--color-bg), which
+   Section.css remaps inside .ds-section--ink — no separate dark variant
+   needed here (v0.2 §05, single-accent, no second colour on dark). */

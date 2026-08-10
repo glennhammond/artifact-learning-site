@@ -1,0 +1,30 @@
+.concept-c .c-section {
+  padding-block: var(--section-y);
+  border-block-end: 1px solid var(--c-border);
+}
+
+.concept-c .c-section:last-of-type {
+  border-block-end: none;
+}
+
+.concept-c .c-section__head {
+  margin-block-end: var(--space-6);
+}
+
+.concept-c h2.c-heading {
+  font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem);
+  max-width: 24ch;
+}
+
+.concept-c .c-fade {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity var(--duration-slow) var(--ease-standard),
+    transform var(--duration-slow) var(--ease-standard);
+}
+
+.concept-c .c-fade.is-visible {
+  opacity: 1;
+  transform: none;
+}

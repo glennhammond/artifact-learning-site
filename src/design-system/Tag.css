@@ -1,0 +1,28 @@
+.ds-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  font-weight: var(--weight-ui-strong);
+  letter-spacing: 0.02em;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-control);
+  border: var(--border-thickness) solid var(--color-border);
+  color: var(--color-text-secondary);
+  background: transparent;
+}
+
+/* Signal marks consequence, never decoration (v0.2 §04) — this tone is for
+   a genuinely meaningful/active state (e.g. a live event), not routine
+   metadata. Ink text on Signal fill keeps contrast well above AA (~10:1). */
+.ds-tag--signal {
+  background: var(--color-signal);
+  border-color: var(--color-signal);
+  color: var(--color-ink);
+}
+
+.ds-tag--mono {
+  font-family: var(--type-data);
+  font-size: var(--text-data);
+  letter-spacing: 0;
+}

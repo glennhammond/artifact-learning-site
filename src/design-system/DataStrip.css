@@ -1,0 +1,46 @@
+.ds-data-strip {
+  position: relative;
+  border: var(--border-thickness) solid var(--color-border);
+  border-radius: var(--radius-panel);
+  padding: var(--space-5);
+  background: var(--color-bg-raised);
+}
+
+.ds-data-strip--muted {
+  background: transparent;
+  border-style: dashed;
+}
+
+.ds-data-strip--muted .ds-data-strip__lines {
+  color: var(--color-text-subtle);
+}
+
+.ds-data-strip--active {
+  border-color: var(--color-text);
+  border-width: var(--border-thickness-focus);
+}
+
+/* The one Signal mark in the pairing — a small corner flag identifying
+   which panel carries the consequence, not a filled background. */
+.ds-data-strip__mark {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 22px;
+  height: 22px;
+  background: var(--color-signal);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.ds-data-strip__label {
+  margin-block-end: var(--space-3);
+}
+
+.ds-data-strip__lines {
+  font-family: var(--type-data);
+  font-size: var(--text-data);
+  line-height: var(--leading-ui);
+  color: var(--color-text);
+  white-space: pre-wrap;
+  word-break: break-word;
+}

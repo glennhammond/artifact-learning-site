@@ -1,0 +1,58 @@
+/*
+  Concept C — Editorial + Experimental Hybrid.
+  Same near-monochrome light editorial base as A's territory (deliberately —
+  this direction's hypothesis is that the base should recede so the one
+  contained "systems module" reads as a genuine departure). Muted teal
+  accent instead of A's navy, purely so the two are distinguishable at a
+  glance in the concept index. Exploratory, not a final palette.
+*/
+.concept-c {
+  --c-bg: var(--neutral-0);
+  --c-bg-raised: var(--neutral-50);
+  --c-text: var(--neutral-900);
+  --c-text-secondary: var(--neutral-600);
+  --c-border: var(--neutral-200);
+  --c-accent: #2f6b58;
+
+  /* the contained systems module borrows Concept B's graphite/amber/teal language */
+  --c-module-bg: #14171a;
+  --c-module-text: #f3f4f5;
+  --c-module-text-secondary: #a8afb7;
+  --c-module-border: #2b3136;
+  --c-module-accent: #d1893f;
+  --c-module-data: #5fb3a3;
+
+  background: var(--c-bg);
+  color: var(--c-text);
+}
+
+.concept-c .kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-text-secondary);
+}
+
+.concept-c a {
+  color: var(--c-accent);
+}
+
+.concept-c .btn-quiet {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--c-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-bottom: 1px solid currentColor;
+  padding-block-end: 2px;
+}
+
+.concept-c h1,
+.concept-c h2,
+.concept-c h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}

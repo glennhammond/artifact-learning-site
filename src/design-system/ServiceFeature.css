@@ -1,0 +1,132 @@
+.ds-service-feature {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  margin-block-end: var(--space-9);
+}
+
+@media (min-width: 700px) {
+  .ds-service-feature {
+    /* text carries the primacy here, not the imagery — the reverse
+       weighting from WorkFeature, which is proof-led */
+    grid-template-columns: 7fr 5fr;
+    align-items: start;
+  }
+}
+
+.ds-service-feature__body h3 {
+  margin-block-start: var(--space-2);
+  font-size: var(--text-h1);
+}
+
+.ds-service-feature__question {
+  margin-block-start: var(--space-4);
+  font-family: var(--type-heading);
+  font-weight: var(--weight-heading-alt);
+  font-size: var(--text-h3);
+  max-width: 34ch;
+}
+
+.ds-service-feature__framing {
+  margin-block-start: var(--space-4);
+  color: var(--color-text-secondary);
+  max-width: var(--measure);
+}
+
+.ds-service-feature__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block-start: var(--space-6);
+}
+
+.ds-service-feature__figure {
+  padding-block-start: var(--space-2);
+}
+
+.ds-service-specimen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.ds-service-specimen svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--color-bg-raised);
+}
+
+.ds-service-specimen__caption {
+  padding-block-start: var(--space-3);
+  border-block-start: var(--border-thickness) solid var(--color-border);
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  color: var(--color-text-subtle);
+}
+
+/* ---- secondary offers ---- */
+
+.ds-service-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-service-list li {
+  padding-block: var(--space-5);
+  border-block-start: var(--border-thickness) solid var(--color-border);
+  display: flex;
+  gap: var(--space-5);
+}
+
+.ds-service-list__mark {
+  flex: none;
+  width: 96px;
+  padding-block-start: var(--space-1);
+}
+
+.ds-service-list__mark svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ds-service-list__mono {
+  font-family: var(--type-data);
+  font-size: 0.625rem;
+  line-height: var(--leading-ui);
+  color: var(--color-text-subtle);
+}
+
+.ds-service-list__body {
+  flex: 1;
+}
+
+.ds-service-list__title {
+  font-family: var(--type-heading);
+  font-weight: var(--weight-heading-alt);
+  font-size: var(--text-h3);
+  margin-block-start: var(--space-1);
+}
+
+.ds-service-list__question {
+  margin-block-start: var(--space-2);
+  font-family: var(--type-ui);
+  font-weight: var(--weight-ui-strong);
+  font-size: var(--text-small);
+  color: var(--color-text);
+  max-width: 48ch;
+}
+
+.ds-service-list__framing {
+  margin-block-start: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: var(--text-small);
+  max-width: 60ch;
+}
+
+@media (max-width: 480px) {
+  .ds-service-list__mark {
+    width: 64px;
+  }
+}

@@ -1,0 +1,51 @@
+.home-philosophy__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  margin-block-start: var(--space-2);
+}
+
+@media (min-width: 700px) {
+  .home-philosophy__row {
+    /* asymmetric — the row grows in width left to right rather than three
+       equal columns, and drifts across the grid */
+    grid-template-columns: 3fr 4fr 5fr;
+    align-items: end;
+  }
+
+  .home-philosophy__item:nth-child(2) {
+    margin-inline-start: 8%;
+  }
+
+  .home-philosophy__item:nth-child(3) {
+    margin-inline-start: 16%;
+  }
+}
+
+.home-philosophy__item {
+  position: relative;
+}
+
+.home-philosophy__word {
+  font-family: var(--type-display);
+  font-weight: var(--weight-display);
+  font-size: clamp(1.75rem, 1.3rem + 2vw, 2.75rem);
+  line-height: 1.05;
+}
+
+.home-philosophy__annotation {
+  margin-block-start: var(--space-3);
+  font-family: var(--type-data);
+  font-size: var(--text-data);
+  color: var(--color-text-subtle);
+}
+
+/* The one Signal moment: where "Build it." turns into "Improve it." */
+.home-philosophy__signal {
+  position: absolute;
+  top: -1.25rem;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: var(--color-signal);
+}

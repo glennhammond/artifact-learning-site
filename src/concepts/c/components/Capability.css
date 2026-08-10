@@ -1,0 +1,27 @@
+.c-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.c-capability h3 {
+  font-size: 1.0625rem;
+  margin-block: var(--space-2);
+}
+
+.c-capability p:last-child {
+  color: var(--c-text-secondary);
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 960px) {
+  .c-capability-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .c-capability-grid {
+    grid-template-columns: 1fr;
+  }
+}

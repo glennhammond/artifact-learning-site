@@ -1,0 +1,20 @@
+.a-cta h2 {
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.5rem);
+  max-width: 20ch;
+  margin-block-end: var(--space-5);
+}
+
+.a-cta__link {
+  font-size: 1.0625rem;
+}
+
+.a-cta__email {
+  margin-block-start: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--a-text-secondary);
+}
+
+.a-cta__note {
+  color: var(--a-text-tertiary, var(--a-text-secondary));
+}

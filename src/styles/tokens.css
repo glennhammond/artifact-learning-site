@@ -1,0 +1,195 @@
+/*
+  Artifact design tokens — v0.2 (confirmed) + candidate values, per
+  Artifact Learning Brand Identity & Digital Design Language v0.2 and
+  docs/consolidation-decision.md. Semantic names throughout; components
+  reference roles (--color-signal, --type-heading), never raw values.
+
+  OKLCH is the source of truth for colour (v0.2 §03); a hex fallback is
+  declared first for engines without OKLCH support, then overridden.
+*/
+
+:root {
+  /* ============ TYPOGRAPHY ============ */
+  --type-display: "ITC Avant Garde Gothic Std", "Avenir Next", ui-sans-serif, system-ui, sans-serif;
+  --type-heading: "ITC Avant Garde Gothic Std", "Avenir Next", ui-sans-serif, system-ui, sans-serif;
+  --type-body: "Source Sans 3", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --type-ui: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --type-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Display/heading weights — confirmed usable range is Medium 500–Bold 700 (v0.2 §02) */
+  --weight-display: 700;
+  --weight-heading: 600;
+  --weight-heading-alt: 500;
+  --weight-body: 400;
+  --weight-body-strong: 600;
+  --weight-ui: 400;
+  --weight-ui-strong: 500;
+
+  /* Fluid type scale. Avant Garde is reserved for display/H1/H2/selected H3
+     and never drops below ~20px (v0.2 §02 — "the practical lower limit"). */
+  --text-display: clamp(2.75rem, 2rem + 3.2vw, 4.75rem);
+  --text-h1: clamp(2.25rem, 1.75rem + 2.2vw, 3.5rem);
+  --text-h2: clamp(1.75rem, 1.5rem + 1.1vw, 2.375rem);
+  --text-h3: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+  --text-lead: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --text-body: 1.0625rem;
+  --text-small: 0.9375rem;
+  --text-ui: 0.8125rem;
+  --text-ui-nav: 0.875rem;
+  --text-data: 0.8125rem;
+  --text-kicker: 0.6875rem;
+
+  --leading-heading: 1.1;
+  --leading-body: 1.65;
+  --leading-ui: 1.4;
+
+  /* ============ COLOUR ============ */
+  /* Hex fallback declared first, OKLCH overrides where supported. */
+  --color-ink: #12141b;
+  --color-ink: oklch(16% 0.016 258);
+  --color-paper: #f7f5f0;
+  --color-paper: oklch(97% 0.006 95);
+  --color-signal: #d7f24a;
+  --color-signal: oklch(84% 0.19 128);
+
+  --color-text-secondary: #6c7078;
+  --color-text-secondary: oklch(52% 0.012 258);
+  --color-text-subtle: #8b8f96;
+  --color-text-subtle: oklch(62% 0.01 258);
+  --color-border: #d9dade;
+  --color-border: oklch(88% 0.008 258);
+  --color-surface-subtle: #eeece6;
+  --color-surface-subtle: oklch(94% 0.006 95);
+  --color-surface-strong: #1c202a;
+  --color-surface-strong: oklch(22% 0.018 258);
+
+  --color-semantic-success: #4f9d5c;
+  --color-semantic-success: oklch(58% 0.13 150);
+  --color-semantic-warning: #c99a3a;
+  --color-semantic-warning: oklch(75% 0.14 75);
+  --color-semantic-error: #b8433f;
+  --color-semantic-error: oklch(56% 0.19 25);
+  --color-semantic-info: #3f74a8;
+  --color-semantic-info: oklch(58% 0.1 240);
+
+  /* Semantic roles — light (Paper-led) surface, the homepage default */
+  --color-bg: var(--color-paper);
+  --color-bg-raised: var(--color-surface-subtle);
+  --color-text: var(--color-ink);
+  --color-text-inverse: var(--color-paper);
+  --color-focus: var(--color-ink);
+
+  /* Data-series palette for the loop diagram / data strip — Ink neutrals
+     plus Signal reserved for the single active/consequential item only. */
+  --color-data-series-1: var(--color-ink);
+  --color-data-series-2: var(--color-text-secondary);
+  --color-data-series-3: var(--color-text-subtle);
+
+  /* ============ SPACING (8px-rooted rhythm) ============ */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  --section-y: clamp(3rem, 4vw + 1.5rem, 7rem);
+
+  /* Section-rhythm variants (Phase 2.2 §9) — sections alternate density
+     rather than sharing one uniform padding-block value. */
+  --section-y-compact: clamp(2rem, 2.5vw + 1rem, 3.5rem);
+  --section-y-expansive: clamp(4rem, 6vw + 2rem, 9rem);
+
+  /* ============ LAYOUT ============
+     Three containment tiers (Phase 2.2 §4): page (the editorial grid max —
+     nav, hero, the dark model section, Work), content (inset — Approach,
+     ecosystem; quieter sections that shouldn't claim the full grid width)
+     and narrow (reading measure — long-form prose, the final CTA). The
+     gutter is fluid and keeps growing past the old fixed 3rem cap, so
+     outer whitespace increases gracefully on very wide screens instead of
+     the page grid feeling like it stretches edge to edge. */
+  --page-gutter: clamp(1.5rem, 1rem + 2.2vw, 4rem);
+  --page-max: 1440px;
+  --content-max: 1180px;
+  --measure: 66ch;
+  --content-padding-inline: var(--page-gutter);
+  --container-max: var(--page-max);
+  --grid-columns: 12;
+  --gutter: var(--space-5);
+
+  /* ============ GEOMETRY ============ */
+  --radius-control: 2px;
+  --radius-panel: 0px;
+  --radius-node: 50%;
+  --border-thickness: 1px;
+  --border-thickness-focus: 2px;
+  --focus-ring-offset: 3px;
+
+  /* ============ MOTION ============ */
+  --duration-state: 140ms;
+  --duration-reveal: 280ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Legacy aliases still referenced by the archived concepts */
+  --duration-fast: var(--duration-state);
+  --duration-base: var(--duration-reveal);
+  --duration-slow: 600ms;
+  --ease-standard: var(--ease-in-out);
+  --radius-sm: var(--radius-control);
+  --radius-md: 4px;
+  --font-display: var(--type-display);
+  --font-body: var(--type-body);
+  --font-mono: var(--type-data);
+  --color-focus-ring: var(--color-focus);
+
+  --focus-ring: 0 0 0 var(--border-thickness-focus) var(--color-bg),
+    0 0 0 calc(var(--border-thickness-focus) + var(--focus-ring-offset)) var(--color-focus);
+
+  /* ============ Z-INDEX ============ */
+  --z-nav: 100;
+  --z-skip-link: 200;
+
+  /* ============ ARCHIVE ONLY ============
+     The pre-v0.2 neutral ramp, kept solely so the archived Concept A/B/C
+     prototypes under /archive still render correctly. Names are unique
+     (no --neutral-* token exists in the v0.2 system above), so this cannot
+     leak into or override anything on the consolidated homepage. Do not
+     reference these from new work — remove this block once the archive is
+     retired (see docs/design-system.md "Archive"). */
+  --neutral-0: #ffffff;
+  --neutral-50: #f6f7f8;
+  --neutral-100: #eceef0;
+  --neutral-200: #d8dbdf;
+  --neutral-300: #b8bec4;
+  --neutral-400: #8b939c;
+  --neutral-500: #656e78;
+  --neutral-600: #4a5158;
+  --neutral-700: #363b41;
+  --neutral-800: #22262a;
+  --neutral-900: #131517;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-state: 1ms;
+    --duration-reveal: 1ms;
+    --duration-fast: 1ms;
+    --duration-base: 1ms;
+    --duration-slow: 1ms;
+  }
+}
+
+/* Breakpoints (documented, used literally in media queries — no custom-media
+   support without a build plugin, and the brief asks us not to add a
+   dependency for something native CSS already does):
+   480  – small phone
+   700  – large phone / small tablet
+   960  – tablet / nav collapse
+   1200 – desktop
+   1560 – large desktop
+*/

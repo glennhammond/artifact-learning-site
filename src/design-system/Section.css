@@ -1,0 +1,70 @@
+.ds-section {
+  padding-block: var(--section-y);
+}
+
+/* Section rhythm (Phase 2.2 §9) — density varies deliberately rather than
+   every section sharing the same top/bottom padding. */
+.ds-section--compact {
+  padding-block: var(--section-y-compact);
+}
+
+.ds-section--expansive {
+  padding-block: var(--section-y-expansive);
+}
+
+.ds-section--paper {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Bounded to the Model section only — dark is a technical-context mode,
+   not the homepage default (v0.2; docs/consolidation-decision.md). Redefines
+   the semantic tokens locally (the same "surface remap" pattern used across
+   the Artifact/GH family) so every component underneath — Button, Tag,
+   DataStrip, LoopDiagram — resolves the correct dark-surface colours and
+   focus ring without a per-component dark variant. */
+.ds-section--ink {
+  --color-bg: var(--color-ink);
+  --color-bg-raised: var(--color-surface-strong);
+  --color-text: var(--color-paper);
+  --color-text-secondary: var(--color-text-subtle);
+  --color-focus: var(--color-paper);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.ds-section--ink .kicker {
+  color: var(--color-text-subtle);
+}
+
+.ds-section__head {
+  max-width: var(--measure);
+  margin-block-end: var(--space-7);
+}
+
+.ds-section__heading {
+  margin-block-start: var(--space-2);
+}
+
+.ds-section__intro {
+  margin-block-start: var(--space-4);
+  font-family: var(--type-body);
+  font-size: var(--text-lead);
+  color: var(--color-text-secondary);
+}
+
+.ds-section--ink .ds-section__intro {
+  color: var(--color-text-subtle);
+}
+
+.ds-fade {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity var(--duration-reveal) var(--ease-out),
+    transform var(--duration-reveal) var(--ease-out);
+}
+
+.ds-fade.is-visible {
+  opacity: 1;
+  transform: none;
+}

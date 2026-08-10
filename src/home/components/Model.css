@@ -1,0 +1,20 @@
+/* The signature moment — heading gets more scale/presence than the
+   default H2 treatment (brief §11: "a major Artifact moment"). */
+.home-model .ds-section__head {
+  max-width: none;
+  text-align: center;
+  margin-inline: auto;
+  margin-block-end: var(--space-9);
+}
+
+.home-model .ds-section__heading {
+  font-size: var(--text-h1);
+}
+
+.home-model__caption {
+  max-width: 46ch;
+  margin-inline: auto;
+  margin-block-start: var(--space-2);
+  text-align: center;
+  color: var(--color-text-secondary);
+}

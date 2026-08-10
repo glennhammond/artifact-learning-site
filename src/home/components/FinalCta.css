@@ -1,0 +1,15 @@
+.home-cta {
+  padding-block: var(--section-y);
+  text-align: center;
+}
+
+.home-cta__supporting {
+  margin-block-start: var(--space-4);
+  margin-inline: auto;
+  max-width: 46ch;
+  color: var(--color-text-secondary);
+}
+
+.home-cta__actions {
+  margin-block: var(--space-6);
+}

@@ -1,0 +1,26 @@
+.a-tech__intro {
+  color: var(--a-text-secondary);
+  max-width: var(--measure);
+  margin-block-end: var(--space-6);
+}
+
+.a-tech-list {
+  display: grid;
+  gap: 0;
+}
+
+.a-tech-list li {
+  display: flex;
+  justify-content: space-between;
+  padding-block: var(--space-3);
+  border-block-start: 1px solid var(--a-border);
+  font-size: 0.9375rem;
+}
+
+.a-tech-list__status {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--a-text-secondary);
+}

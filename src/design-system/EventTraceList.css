@@ -1,0 +1,93 @@
+.ds-trace-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.ds-trace-list__label {
+  padding-inline-start: var(--space-5);
+}
+
+.ds-trace-list__events {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-inline-start: var(--space-5);
+}
+
+/* the thin rail the events sit on */
+.ds-trace-list__events::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  bottom: 6px;
+  width: var(--border-thickness);
+  background: var(--color-border);
+}
+
+.ds-trace-list__events li {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  font-family: var(--type-data);
+  font-size: var(--text-small);
+  color: var(--color-text-subtle);
+}
+
+.ds-trace-list__dot {
+  position: absolute;
+  left: calc(-1 * var(--space-5) + 1px);
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-node);
+  background: var(--color-text-subtle);
+}
+
+/* The one active/consequential event — the single Signal moment in the trace */
+li[data-active="true"] .ds-trace-list__dot {
+  background: var(--color-signal);
+  width: 9px;
+  height: 9px;
+  left: calc(-1 * var(--space-5) - 1px);
+  top: 5px;
+}
+
+li[data-active="true"] .ds-trace-list__name {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.ds-trace-list__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--space-5);
+  row-gap: var(--space-2);
+  padding-inline-start: var(--space-5);
+  padding-block-start: var(--space-5);
+  border-block-start: var(--border-thickness) solid var(--color-border);
+}
+
+.ds-trace-list__meta div {
+  display: flex;
+  gap: var(--space-2);
+  font-family: var(--type-data);
+  font-size: var(--text-data);
+}
+
+.ds-trace-list__meta dt {
+  color: var(--color-text-subtle);
+}
+
+.ds-trace-list__meta dt::after {
+  content: ":";
+}
+
+.ds-trace-list__meta dd {
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
+}

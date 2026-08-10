@@ -1,0 +1,76 @@
+.home-hero {
+  padding-block: clamp(3rem, 6vw + 1rem, 6rem) var(--section-y-expansive);
+  border-block-end: var(--border-thickness) solid var(--color-border);
+}
+
+.home-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 900px) {
+  .home-hero__grid {
+    /* ~60/40 — the headline carries the emphasis, the trace occupies the
+       secondary plane and may run taller than the primary column rather
+       than being centred against it (v0.4 §4). */
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    align-items: start;
+  }
+}
+
+.home-hero__primary .kicker {
+  margin-block-end: var(--space-5);
+}
+
+.home-hero__primary h1 {
+  /* Each authored fragment in Hero.tsx is short enough to hold its own
+     line without an additional width-driven wrap at any of the required
+     widths (verified 375–1728px+). */
+  max-width: 20ch;
+  margin-block-end: var(--space-6);
+}
+
+.home-hero__standfirst {
+  font-size: var(--text-lead);
+  color: var(--color-text-secondary);
+  max-width: 46ch;
+  margin-block-end: var(--space-4);
+}
+
+.home-hero__standfirst--secondary {
+  font-size: var(--text-small);
+  color: var(--color-text-subtle);
+  max-width: 48ch;
+  margin-block-end: var(--space-7);
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.home-hero__trace-plane {
+  padding-block-start: var(--space-2);
+}
+
+@media (min-width: 900px) {
+  .home-hero__trace-plane {
+    /* the integrated artefact column — a vertical plane beside the
+       headline, not a separate strip underneath it */
+    padding-inline-start: var(--space-7);
+    border-inline-start: var(--border-thickness) solid var(--color-border);
+  }
+}
+
+.home-hero__trace-statement {
+  margin-block-start: var(--space-6);
+  padding-inline-start: var(--space-5);
+  font-family: var(--type-body);
+  font-style: italic;
+  color: var(--color-text-subtle);
+  font-size: var(--text-small);
+  max-width: 34ch;
+}

@@ -1,0 +1,29 @@
+.a-lifecycle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.a-lifecycle li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.a-lifecycle .kicker {
+  font-weight: 400;
+}
+
+.a-lifecycle__arrow {
+  color: var(--a-text-secondary);
+  font-weight: 400;
+}
+
+.a-lifecycle__caption {
+  margin-block-start: var(--space-5);
+  color: var(--a-text-secondary);
+  max-width: 50ch;
+}

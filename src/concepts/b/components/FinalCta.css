@@ -1,0 +1,12 @@
+.b-cta h2 {
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.5rem);
+  max-width: 22ch;
+  margin-block-end: var(--space-5);
+}
+
+.b-cta__email {
+  margin-block-start: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--b-text-secondary);
+}

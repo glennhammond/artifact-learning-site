@@ -1,0 +1,108 @@
+.home-nav {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  background: transparent;
+  border-block-end: var(--border-thickness) solid transparent;
+  transition: background-color var(--duration-state) var(--ease-in-out),
+    border-color var(--duration-state) var(--ease-in-out);
+}
+
+/* Subtle paper/translucent surface only once the page has scrolled — at
+   rest, the header reads as part of the hero rather than a fixed chrome
+   bar (v0.4 §1). No shadow, ever. */
+.home-nav[data-scrolled="true"] {
+  background: color-mix(in oklch, var(--color-bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-block-end-color: var(--color-border);
+}
+
+.home-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+}
+
+.home-nav__wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--type-display);
+  font-weight: var(--weight-heading);
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+/* A restrained device derived from the Artifact visual language — the
+   same signal mark used to identify a consequential/active state
+   elsewhere — standing in for the brand, not a logo. */
+.home-nav__mark {
+  width: 9px;
+  height: 9px;
+  background: var(--color-signal);
+  border-radius: var(--radius-control);
+}
+
+.home-nav__toggle {
+  display: none;
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-thickness) solid var(--color-border);
+  border-radius: var(--radius-control);
+  min-height: 44px;
+}
+
+.home-nav__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-7);
+}
+
+.home-nav__menu ul {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.home-nav__cta {
+  font-size: var(--text-ui);
+}
+
+@media (max-width: 760px) {
+  .home-nav__toggle {
+    display: block;
+  }
+
+  .home-nav__menu {
+    position: absolute;
+    inset-inline: 0;
+    top: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-5);
+    background: var(--color-bg);
+    border-block-end: var(--border-thickness) solid var(--color-border);
+    padding: var(--space-5) var(--page-gutter) var(--space-6);
+    display: none;
+  }
+
+  .home-nav__menu[data-open="true"] {
+    display: flex;
+  }
+
+  .home-nav__menu ul {
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 100%;
+  }
+
+  .home-nav__cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
