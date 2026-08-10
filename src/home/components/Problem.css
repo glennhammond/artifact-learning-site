@@ -1,13 +1,13 @@
 .home-problem__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-8);
+  gap: var(--space-7);
+  align-items: start;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 700px) {
   .home-problem__grid {
-    grid-template-columns: 5fr 7fr;
-    align-items: start;
+    grid-template-columns: 7fr 5fr;
   }
 }
 
@@ -20,126 +20,23 @@
 .home-problem__body {
   font-size: var(--text-lead);
   color: var(--color-text-secondary);
-  max-width: 42ch;
-}
-
-/* ---- the comparison composition ---- */
-
-.home-problem__composition {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: var(--space-6);
-}
-
-.home-problem__before {
-  flex: 0 1 200px;
-}
-
-.home-problem__transition {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-2);
-  flex: 0 0 auto;
-  align-self: center;
-  padding-block: var(--space-2);
-}
-
-.home-problem__transition-line {
-  width: var(--border-thickness);
-  height: 20px;
-  background: var(--color-border);
-}
-
-.home-problem__transition-label {
-  white-space: nowrap;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-}
-
-@media (min-width: 620px) {
-  .home-problem__transition-label {
-    writing-mode: horizontal-tb;
-  }
-
-  .home-problem__transition {
-    flex-direction: row;
-  }
-
-  .home-problem__transition-line {
-    width: 28px;
-    height: var(--border-thickness);
-  }
-}
-
-/* the richer record, deliberately opening up wider/taller than the
-   compact completion panel beside it (content doc §3 visual direction) */
-.home-problem__after {
-  position: relative;
-  flex: 1 1 380px;
-  border: var(--border-thickness-focus) solid var(--color-text);
-  background: var(--color-bg-raised);
-  padding: var(--space-6);
-}
-
-.home-problem__after-mark {
-  width: 26px;
-  height: 26px;
-}
-
-.home-problem__after-label {
-  margin-block-end: var(--space-5);
-}
-
-.home-problem__events {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-4);
-}
-
-@media (min-width: 560px) {
-  .home-problem__events {
-    grid-template-columns: 1fr 1fr;
-    column-gap: var(--space-6);
-  }
-}
-
-.home-problem__event-group {
-  padding-block-start: var(--space-3);
-  border-block-start: var(--border-thickness) solid var(--color-border);
-}
-
-.home-problem__event-lines {
-  font-family: var(--type-data);
-  font-size: var(--text-data);
-  line-height: var(--leading-ui);
-  color: var(--color-text);
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.home-problem__annotation {
-  margin-block-start: var(--space-2);
-  padding-inline-start: var(--space-3);
-  border-inline-start: var(--border-thickness) solid var(--color-border);
-  font-family: var(--type-ui);
-  font-size: var(--text-ui);
-  font-style: italic;
-  color: var(--color-text-secondary);
+  max-width: 46ch;
 }
 
 .home-problem__closing {
-  margin-block-start: var(--space-8);
+  margin-block-start: var(--space-2);
   font-family: var(--type-heading);
   font-weight: var(--weight-heading-alt);
   font-size: var(--text-h3);
   max-width: 30ch;
 }
 
-.home-problem__caveat {
-  margin-block-start: var(--space-3);
-  font-family: var(--type-ui);
-  font-size: var(--text-ui);
-  color: var(--color-text-subtle);
+.home-problem__abstraction {
+  max-width: 260px;
+}
+
+@media (min-width: 700px) {
+  .home-problem__abstraction {
+    justify-self: end;
+  }
 }

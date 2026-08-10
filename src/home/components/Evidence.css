@@ -1,0 +1,165 @@
+/* ---- the before/after comparison (relocated from Problem) ---- */
+
+.home-evidence__composition {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+
+.home-evidence__before {
+  flex: 0 1 220px;
+}
+
+.home-evidence__transition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 0 0 auto;
+  align-self: center;
+  padding-block: var(--space-2);
+}
+
+.home-evidence__transition-line {
+  width: var(--border-thickness);
+  height: 20px;
+  background: var(--color-border);
+}
+
+.home-evidence__transition-label {
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+@media (min-width: 620px) {
+  .home-evidence__transition-label {
+    writing-mode: horizontal-tb;
+  }
+
+  .home-evidence__transition {
+    flex-direction: row;
+  }
+
+  .home-evidence__transition-line {
+    width: 28px;
+    height: var(--border-thickness);
+  }
+}
+
+.home-evidence__after {
+  position: relative;
+  flex: 1 1 380px;
+  border: var(--border-thickness-focus) solid var(--color-text);
+  background: var(--color-bg-raised);
+  padding: var(--space-6);
+}
+
+.home-evidence__after-mark {
+  width: 26px;
+  height: 26px;
+}
+
+.home-evidence__after-label {
+  margin-block-end: var(--space-5);
+}
+
+.home-evidence__events {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 560px) {
+  .home-evidence__events {
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-6);
+  }
+}
+
+.home-evidence__event-group {
+  padding-block-start: var(--space-3);
+  border-block-start: var(--border-thickness) solid var(--color-border);
+}
+
+.home-evidence__event-lines {
+  font-family: var(--type-data);
+  font-size: var(--text-data);
+  line-height: var(--leading-ui);
+  color: var(--color-text);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.home-evidence__annotation {
+  margin-block-start: var(--space-2);
+  padding-inline-start: var(--space-3);
+  border-inline-start: var(--border-thickness) solid var(--color-border);
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+.home-evidence__caveat {
+  margin-block-start: var(--space-4);
+  font-family: var(--type-ui);
+  font-size: var(--text-ui);
+  color: var(--color-text-subtle);
+}
+
+/* ---- the "does not prove" distinction ---- */
+
+.home-evidence__distinction {
+  margin-block-start: var(--space-9);
+  padding-block-start: var(--space-7);
+  padding-inline-start: var(--space-5);
+  border-block-start: var(--border-thickness) solid var(--color-border);
+  border-inline-start: var(--border-thickness-focus) solid var(--color-text);
+  max-width: var(--measure);
+}
+
+.home-evidence__distinction h3 {
+  font-size: var(--text-h3);
+}
+
+.home-evidence__distinction-body {
+  margin-block-start: var(--space-3);
+  color: var(--color-text-secondary);
+}
+
+.home-evidence__boundary-label {
+  margin-block-start: var(--space-5);
+}
+
+.home-evidence__boundary {
+  margin-block-start: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.home-evidence__boundary li {
+  font-family: var(--type-ui);
+  font-weight: var(--weight-ui-strong);
+  color: var(--color-text);
+  padding-inline-start: var(--space-4);
+  position: relative;
+}
+
+.home-evidence__boundary li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: var(--border-thickness);
+  background: var(--color-text-subtle);
+}
+
+.home-evidence__distinction-closing {
+  margin-block-start: var(--space-5);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}

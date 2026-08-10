@@ -7,3 +7,4 @@ export { DataStrip } from "./DataStrip";
 export { WorkFeature, WorkList } from "./WorkFeature";
 export { EventTraceList } from "./EventTraceList";
 export { WorkComposite } from "./WorkComposite";
+export { ServiceFeature, ServiceList } from "./ServiceFeature";

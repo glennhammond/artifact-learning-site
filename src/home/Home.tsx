@@ -3,27 +3,29 @@ import { SkipLink } from "../components/layout/SkipLink";
 import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
 import { Problem } from "./components/Problem";
-import { TransitionDesignObserve } from "./components/TransitionDesignObserve";
-import { Model } from "./components/Model";
+import { Services } from "./components/Services";
 import { Work } from "./components/Work";
-import { Capability } from "./components/Capability";
-import { TransitionToolFollows } from "./components/TransitionToolFollows";
+import { ProductPhilosophy } from "./components/ProductPhilosophy";
+import { Model } from "./components/Model";
 import { Approach } from "./components/Approach";
-import { ArtifactTech } from "./components/ArtifactTech";
-import { CommercialStatement } from "./components/CommercialStatement";
+import { Capability } from "./components/Capability";
+import { Evidence } from "./components/Evidence";
+import { Platform } from "./components/Platform";
+import { Practice } from "./components/Practice";
 import { FinalCta } from "./components/FinalCta";
 import { Footer } from "./components/Footer";
 
 /**
- * The consolidated Artifact Learning homepage — the primary v0.x foundation
- * this phase produces. See docs/consolidation-decision.md for what survived
- * from Concepts A/B/C and why, and docs/design-system.md for the token and
- * component reference this page is built from. Content per "Artifact
- * Learning Homepage Content & Visual Direction v0.3".
+ * The Phase 2 commercially repositioned Artifact Learning homepage. See
+ * docs/strategy/phase-1-strategic-ia-homepage-definition.md for the strategy
+ * this implements and docs/strategy/phase-2-homepage-implementation-report.md
+ * for what changed. Section order is the strategy's recommended sequence:
+ * Hero → Problem → Services → Work → Product Philosophy → Model → Approach
+ * → Capability → Evidence → Platform → Practice → Final CTA.
  */
 export function Home() {
   useEffect(() => {
-    document.title = "Artifact Learning — Digital learning as a product, not a course.";
+    document.title = "Artifact Learning — Develop capability, not just completion.";
   }, []);
 
   return (
@@ -33,14 +35,15 @@ export function Home() {
       <main id="main">
         <Hero />
         <Problem />
-        <TransitionDesignObserve />
-        <Model />
+        <Services />
         <Work />
-        <Capability />
-        <TransitionToolFollows />
+        <ProductPhilosophy />
+        <Model />
         <Approach />
-        <ArtifactTech />
-        <CommercialStatement />
+        <Capability />
+        <Evidence />
+        <Platform />
+        <Practice />
         <FinalCta />
       </main>
       <Footer />

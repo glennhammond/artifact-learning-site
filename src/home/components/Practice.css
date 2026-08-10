@@ -1,18 +1,26 @@
-.home-commercial {
+.home-practice {
   padding-block: var(--section-y-expansive);
   border-block-start: var(--border-thickness) solid var(--color-border);
 }
 
-.home-commercial__statement {
+.home-practice .kicker {
+  margin-block-end: var(--space-5);
+}
+
+.home-practice__statement {
   font-family: var(--type-heading);
   font-weight: var(--weight-heading);
   font-size: var(--text-h1);
   max-width: 18ch;
 }
 
-.home-commercial__supporting {
-  margin-block-start: var(--space-6);
+.home-practice__body {
+  margin-block-start: var(--space-5);
   color: var(--color-text-secondary);
   font-size: var(--text-lead);
-  max-width: 56ch;
+  max-width: 60ch;
+}
+
+.home-practice__body + .home-practice__body {
+  margin-block-start: var(--space-4);
 }

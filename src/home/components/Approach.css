@@ -99,8 +99,10 @@
 
 @media (min-width: 700px) {
   .home-approach-legend {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: var(--space-6);
+    /* sized so all six stages hold one row at content width rather than
+       five-plus-a-widow (verified at 1024/1440/1728) */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-5) var(--space-6);
   }
 }
 

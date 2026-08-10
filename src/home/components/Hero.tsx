@@ -11,15 +11,13 @@ export function Hero() {
         <div className="home-hero__grid">
           <div className="home-hero__primary">
             <p className="kicker">{hero.eyebrow}</p>
-            {/* Authored three-line break for hero.headline — short fragments that
-                hold their line at any viewport/display-scale combination, rather
-                than letting the browser wrap "...as a product," awkwardly mid-clause. */}
+            {/* Authored line break for hero.headline — holds its shape at any
+                viewport/display-scale combination rather than an awkward
+                browser wrap mid-clause. */}
             <h1>
-              Digital learning
+              Develop capability,
               <br />
-              as a product,
-              <br />
-              not a course.
+              not just completion.
             </h1>
             <p className="home-hero__standfirst">{hero.standfirst}</p>
             <p className="home-hero__standfirst home-hero__standfirst--secondary">
@@ -28,6 +26,9 @@ export function Hero() {
             <div className="home-hero__actions">
               <Button variant="primary" href={hero.ctaHref}>
                 {hero.cta}
+              </Button>
+              <Button variant="text" href={hero.ctaSecondaryHref}>
+                {hero.ctaSecondary} <span aria-hidden="true">→</span>
               </Button>
             </div>
           </div>

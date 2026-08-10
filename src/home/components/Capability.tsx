@@ -1,5 +1,5 @@
 import { Section } from "../../design-system/Section";
-import { capabilityGroups, capabilityIntro } from "../../content/shared";
+import { capabilityGroups, capabilityIntro, transitionToolFollows } from "../../content/shared";
 import "./Capability.css";
 
 /** A quiet low→high fidelity progression — no icons (content doc §9.01, §9.04). */
@@ -100,6 +100,23 @@ export function Capability() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Retained principle, folded in as the closing statement rather than
+          a standalone section (Phase 2 strategy §11/§6). */}
+      <div className="home-capability-toolfollows">
+        <div className="home-capability-toolfollows__copy">
+          <p className="home-capability-toolfollows__statement">{transitionToolFollows.statement}</p>
+          <p className="home-capability-toolfollows__supporting">{transitionToolFollows.supporting}</p>
+        </div>
+        <dl className="home-capability-toolfollows__tools">
+          {transitionToolFollows.tools.map((tool) => (
+            <div className="home-capability-toolfollows__tool" key={tool.name}>
+              <dt>{tool.name}</dt>
+              <dd>{tool.when}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </Section>
   );

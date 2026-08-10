@@ -117,3 +117,28 @@
 .home-tech-inspector .kicker {
   flex: none;
 }
+
+/* Analytics stays on the light surface, deliberately — it's a Concept-stage
+   idea, not shipped tooling like the Inspector fragment above, so it
+   doesn't earn the same "real instrument" dark-surface treatment. */
+.home-tech-analytics {
+  border: var(--border-thickness) dashed var(--color-border);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 220px;
+}
+
+.home-tech-analytics p {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  font-family: var(--type-data);
+  font-size: var(--text-data);
+  color: var(--color-text-secondary);
+}
+
+.home-tech-analytics .kicker {
+  flex: none;
+}

@@ -1,7 +1,7 @@
 import { Section } from "../../design-system/Section";
 import { Tag } from "../../design-system/Tag";
-import { ecosystem, ecosystemIntroHeading } from "../../content/shared";
-import "./ArtifactTech.css";
+import { platformEcosystem, platformIntro } from "../../content/shared";
+import "./Platform.css";
 
 function FrameworkTree() {
   return (
@@ -64,25 +64,51 @@ function InspectorFragment() {
   );
 }
 
-const SPECIMENS = [FrameworkTree, ComponentSpecimens, EventObject, XapiFlow, InspectorFragment];
+/** Illustrative only — Analytics has no shipped reporting yet (status: Concept). */
+function AnalyticsFragment() {
+  return (
+    <div className="home-tech-specimen home-tech-analytics" aria-hidden="true">
+      <p>
+        <span className="kicker">Signal</span>
+        decision.responded
+      </p>
+      <p>
+        <span className="kicker">Pattern</span>
+        3 of 5 retried at decision 03
+      </p>
+      <p>
+        <span className="kicker">Note</span>
+        illustrative summary, not live reporting
+      </p>
+    </div>
+  );
+}
 
-export function ArtifactTech() {
+const SPECIMENS = [FrameworkTree, ComponentSpecimens, EventObject, XapiFlow, InspectorFragment, AnalyticsFragment];
+
+/**
+ * "Under the experience" — introduced last on the homepage, deliberately,
+ * after the proposition, services, work, philosophy, approach and evidence
+ * (Phase 1 strategy §19). Supports the consultancy; never a standalone
+ * product catalogue.
+ */
+export function Platform() {
   return (
     <Section
-      id="artifact-tech"
-      kicker={ecosystemIntroHeading.eyebrow}
-      heading={ecosystemIntroHeading.headline}
+      id="platform"
+      kicker={platformIntro.eyebrow}
+      heading={platformIntro.headline}
       width="content"
       density="compact"
     >
-      {ecosystemIntroHeading.paragraphs.map((p) => (
+      {platformIntro.paragraphs.map((p) => (
         <p className="home-tech-intro" key={p}>
           {p}
         </p>
       ))}
 
       <div className="home-tech-list">
-        {ecosystem.map((item, i) => {
+        {platformEcosystem.map((item, i) => {
           const Specimen = SPECIMENS[i];
           return (
             <div className="home-tech-row" key={item.name}>

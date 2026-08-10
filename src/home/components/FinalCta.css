@@ -13,13 +13,3 @@
 .home-cta__actions {
   margin-block: var(--space-6);
 }
-
-.home-cta__email {
-  font-family: var(--type-ui);
-  font-size: var(--text-ui);
-  color: var(--color-text-secondary);
-}
-
-.home-cta__note {
-  color: var(--color-text-subtle);
-}
