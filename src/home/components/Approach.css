@@ -1,124 +1,90 @@
-.home-approach-timeline {
-  position: relative;
+.home-approach-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border-block-start: var(--border-thickness) solid var(--color-border);
+}
+
+@media (min-width: 700px) {
+  .home-approach-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home-approach-card {
+  min-width: 0;
+  padding: var(--space-6) 0;
+  border-block-end: var(--border-thickness) solid var(--color-border);
+}
+
+@media (min-width: 700px) {
+  .home-approach-card {
+    padding: var(--space-6);
+    border-inline-end: var(--border-thickness) solid var(--color-border);
+  }
+
+  .home-approach-card:nth-child(3n + 1) {
+    padding-inline-start: 0;
+  }
+
+  .home-approach-card:nth-child(3n) {
+    padding-inline-end: 0;
+    border-inline-end: 0;
+  }
+}
+
+.home-approach-card__top {
   display: flex;
   justify-content: space-between;
-  gap: var(--space-3);
-  padding-block-start: var(--space-2);
-}
-
-.home-approach-timeline__spine {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: calc(clamp(1.75rem, 1.4rem + 1.4vw, 2.75rem) + 14px);
-  height: var(--border-thickness);
-  background: var(--color-border);
-}
-
-.home-approach-step {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: var(--space-3);
-  flex: 1;
-  text-align: center;
+  gap: var(--space-4);
+  margin-block-end: var(--space-5);
 }
 
-.home-approach-step__index {
+.home-approach-card__index {
   font-family: var(--type-display);
+  font-size: clamp(1.75rem, 1.4rem + 1vw, 2.5rem);
   font-weight: var(--weight-display);
-  font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.75rem);
-  line-height: 1;
   color: var(--color-text-subtle);
 }
 
-.home-approach-step__dot {
+.home-approach-card__dot {
   width: 10px;
   height: 10px;
   border-radius: var(--radius-node);
-  background: var(--color-bg);
   border: var(--border-thickness-focus) solid var(--color-text);
-  z-index: 1;
 }
 
-/* The step whose job is to change the other four — the one Signal moment
-   in the sequence (brief §16: "relationship to the Artifact signal/event
-   language"). */
-.home-approach-step__dot[data-terminal="true"] {
-  border-color: var(--color-signal);
+.home-approach-card__dot[data-terminal="true"] {
   background: var(--color-signal);
+  border-color: var(--color-signal);
 }
 
-.home-approach-step__name {
-  font-family: var(--type-ui);
-  font-weight: var(--weight-ui-strong);
-  font-size: var(--text-ui-nav);
+.home-approach-card h3 {
+  margin-block-end: var(--space-2);
+}
+
+.home-approach-card p {
+  max-width: 32ch;
+  color: var(--color-text-secondary);
+  font-size: var(--text-small);
 }
 
 .home-approach-return {
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  margin-block-start: var(--space-8);
+  margin-block-start: var(--space-6);
   color: var(--color-text-secondary);
-  max-width: var(--measure);
+  font-size: var(--text-small);
 }
 
 .home-approach-return__mark {
-  flex: none;
   width: 14px;
   height: 14px;
   border: var(--border-thickness) dashed var(--color-signal);
   border-radius: var(--radius-node);
-}
-
-@media (max-width: 620px) {
-  .home-approach-timeline {
-    flex-wrap: wrap;
-    row-gap: var(--space-6);
-  }
-
-  .home-approach-timeline__spine {
-    display: none;
-  }
-
-  .home-approach-step {
-    flex: 1 1 40%;
-  }
-}
-
-.home-approach-legend {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-5);
-  margin-block-start: var(--space-8);
-  padding-block-start: var(--space-6);
-  border-block-start: var(--border-thickness) solid var(--color-border);
-}
-
-@media (min-width: 700px) {
-  .home-approach-legend {
-    /* sized so all six stages hold one row at content width rather than
-       five-plus-a-widow (verified at 1024/1440/1728) */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: var(--space-5) var(--space-6);
-  }
-}
-
-.home-approach-legend__item dt {
-  font-family: var(--type-ui);
-  font-weight: var(--weight-ui-strong);
-  font-size: var(--text-ui-nav);
-  color: var(--color-text-subtle);
-  margin-block-end: var(--space-2);
-}
-
-.home-approach-legend__item dd {
-  font-size: var(--text-small);
-  color: var(--color-text-secondary);
-}
-
-.home-approach-legend__item dd strong {
-  color: var(--color-text);
 }

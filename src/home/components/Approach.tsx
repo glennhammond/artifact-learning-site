@@ -4,6 +4,7 @@ import "./Approach.css";
 
 export function Approach() {
   const lastIndex = lifecycle.length - 1;
+
   return (
     <Section
       id="approach"
@@ -13,33 +14,23 @@ export function Approach() {
       width="content"
       density="compact"
     >
-      <div className="home-approach-timeline">
-        <span className="home-approach-timeline__spine" aria-hidden="true" />
+      <ol className="home-approach-grid">
         {lifecycle.map((step, i) => (
-          <div className="home-approach-step" key={step.name}>
-            <span className="home-approach-step__index">{step.index}</span>
-            <span className="home-approach-step__dot" data-terminal={i === lastIndex} />
-            <span className="home-approach-step__name">{step.name}</span>
-          </div>
+          <li className="home-approach-card" key={step.name}>
+            <div className="home-approach-card__top">
+              <span className="home-approach-card__index">{step.index}</span>
+              <span className="home-approach-card__dot" data-terminal={i === lastIndex} aria-hidden="true" />
+            </div>
+            <h3>{step.name}</h3>
+            <p>{step.statement}</p>
+          </li>
         ))}
-      </div>
+      </ol>
+
       <p className="home-approach-return">
         <span className="home-approach-return__mark" aria-hidden="true" />
         {lifecycleCaption}
       </p>
-
-      <dl className="home-approach-legend">
-        {lifecycle.map((step) => (
-          <div className="home-approach-legend__item" key={step.name}>
-            <dt>
-              <span className="kicker">{step.index}</span> {step.name}
-            </dt>
-            <dd>
-              <strong>{step.statement}</strong> {step.detail}
-            </dd>
-          </div>
-        ))}
-      </dl>
     </Section>
   );
 }

@@ -24,9 +24,7 @@ export const hero = {
   eyebrow: "Artifact Learning",
   headline: "Develop capability, not just completion.",
   standfirst:
-    "Artifact creates purpose-built digital learning experiences for organisations where judgement, decision-making and behavioural application matter.",
-  standfirstSecondary:
-    "Learning science, experience design, technology and meaningful evidence, brought together as one integrated practice.",
+    "Purpose-built digital learning for organisations where judgement, decision-making and behavioural application matter.",
   cta: "Discuss a learning challenge",
   ctaHref: "#contact",
   ctaSecondary: "Explore the work",
@@ -76,9 +74,9 @@ export const completionAbstraction = {
 
 export const servicesIntro = {
   eyebrow: "Services",
-  headline: "Purpose-built digital learning for complex organisational problems.",
+  headline: "Purpose-built learning, not a production line.",
   intro:
-    "Artifact works across four related offers, built from one integrated practice. Most engagements start with the first.",
+    "Most engagements begin with a specific capability or performance problem. Artifact can also redesign existing learning, build reusable systems, and strengthen the evidence used to improve it.",
 };
 
 export interface ServiceOffer {
@@ -88,48 +86,68 @@ export interface ServiceOffer {
   framing: string;
 }
 
-export const primaryService: ServiceOffer & { tags: string[]; imageNote: string } = {
+export const primaryService = {
   index: "01",
   name: "Bespoke Learning Experiences",
-  question:
-    "What does someone need to understand, decide or do — and what experience would actually develop that?",
+  question: "What does someone need to understand, decide or do?",
   framing:
-    "Purpose-built digital learning designed around a specific organisational capability, judgement or behaviour — not a template course. This is where most Artifact engagements begin: a real performance problem, translated into an experience people need to think through, not click through.",
+    "Artifact designs the experience around that requirement, then chooses the right combination of scenario, interaction, media, platform and evidence.",
   tags: ["Learning design", "UX/UI", "Scenario design", "Development"],
-  imageNote: "Representative decision-scenario layout — specimen, not a shipped project.",
+  imageNote: "Illustrative Artifact decision experience, not client work.",
 };
 
-export const secondaryServices: ServiceOffer[] = [
+export const secondaryServices = [
   {
     index: "02",
     name: "Learning Experience Redesign",
-    question: "What happens when existing learning has stopped working?",
-    framing:
-      "Reconsidering and rebuilding digital learning that has become outdated, passive, inconsistent, inaccessible or no longer fits the organisation it was built for.",
+    question: "When existing learning no longer earns attention.",
+    framing: "Rework passive, outdated or inconsistent learning around the performance that matters.",
   },
   {
     index: "03",
     name: "Learning Systems & Design Systems",
-    question: "How do you produce learning at scale without rebuilding the basics each time?",
-    framing:
-      "Reusable standards, components, templates, patterns, accessibility rules and governance for organisations producing digital learning at scale.",
+    question: "When every project should not start from zero.",
+    framing: "Reusable standards, patterns, components and governance for consistent digital learning.",
   },
   {
     index: "04",
     name: "Learning Evidence & Improvement",
-    question: "What should the learning experience actually be telling you?",
-    framing:
-      "Capturing meaningful learning behaviour where it serves a clear purpose, and using that evidence to understand and improve the experience — not generic analytics, and not xAPI for its own sake.",
+    question: "When completion is not enough to improve the experience.",
+    framing: "Capture meaningful learning behaviour where useful and interpret it without overclaiming.",
   },
 ];
 
-// ---- 5. Selected work ----
+export const whyArtifact = {
+  eyebrow: "Why Artifact",
+  headline: "Learning design meets digital-product practice.",
+  intro:
+    "Artifact brings the learning problem, the experience, the technology and the evidence into one design process.",
+  principles: [
+    {
+      index: "01",
+      title: "Designed around decisions",
+      body: "Begin with what people need to understand, judge or do. Content, interaction and assessment follow that requirement.",
+    },
+    {
+      index: "02",
+      title: "Built as a digital product",
+      body: "UX, visual design, accessibility, development and platform decisions are treated as part of the learning experience.",
+    },
+    {
+      index: "03",
+      title: "Measured without overclaiming",
+      body: "Capture meaningful signals where they answer a useful question, then distinguish learning-experience evidence from workplace transfer.",
+    },
+  ],
+  boundary:
+    "Completion, decisions and interaction data can help explain what happened inside the experience. They do not, on their own, prove long-term behaviour change or organisational performance.",
+};
 
 export const workIntro = {
   eyebrow: "Selected work",
-  headline: "The decision matters as much as the deliverable.",
+  headline: "Learning problems made tangible.",
   intro:
-    "Artifact work is framed around the problem, the constraints and the decisions behind the experience, not simply the software used to build it.",
+    "A small selection of systems, experiences and R&D showing how Artifact works across learning design, UX, development and evidence.",
 };
 
 export interface CaseStudyStage {
@@ -283,7 +301,7 @@ export const approachIntro = {
   eyebrow: "Approach",
   headline: "Discover → Design → Build → Instrument → Measure → Improve.",
   intro:
-    "A working method, not a one-off production pipeline. Not every stage is required on every engagement — Instrument in particular is scoped in only where evidence has a clear purpose.",
+    "A working method rather than a one-off production pipeline. Instrumentation is used only when the evidence has a clear purpose.",
 };
 
 export interface LifecycleStep {
@@ -293,52 +311,16 @@ export interface LifecycleStep {
   detail: string;
 }
 
-export const lifecycle: LifecycleStep[] = [
-  {
-    index: "01",
-    name: "Discover",
-    statement: "Understand the problem before designing the learning.",
-    detail:
-      "Audience, performance need, existing evidence, environment and constraints, before any design decision is made.",
-  },
-  {
-    index: "02",
-    name: "Design",
-    statement: "Shape the learning architecture, practice, feedback, assessment and UX.",
-    detail:
-      "Scenario design, interaction design, content architecture and measurement intent, shaped around the decision or behaviour that matters.",
-  },
-  {
-    index: "03",
-    name: "Build",
-    statement: "Develop the experience using the technology best suited to the problem.",
-    detail: "Rise, Storyline, React, HTML/CSS/JavaScript, multimedia or a combination — the tool follows the problem.",
-  },
-  {
-    index: "04",
-    name: "Instrument",
-    statement: "Capture meaningful learner behaviour only where it serves a clear evidence purpose.",
-    detail:
-      "Not every project needs this stage. Where it's used: structured events, mapped to standards such as xAPI where appropriate.",
-  },
-  {
-    index: "05",
-    name: "Measure",
-    statement: "Interpret available evidence without claiming more than it supports.",
-    detail: "What the evidence can and cannot tell you — completion, interaction data and learner behaviour within the experience.",
-  },
-  {
-    index: "06",
-    name: "Improve",
-    statement: "Use evidence and feedback to strengthen the learning product.",
-    detail:
-      "Changes to content, UX, interaction, instrumentation or the supporting system, based on what was actually learned.",
-  },
+export const lifecycle = [
+  { index: "01", name: "Discover", statement: "Define the performance problem." },
+  { index: "02", name: "Design", statement: "Shape the learning experience." },
+  { index: "03", name: "Build", statement: "Create it in the right medium." },
+  { index: "04", name: "Instrument", statement: "Capture meaningful signals where useful." },
+  { index: "05", name: "Measure", statement: "Interpret the available evidence." },
+  { index: "06", name: "Improve", statement: "Refine what is not working." },
 ];
 
 export const lifecycleCaption = "Publishing is not the end of the process.";
-
-// ---- 9. Integrated capability ----
 
 export const capabilityIntro = {
   eyebrow: "Integrated capability",
@@ -487,6 +469,15 @@ export const platformEcosystem: EcosystemItem[] = [
 
 // ---- 12. Practice ----
 
+export const platformSummary = {
+  eyebrow: "Artifact R&D",
+  headline: "The technology underneath the experience.",
+  intro:
+    "Artifact is developing a small standards-based platform for structured learning experiences, meaningful events and evidence. It supports the consultancy rather than asking clients to replace their existing learning ecosystem.",
+  status:
+    "Framework and event foundations are in development. Inspector and Analytics remain emerging R&D. Status is shown deliberately rather than presented as finished product capability.",
+};
+
 export const practice = {
   eyebrow: "Practice",
   headline: "One integrated practice.",
@@ -500,7 +491,7 @@ export const practice = {
 export const finalCta = {
   headline: "Start with the learning problem.",
   supporting:
-    "If you're developing an important learning programme, redesigning an existing experience, or trying to understand what your current learning is actually achieving, Artifact can help define the right approach.",
+    "If the learning matters enough to be worth doing, it is worth defining the performance, experience and evidence properly.",
   action: "Discuss a learning challenge",
   actionHref: "#contact",
 };
