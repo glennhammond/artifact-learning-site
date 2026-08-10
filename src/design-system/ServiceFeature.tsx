@@ -11,36 +11,32 @@ interface ServiceFeatureProps {
   service: FeaturedService;
 }
 
-/**
- * A decision-scenario schematic standing in for the kind of interaction a
- * Bespoke Learning Experience is built around — diagrammatic rather than a
- * screenshot, so it reads as "the shape of the problem," not a shipped
- * project (see docs/strategy/phase-1-strategic-ia-homepage-definition.md §8:
- * editorial visual specimens, not project imagery).
- */
 function DecisionSpecimen({ label }: { label: string }) {
   return (
-    <div className="ds-service-specimen" role="img" aria-label={label}>
-      <svg viewBox="0 0 320 220" preserveAspectRatio="none" aria-hidden="true">
-        <rect x="0.5" y="0.5" width="319" height="219" fill="none" stroke="var(--color-border)" />
-        <rect x="20" y="20" width="200" height="10" fill="var(--color-border)" />
-        <rect x="20" y="40" width="260" height="7" fill="var(--color-text-subtle)" />
-        <rect x="20" y="54" width="220" height="7" fill="var(--color-text-subtle)" />
-
-        {/* two decision choices, one selected in Signal */}
-        <rect x="20" y="90" width="120" height="50" fill="none" stroke="var(--color-text)" strokeWidth="1.5" />
-        <rect x="20" y="90" width="120" height="50" fill="var(--color-signal)" opacity="0.14" />
-        <rect x="34" y="108" width="14" height="14" fill="none" stroke="var(--color-signal)" strokeWidth="2" />
-        <rect x="56" y="112" width="70" height="6" fill="var(--color-text-secondary)" />
-
-        <rect x="160" y="90" width="120" height="50" fill="none" stroke="var(--color-border)" />
-        <rect x="174" y="108" width="14" height="14" fill="none" stroke="var(--color-border)" strokeWidth="2" />
-        <rect x="196" y="112" width="70" height="6" fill="var(--color-border)" />
-
-        <rect x="20" y="168" width="90" height="24" fill="var(--color-text)" />
-      </svg>
-      <p className="ds-service-specimen__caption">{label}</p>
-    </div>
+    <figure className="ds-service-specimen">
+      <div
+        className="ds-service-specimen__visual"
+        role="img"
+        aria-label="Artifact experience specimen showing workplace context, evidence, a learner decision, tailored feedback and an observable response signal."
+      >
+        <div aria-hidden="true">
+          <div className="ds-service-specimen__topline"><span>Artifact experience specimen</span><span>Decision 03 / 05</span></div>
+          <div className="ds-service-specimen__content">
+            <p className="kicker">Context</p>
+            <h4>An urgent approval arrives without the evidence normally required.</h4>
+            <div className="ds-service-specimen__source"><span>Evidence available</span><strong>Request summary</strong><strong>Verification record · missing</strong></div>
+            <p className="ds-service-specimen__prompt">What would you do next?</p>
+            <div className="ds-service-specimen__choices">
+              <div className="is-selected"><span />Request the missing evidence</div>
+              <div><span />Approve and record it later</div>
+            </div>
+            <div className="ds-service-specimen__feedback"><span className="kicker">Response-specific feedback</span><strong>Preserve the verification step before approval.</strong></div>
+          </div>
+          <div className="ds-service-specimen__evidence"><span>decision.responded</span><strong>request_evidence</strong><span>feedback.presented</span></div>
+        </div>
+      </div>
+      <figcaption>{label}</figcaption>
+    </figure>
   );
 }
 

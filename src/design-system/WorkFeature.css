@@ -5,10 +5,10 @@
   margin-block-end: var(--space-9);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 960px) {
   .ds-work-feature {
     /* the figure carries real visual weight — "the work is the imagery" */
-    grid-template-columns: 7fr 5fr;
+    grid-template-columns: minmax(0, 8fr) minmax(280px, 4fr);
     align-items: start;
   }
 }
@@ -58,25 +58,27 @@
 }
 
 .ds-work-list li {
-  padding-block: var(--space-5);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  padding-block: var(--space-8);
   border-block-start: var(--border-thickness) solid var(--color-border);
-  display: flex;
-  gap: var(--space-5);
 }
 
-.ds-work-list__thumb {
-  flex: none;
-  width: 72px;
+@media (min-width: 820px) {
+  .ds-work-list li {
+    grid-template-columns: minmax(0, 7fr) minmax(260px, 5fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 6rem);
+  }
+
+  .ds-work-list li:nth-child(even) .ds-work-list__proof { order: 2; }
+  .ds-work-list li:nth-child(even) .ds-work-list__body { order: 1; }
 }
 
-.ds-work-list__thumb svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
+.ds-work-list__proof { min-width: 0; }
 .ds-work-list__body {
-  flex: 1;
+  min-width: 0;
 }
 
 .ds-work-list__title {

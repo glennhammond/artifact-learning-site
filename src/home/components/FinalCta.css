@@ -1,15 +1,22 @@
 .home-cta {
-  padding-block: var(--section-y);
-  text-align: center;
+  margin-block-start: var(--section-y-compact);
+  padding-block: clamp(4rem, 8vw, 8rem);
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.home-cta h2 {
+  max-width: 14ch;
+  font-size: clamp(2.25rem, 1.6rem + 2.8vw, 4.5rem);
 }
 
 .home-cta__supporting {
-  margin-block-start: var(--space-4);
-  margin-inline: auto;
-  max-width: 46ch;
-  color: var(--color-text-secondary);
+  margin-block-start: var(--space-5);
+  max-width: 52ch;
+  color: var(--color-text-subtle);
+  font-size: var(--text-lead);
 }
 
 .home-cta__actions {
-  margin-block: var(--space-6);
+  margin-block-start: var(--space-7);
 }
