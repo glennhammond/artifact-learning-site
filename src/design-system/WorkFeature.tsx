@@ -52,7 +52,7 @@ export function WorkFeature({ project, stages }: WorkFeatureProps) {
           ))}
         </dl>
 
-        <Button variant="text" href="#work" aria-disabled="true">
+        <Button variant="text" href={`/work/${project.slug}`}>
           {project.cta} <span aria-hidden="true">→</span>
         </Button>
       </div>
@@ -82,6 +82,7 @@ export function WorkList({ projects }: WorkListProps) {
             <p className="ds-work-list__title">{project.question}</p>
             <p className="ds-work-list__framing">{project.framing}</p>
             {project.status && <span className="ds-work-list__status">{project.status}</span>}
+            <Button variant="text" href={`/work/${project.slug}`}>View work <span aria-hidden="true">→</span></Button>
           </div>
         </li>
       ))}

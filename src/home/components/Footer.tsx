@@ -16,16 +16,17 @@ export function Footer() {
             <ul className="home-footer__nav">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href}>{item.label}</a>
+                  <Link to={item.href}>{item.label}</Link>
                 </li>
               ))}
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </nav>
         </div>
         <div className="home-footer__bottom">
           <span>artifactlearning.com · artifactlearning.com.au</span>
           <span>
-            Consolidated v0.x foundation — internal review build, not the public site ·{" "}
+            Multi-page review build ·{" "}
             <Link to="/archive">Archived concept prototypes</Link>
           </span>
         </div>

@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import { SkipLink } from "../components/layout/SkipLink";
-import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
 import { Work } from "./components/Work";
 import { Services } from "./components/Services";
@@ -8,7 +5,8 @@ import { WhyArtifact } from "./components/WhyArtifact";
 import { Approach } from "./components/Approach";
 import { Platform } from "./components/Platform";
 import { FinalCta } from "./components/FinalCta";
-import { Footer } from "./components/Footer";
+import { SiteShell } from "../site/SiteShell";
+import { usePageMeta } from "../site/usePageMeta";
 
 /**
  * Phase 3 reduced commercial homepage.
@@ -19,15 +17,14 @@ import { Footer } from "./components/Footer";
  * future inner pages.
  */
 export function Home() {
-  useEffect(() => {
-    document.title = "Artifact Learning — Develop capability, not just completion.";
-  }, []);
+  usePageMeta(
+    "Artifact Learning — Develop capability, not just completion.",
+    "Purpose-built digital learning for organisations where judgement, decision-making and behavioural application matter.",
+  );
 
   return (
-    <div className="home">
-      <SkipLink />
-      <Nav />
-      <main id="main">
+    <SiteShell>
+      <div className="home">
         <Hero />
         <Work />
         <Services />
@@ -35,8 +32,7 @@ export function Home() {
         <Approach />
         <Platform />
         <FinalCta />
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </SiteShell>
   );
 }
