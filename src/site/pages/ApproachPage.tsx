@@ -10,14 +10,14 @@ import "./pages.css";
 const detail = [
   "Understand the audience, required performance, existing evidence, environment and constraints before choosing a format.",
   "Shape the learning architecture, scenario, practice, feedback, assessment and user experience around the decisions that matter.",
-  "Develop in the medium suited to the experience—authoring tools, web technology, multimedia or a considered combination.",
+  "Develop in the medium suited to the experience: authoring tools, web technology, multimedia or a considered combination.",
   "Define and capture meaningful events only where they answer a useful question. Instrumentation is separate because it is not required everywhere.",
   "Interpret completion and in-experience behaviour within their limits. Neither automatically demonstrates workplace transfer.",
   "Use evidence, feedback and observation to refine content, interaction, instrumentation or the supporting system.",
 ];
 
 export function ApproachPage() {
-  usePageMeta("Approach — Artifact Learning", "Artifact's six-stage method for designing, building, measuring and improving digital learning products.");
+  usePageMeta("Approach – Artifact Learning", "Artifact's six-stage method for designing, building, measuring and improving digital learning products.");
   return (
     <SiteShell>
       <PageIntro eyebrow="Approach" title="Digital learning as a product, not a course." intro={productPhilosophy.body} aside={<p>Not every engagement requires every stage. The method follows the problem rather than forcing a production pipeline.</p>} />

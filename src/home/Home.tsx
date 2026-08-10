@@ -18,7 +18,7 @@ import { usePageMeta } from "../site/usePageMeta";
  */
 export function Home() {
   usePageMeta(
-    "Artifact Learning — Develop capability, not just completion.",
+    "Artifact Learning – Develop capability, not just completion.",
     "Purpose-built digital learning for organisations where judgement, decision-making and behavioural application matter.",
   );
 

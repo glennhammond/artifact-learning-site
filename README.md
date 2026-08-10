@@ -1,15 +1,12 @@
 # Artifact Learning — website
 
-This repository is the implementation home for the Artifact Learning public website: brand exploration,
-UX exploration, the coded design system, and — later — the full production site, case studies and
-deployment configuration.
+This repository is the implementation home for the Artifact Learning website: brand and UX exploration,
+the coded design system, the multi-page publication candidate, case studies and deployment configuration.
 
-**Current phase: Phase 2 — design system consolidation and homepage direction.** The three Phase 1
-exploratory homepage concepts have been reviewed against `Artifact Learning Brand Identity & Digital
-Design Language v0.2` and consolidated into one coded design system and one homepage direction. This is
-not the public website yet — see `docs/design-system.md` for the current status and `docs/
-consolidation-decision.md` for how this build was derived. The Phase 1 concepts are preserved under
-`/archive` for reference.
+**Current phase: Phase 6 — publication-readiness candidate.** The approved homepage, multi-page routes and
+representative proof system are implemented. Publication remains blocked until rendered QA, a verified
+contact destination and the ITC Avant Garde licensing/public-repository decision are resolved. See
+`docs/strategy/phase-6-publication-readiness-audit.md` and the Phase 6 report.
 
 ## Running locally
 
@@ -22,11 +19,17 @@ Then open the URL Vite prints (typically `http://localhost:5173`). Routes:
 
 | Route | What it is |
 |---|---|
-| `/` | **The consolidated Artifact Learning homepage.** |
-| `/archive` | Index of the three archived Phase 1 concepts. |
-| `/archive/concept-a` | Archived — Direction A, Editorial Product Studio |
-| `/archive/concept-b` | Archived — Direction B, Digital Learning Laboratory |
-| `/archive/concept-c` | Archived — Direction C, Editorial + Experimental Hybrid |
+| `/` | Artifact Learning homepage |
+| `/services` | Services overview |
+| `/work` | Selected Work overview |
+| `/work/:slug` | Publication-safe Work detail |
+| `/approach` | Methodology and product-improvement model |
+| `/platform` | Artifact Platform / R&D |
+| `/about` | Integrated practice |
+| `/contact` | Contact preparation and integration status |
+
+Archived Phase 1 concepts remain available under `/archive` in local development only. Their source is
+preserved but withheld from production builds because it contains historical placeholder behaviour.
 
 Other useful scripts:
 
@@ -65,10 +68,12 @@ src/
 ## Licensing note
 
 `src/assets/fonts/` contains three weights of ITC Avant Garde Gothic Std, licensed to Glenn Hammond
-personally (the same licence already used for `glennhammond.com`). Do not make this repository or its
-font files public without first confirming that licence covers a second commercial site/domain
-(artifactlearning.com) — see the design-sync readiness note in the Phase 2 final report. Source Sans 3,
-IBM Plex Sans and IBM Plex Mono are SIL Open Font Licence, self-hosted from `@fontsource`.
+personally (the same licence already used for `glennhammond.com`). The repository is public, but no
+licence terms confirming public redistribution or use on `artifactlearning.com` were found here. This is
+a material publication blocker: confirm the licence and repository exposure, or approve a compliant
+private/font-delivery approach before public launch. Do not infer permission or substitute a typeface
+without explicit design/legal approval. Source Sans 3, IBM Plex Sans and IBM Plex Mono are SIL Open Font
+Licence, self-hosted from `@fontsource`.
 
 ## Status of colour and typography
 
