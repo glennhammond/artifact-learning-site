@@ -9,14 +9,15 @@
  */
 
 export const nav = [
-  { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
-  { label: "Approach", href: "#approach" },
-  { label: "Platform", href: "#platform" },
+  { label: "Work", href: "/work" },
+  { label: "Services", href: "/services" },
+  { label: "Approach", href: "/approach" },
+  { label: "Platform", href: "/platform" },
+  { label: "About", href: "/about" },
 ];
 
 /** Differentiated with restraint (outline, not a filled button) — v0.4 §1. */
-export const navCta = { label: "Discuss a learning challenge", href: "#contact" };
+export const navCta = { label: "Discuss a learning challenge", href: "/contact" };
 
 // ---- 2. Hero ----
 
@@ -26,9 +27,9 @@ export const hero = {
   standfirst:
     "Purpose-built digital learning for organisations where judgement, decision-making and behavioural application matter.",
   cta: "Discuss a learning challenge",
-  ctaHref: "#contact",
+  ctaHref: "/contact",
   ctaSecondary: "Explore the work",
-  ctaSecondaryHref: "#work",
+  ctaSecondaryHref: "/work",
 };
 
 export interface TraceEvent {
@@ -164,6 +165,7 @@ export const caseStudyStages: CaseStudyStage[] = [
 ];
 
 export interface Project {
+  slug: string;
   eyebrow: string;
   question: string;
   framing: string;
@@ -171,6 +173,7 @@ export interface Project {
 }
 
 export const featuredProject: Project & { tags: string[]; cta: string; imageNote: string } = {
+  slug: "elearning-design-system",
   eyebrow: "eLearning design system",
   question:
     "How do you create consistent, accessible digital learning across an organisation without redesigning every experience from scratch?",
@@ -191,12 +194,14 @@ export const featuredProject: Project & { tags: string[]; cta: string; imageNote
  */
 export const secondaryProjects: Project[] = [
   {
+    slug: "professional-judgement",
     eyebrow: "Professional judgement learning",
     question: "How do you design digital learning around decisions that carry real professional weight?",
     framing: "Case study pending publication approval.",
     status: "Case study pending publication approval",
   },
   {
+    slug: "wellbeing-studio",
     eyebrow: "Wellbeing Studio",
     question: "Can a digital learning practice model something that isn't a course at all?",
     framing:
@@ -204,6 +209,7 @@ export const secondaryProjects: Project[] = [
     status: "Case study in development",
   },
   {
+    slug: "artifact-rd",
     eyebrow: "Artifact R&D",
     question: "What does Artifact build for itself while building for clients?",
     framing:
@@ -493,5 +499,5 @@ export const finalCta = {
   supporting:
     "If the learning matters enough to be worth doing, it is worth defining the performance, experience and evidence properly.",
   action: "Discuss a learning challenge",
-  actionHref: "#contact",
+  actionHref: "/contact",
 };

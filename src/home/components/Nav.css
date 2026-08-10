@@ -73,6 +73,10 @@
   font-size: var(--text-ui);
 }
 
+.home-nav__menu .ds-nav-link[aria-current="page"] {
+  border-block-end-color: var(--color-signal);
+}
+
 @media (max-width: 760px) {
   .home-nav__toggle {
     display: block;

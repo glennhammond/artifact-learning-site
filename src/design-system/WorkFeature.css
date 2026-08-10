@@ -104,3 +104,7 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
+
+.ds-work-list__body > .ds-btn {
+  margin-block-start: var(--space-5);
+}

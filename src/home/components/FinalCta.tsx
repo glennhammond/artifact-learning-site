@@ -5,11 +5,8 @@ import { finalCta } from "../../content/shared";
 import "./FinalCta.css";
 
 /**
- * No verified contact email or `/contact` route exists yet (Phase 1
- * strategy §10/unresolved decisions), so every CTA on the page — nav, hero,
- * this one — resolves to this section's own `#contact` anchor rather than a
- * fabricated mailto: or a route that doesn't exist. Replace `actionHref`
- * with a real destination once one is verified.
+ * The real `/contact` route intentionally contains no form or invented email
+ * until a verified public destination is supplied.
  */
 export function FinalCta() {
   return (

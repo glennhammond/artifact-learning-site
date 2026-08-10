@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { Container } from "../../components/layout/Container";
-import { NavLink } from "../../design-system/NavLink";
 import { Button } from "../../design-system/Button";
 import { useScrolled } from "../../hooks/useScrolled";
 import { nav, navCta } from "../../content/shared";
+import "../../design-system/NavLink.css";
 import "./Nav.css";
 
 export function Nav() {
@@ -13,10 +14,10 @@ export function Nav() {
   return (
     <header className="home-nav" data-scrolled={scrolled}>
       <Container className="home-nav__inner">
-        <a href="#top" className="home-nav__wordmark">
+        <Link to="/" className="home-nav__wordmark">
           <span className="home-nav__mark" aria-hidden="true" />
           Artifact
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -32,7 +33,7 @@ export function Nav() {
           <ul>
             {nav.map((item) => (
               <li key={item.href}>
-                <NavLink href={item.href} onClick={() => setOpen(false)}>
+                <NavLink className="ds-nav-link" to={item.href} onClick={() => setOpen(false)}>
                   {item.label}
                 </NavLink>
               </li>

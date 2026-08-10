@@ -1,4 +1,5 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
+import { Link } from "react-router-dom";
 import "./Button.css";
 
 type Variant = "primary" | "secondary" | "text";
@@ -28,6 +29,13 @@ export function Button({ variant = "secondary", children, className = "", ...res
 
   if ("href" in rest && rest.href !== undefined) {
     const { href, ...anchorRest } = rest as ButtonAsAnchor;
+    if (href.startsWith("/")) {
+      return (
+        <Link className={classes} to={href} {...anchorRest}>
+          {children}
+        </Link>
+      );
+    }
     return (
       <a className={classes} href={href} {...anchorRest}>
         {children}
