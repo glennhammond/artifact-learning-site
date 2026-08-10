@@ -15,6 +15,8 @@ import { WorkPage } from "./site/pages/WorkPage";
 import "./site/site.css";
 
 export default function App() {
+  const showArchive = import.meta.env.DEV;
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -25,14 +27,13 @@ export default function App() {
       <Route path="/platform" element={<PlatformPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
-      <Route path="/archive" element={<ArchiveIndex />} />
-      <Route path="/archive/concept-a" element={<ConceptA />} />
-      <Route path="/archive/concept-b" element={<ConceptB />} />
-      <Route path="/archive/concept-c" element={<ConceptC />} />
-      {/* Old Phase 1 top-level paths — redirect to their new /archive location rather than 404 */}
-      <Route path="/concept-a" element={<Navigate to="/archive/concept-a" replace />} />
-      <Route path="/concept-b" element={<Navigate to="/archive/concept-b" replace />} />
-      <Route path="/concept-c" element={<Navigate to="/archive/concept-c" replace />} />
+      {showArchive && <Route path="/archive" element={<ArchiveIndex />} />}
+      {showArchive && <Route path="/archive/concept-a" element={<ConceptA />} />}
+      {showArchive && <Route path="/archive/concept-b" element={<ConceptB />} />}
+      {showArchive && <Route path="/archive/concept-c" element={<ConceptC />} />}
+      {showArchive && <Route path="/concept-a" element={<Navigate to="/archive/concept-a" replace />} />}
+      {showArchive && <Route path="/concept-b" element={<Navigate to="/archive/concept-b" replace />} />}
+      {showArchive && <Route path="/concept-c" element={<Navigate to="/archive/concept-c" replace />} />}
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

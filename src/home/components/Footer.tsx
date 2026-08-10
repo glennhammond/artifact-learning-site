@@ -25,10 +25,7 @@ export function Footer() {
         </div>
         <div className="home-footer__bottom">
           <span>artifactlearning.com · artifactlearning.com.au</span>
-          <span>
-            Multi-page review build ·{" "}
-            <Link to="/archive">Archived concept prototypes</Link>
-          </span>
+          {import.meta.env.DEV && <span><Link to="/archive">Archived concept prototypes</Link></span>}
         </div>
       </Container>
     </footer>

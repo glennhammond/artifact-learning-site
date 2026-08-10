@@ -10,7 +10,7 @@ import { usePageMeta } from "../usePageMeta";
 import "./pages.css";
 
 export function ServicesPage() {
-  usePageMeta("Services — Artifact Learning", "Purpose-built digital learning services for complex capability, judgement and performance problems.");
+  usePageMeta("Services – Artifact Learning", "Purpose-built digital learning services for complex capability, judgement and performance problems.");
   const [primary, ...secondary] = serviceDetails;
 
   return (

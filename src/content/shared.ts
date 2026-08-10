@@ -1,8 +1,8 @@
 /**
  * Homepage content — Artifact Learning Homepage Content & Visual Direction
- * v0.4 (Phase 2 commercial repositioning). Working copy for design review,
- * not final marketing copy. No client outcomes, metrics, names or approvals
- * are invented anywhere in this file; interface/event/data examples are
+ * v0.4 (Phase 2 commercial repositioning), refined through the publication
+ * candidate. No client outcomes, metrics, names or approvals are invented
+ * anywhere in this file; interface/event/data examples are
  * illustrative design content unless explicitly noted otherwise. See
  * docs/strategy/phase-1-strategic-ia-homepage-definition.md for the strategy
  * this content implements.
@@ -205,7 +205,7 @@ export const secondaryProjects: Project[] = [
     eyebrow: "Wellbeing Studio",
     question: "Can a digital learning practice model something that isn't a course at all?",
     framing:
-      "A programme-based learning experience — recurring practice, asynchronous video and live sessions — exploring what learning looks like beyond a single module.",
+      "A programme-based learning experience using recurring practice, asynchronous video and live sessions to explore learning beyond a single module.",
     status: "Case study in development",
   },
   {
@@ -213,8 +213,8 @@ export const secondaryProjects: Project[] = [
     eyebrow: "Artifact R&D",
     question: "What does Artifact build for itself while building for clients?",
     framing:
-      "The Artifact Learning Platform and runtime — proprietary research and development, not a client engagement. Explored further in Platform below.",
-    status: "Artifact R&D — not client work",
+      "The Artifact Learning Platform and runtime: proprietary research and development, not a client engagement. Explored further in Platform below.",
+    status: "Artifact R&D · not client work",
   },
 ];
 
@@ -223,7 +223,7 @@ export const secondaryProjects: Project[] = [
 export const productPhilosophy = {
   eyebrow: "Philosophy",
   headline: "Digital learning as a product, not a course.",
-  body: "Learning can be researched, designed, prototyped, built, launched, observed where it's useful, and improved — rather than built, published and left alone.",
+  body: "Learning can be researched, designed, prototyped, built, launched, observed where useful and improved, rather than built, published and left alone.",
   words: ["Design it.", "Build it.", "Improve it."],
 };
 
@@ -332,7 +332,7 @@ export const capabilityIntro = {
   eyebrow: "Integrated capability",
   headline: "Learning design meets digital-product practice.",
   intro:
-    "Every service above draws on the same integrated practice — learning science, instructional design, UX/UI, visual design, multimedia and modern web technology working together rather than commissioned separately.",
+    "Every service above draws on the same integrated practice: learning science, instructional design, UX/UI, visual design, multimedia and modern web technology working together rather than commissioned separately.",
 };
 
 export interface CapabilityGroup {
@@ -347,7 +347,7 @@ export const capabilityGroups: CapabilityGroup[] = [
     index: "01",
     name: "Learning experience design",
     question: "What should the learner need to understand, decide or do?",
-    copy: "Learning strategy, learning architecture, instructional design, scenario design, UX, assessment and prototyping. This is how Bespoke Learning Experiences and Redesign work begins — with the required performance or decision, not a screen template.",
+    copy: "Learning strategy, learning architecture, instructional design, scenario design, UX, assessment and prototyping. This is how Bespoke Learning Experiences and Redesign work begins: with the required performance or decision, not a screen template.",
   },
   {
     index: "02",
@@ -365,7 +365,7 @@ export const capabilityGroups: CapabilityGroup[] = [
     index: "04",
     name: "Measurement & learning analytics",
     question: "What evidence should the experience produce?",
-    copy: "Measurement planning, structured learning events, xAPI, Learning Record Stores, reporting, evaluation and iteration — the discipline behind Learning Evidence & Improvement, scoped to the questions worth answering.",
+    copy: "Measurement planning, structured learning events, xAPI, Learning Record Stores, reporting, evaluation and iteration. This is the discipline behind Learning Evidence & Improvement, scoped to the questions worth answering.",
   },
 ];
 
@@ -411,7 +411,7 @@ export const readoutPanels = {
 };
 
 export const evidenceDistinction = {
-  heading: "What this does — and doesn't — show",
+  heading: "What this does and does not show",
   body: "Learning-experience evidence describes what happened inside the experience: the decisions, responses and pathways it produced.",
   boundaryLabel: "On its own, it does not prove:",
   boundary: ["Workplace transfer", "Long-term behaviour change", "Organisational performance"],
@@ -489,7 +489,7 @@ export const practice = {
   headline: "One integrated practice.",
   body: "Strategy, learning design, UX/UI, development, multimedia, platform knowledge and learning evidence are usually split across separate vendors, with no one accountable for the whole experience.",
   bodySecondary:
-    "Artifact holds all of it in one practice, because a decision in one discipline changes what's worth doing in the others — a measurement choice changes what's worth designing for; a design choice changes what's worth building.",
+    "Artifact holds all of it in one practice because a decision in one discipline changes what is worth doing in the others. A measurement choice changes what is worth designing for; a design choice changes what is worth building.",
 };
 
 // ---- 13. Final CTA ----
