@@ -1,7 +1,9 @@
 import { Button } from "./Button";
 import { Tag } from "./Tag";
 import { WorkComposite } from "./WorkComposite";
+import { ArtifactRdProof, ProfessionalJudgementProof, WellbeingStudioProof } from "./WorkProofs";
 import type { CaseStudyStage, Project } from "../content/shared";
+import { workVisuals } from "../content/workAssets";
 import "./WorkFeature.css";
 
 interface FeaturedProject extends Project {
@@ -26,7 +28,7 @@ export function WorkFeature({ project, stages }: WorkFeatureProps) {
   return (
     <article className="ds-work-feature">
       <div className="ds-work-feature__figure">
-        <WorkComposite label={project.imageNote} />
+        <WorkComposite asset={workVisuals.featured} />
       </div>
       <div className="ds-work-feature__body">
         <p className="kicker">{project.eyebrow}</p>
@@ -64,18 +66,17 @@ interface WorkListProps {
 
 /** Secondary work items — a short text-led list, not a card grid. */
 export function WorkList({ projects }: WorkListProps) {
+  const proofs = [
+    <ProfessionalJudgementProof asset={workVisuals.professionalJudgement} />,
+    <WellbeingStudioProof asset={workVisuals.wellbeingStudio} />,
+    <ArtifactRdProof asset={workVisuals.artifactRd} />,
+  ];
+
   return (
     <ul className="ds-work-list">
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <li key={project.question}>
-          <div className="ds-work-list__thumb" aria-hidden="true">
-            <svg viewBox="0 0 60 44" preserveAspectRatio="none">
-              <rect x="0.5" y="0.5" width="59" height="43" fill="none" stroke="var(--color-border)" />
-              <line x1="0" y1="10" x2="60" y2="10" stroke="var(--color-border)" />
-              <rect x="6" y="18" width="30" height="5" fill="var(--color-border)" />
-              <rect x="6" y="28" width="20" height="5" fill="var(--color-border)" />
-            </svg>
-          </div>
+          <div className="ds-work-list__proof">{proofs[index]}</div>
           <div className="ds-work-list__body">
             <p className="kicker">{project.eyebrow}</p>
             <p className="ds-work-list__title">{project.question}</p>
