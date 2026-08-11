@@ -1,9 +1,26 @@
-# Artifact design system — v0.x
+# Artifact design system — production foundation
 
-Status: **consolidated v0.x foundation**, built directly from `Artifact Learning Brand Identity &
-Digital Design Language v0.2`. This is the first coded, single design system for Artifact Learning —
-not yet the complete public website. See `docs/consolidation-decision.md` for how it was derived from
-the three Phase 1 concepts, and §14 below for what deliberately isn't built yet.
+Artifact is the visible masterbrand; Artifact Learning remains the formal business/category name where
+context requires it. The dedicated brand minisite remains the complete brand-system reference surface;
+this document records only the production rules needed by this website.
+
+Brand promise: **Designed with intent. Built to leave evidence.**
+
+## Anchor and lock-up
+
+The production logo is the Artifact Anchor, implemented once in
+`src/components/brand/ArtifactMark.tsx`. Its canonical `68 × 68` geometry uses the path
+`M0 0H68V68H0Z M27 15H53V41H27Z` with even-odd fill: the `26 × 26` void begins at `(27, 15)` and is
+deliberately asymmetric.
+
+- Canonical use: Ink mark on Paper, or Paper mark on Ink. Black/white is permitted where necessary.
+- Never use a Signal logo or put Signal inside the void. Do not centre or round the void, add effects,
+  shadows, gradients or outlines, stretch or rotate the mark, or repeat it decoratively.
+- Minimum digital symbol: `16px`. Recommended navigation symbol: approximately `27px`.
+- Clearspace: `1x`, where `x = 26` (the canonical void dimension). Formal lock-up gap: approximately
+  `0.5x`; small UI lock-ups may adapt spacing optically without altering the mark.
+- A decorative mark in an already named lock-up is hidden from assistive technology. A standalone,
+  informative mark must expose the accessible name “Artifact”.
 
 ## Typography
 
@@ -40,12 +57,15 @@ Territory C — Ink, Paper, Signal — OKLCH is the source of truth, hex is the 
 
 ### The Signal principle
 
-**Signal identifies consequence. It does not decorate.** It appears in exactly three places in this
-system: the primary button fill, the active/selected state of a loop-diagram node, and the pulse that
-travels the loop diagram on a meaningful state change. It is never a section background, never applied
-to more than one element in a viewport, and never used as text on Paper (contrast ≈1.6:1 — fails; see
-v0.2 §05). Where a component needs emphasis without a second accent, it uses Ink weight/contrast, not
-colour.
+**Signal identifies consequence. It does not decorate.** Ink and Paper establish the identity; Signal
+happens within it. Signal marks meaningful consequence where it has enough visual presence to perform
+clearly. It is not required for every small trace, marker or selected state.
+
+Primary CTA fills, substantial event/state fills, persistent progress/evidence fields, and meaningful
+states against Ink may use Signal with Ink text where applicable. Tiny marks, routine borders and
+dividers, body or small text on Paper, and small selected edges use Ink or a neutral instead. Selection
+and critical status must always have a non-Signal cue such as weight, size, labelling or a stronger Ink
+border. There is one Signal colour and one semantic token: `--color-signal`.
 
 ### Dark surface (Ink)
 
@@ -116,13 +136,13 @@ report for detail.
 | Component | Purpose |
 |---|---|
 | `Button` | primary (Signal fill), secondary (bordered), text (underline) — all states |
-| `NavLink` | primary nav item, quiet by default, Signal underline for the active anchor |
+| `NavLink` | primary nav item, quiet by default, Ink underline for the active anchor |
 | `Tag` | small label/status pill, neutral or Signal tone |
 | `Section` | kicker + heading + one-shot reveal + light/dark tone switch |
 | `LoopDiagram` | the signature system visual — circular (default) + stacked (compact) variants, per-node illustrative artefact on selection |
-| `DataStrip` | labelled mono event/data panel, with "active" (Signal-marked) and "muted" states |
+| `DataStrip` | labelled mono event/data panel; active state uses a strong Ink border plus a supplementary Signal flag |
 | `WorkFeature` / `WorkList` | the one full featured case study (definitions, tags, composite figure) + short text-led secondary list |
-| `EventTraceList` | a vertical rail of learning events, one marked active in Signal — the hero's data artefact |
+| `EventTraceList` | a vertical rail of learning events, with active state marked by Ink, size and weight |
 | `WorkComposite` | a multi-artefact stand-in for real work imagery — primary crop + overlapping detail crop + token specimen rail, at different scales |
 
 `ArtifactTech` and `Capability` (in `src/home/components/`) each render five/four *distinct* per-item visual specimens defined inline rather than a shared generic card — a component tree, live component previews, a mono event object, a flow diagram and a locally-dark inspector fragment for the ecosystem; a fidelity progression, three build-context crops, a system map and another progression for the capabilities. See `docs/consolidation-decision.md`-style reasoning inline in those files' comments — content drives the composition rather than forcing every pattern into one generic card API (v0.3 content doc, "Final implementation principles").

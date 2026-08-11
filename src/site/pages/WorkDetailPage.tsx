@@ -24,7 +24,7 @@ export function WorkDetailPage() {
   const { slug = "" } = useParams();
   const validSlug = workSlugs.find((item) => item === slug);
   const detail = validSlug ? workDetails[validSlug] : null;
-  usePageMeta(detail ? `${detail.title} – Artifact Learning` : "Work – Artifact Learning", detail?.intro ?? "Selected Artifact Learning work.");
+  usePageMeta(detail ? `${detail.title} – Artifact` : "Work – Artifact", detail?.intro ?? "Selected Artifact Learning work.");
 
   if (!validSlug || !detail) return <Navigate to="/work" replace />;
 

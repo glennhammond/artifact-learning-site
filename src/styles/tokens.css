@@ -1,7 +1,5 @@
 /*
-  Artifact design tokens — v0.2 (confirmed) + candidate values, per
-  Artifact Learning Brand Identity & Digital Design Language v0.2 and
-  docs/consolidation-decision.md. Semantic names throughout; components
+  Artifact production design tokens. Semantic names throughout; components
   reference roles (--color-signal, --type-heading), never raw values.
 
   OKLCH is the source of truth for colour (v0.2 §03); a hex fallback is

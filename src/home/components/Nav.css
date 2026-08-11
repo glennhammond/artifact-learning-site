@@ -36,14 +36,11 @@
   color: var(--color-text);
 }
 
-/* A restrained device derived from the Artifact visual language — the
-   same signal mark used to identify a consequential/active state
-   elsewhere — standing in for the brand, not a logo. */
 .home-nav__mark {
-  width: 9px;
-  height: 9px;
-  background: var(--color-signal);
-  border-radius: var(--radius-control);
+  width: 27px;
+  height: 27px;
+  flex: none;
+  color: var(--color-ink);
 }
 
 .home-nav__toggle {
@@ -74,7 +71,7 @@
 }
 
 .home-nav__menu .ds-nav-link[aria-current="page"] {
-  border-block-end-color: var(--color-signal);
+  border-block-end-color: var(--color-text);
 }
 
 @media (max-width: 760px) {

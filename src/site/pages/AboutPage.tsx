@@ -7,7 +7,7 @@ import { usePageMeta } from "../usePageMeta";
 import "./pages.css";
 
 export function AboutPage() {
-  usePageMeta("About – Artifact Learning", "Why Artifact Learning connects learning design, UX, development, platforms and evidence in one practice.");
+  usePageMeta("About – Artifact", "Why Artifact Learning connects learning design, UX, development, platforms and evidence in one practice.");
   return (
     <SiteShell>
       <PageIntro eyebrow="About Artifact" title="One integrated practice." intro="Digital learning decisions are often divided between strategy, instructional design, UX, visual design, development, multimedia, platforms and measurement. Artifact connects them because each decision changes what is worth doing in the others." />

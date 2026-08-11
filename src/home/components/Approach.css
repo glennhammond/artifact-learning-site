@@ -59,8 +59,8 @@
 }
 
 .home-approach-card__dot[data-terminal="true"] {
-  background: var(--color-signal);
-  border-color: var(--color-signal);
+  background: var(--color-ink);
+  border-color: var(--color-ink);
 }
 
 .home-approach-card h3 {
@@ -85,6 +85,6 @@
 .home-approach-return__mark {
   width: 14px;
   height: 14px;
-  border: var(--border-thickness) dashed var(--color-signal);
+  border: var(--border-thickness) dashed var(--color-text-secondary);
   border-radius: var(--radius-node);
 }

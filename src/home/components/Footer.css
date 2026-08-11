@@ -14,11 +14,24 @@
   border-block-end: var(--border-thickness) solid var(--color-border);
 }
 
+.home-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.home-footer__mark {
+  width: 27px;
+  height: 27px;
+  flex: none;
+}
+
 .home-footer__wordmark {
   font-family: var(--type-heading);
   font-weight: var(--weight-heading);
   font-size: 1.1rem;
-  color: var(--color-text);
 }
 
 .home-footer__tagline {

@@ -3,10 +3,10 @@
 This repository is the implementation home for the Artifact Learning website: brand and UX exploration,
 the coded design system, the multi-page publication candidate, case studies and deployment configuration.
 
-**Current phase: Phase 6 — publication-readiness candidate.** The approved homepage, multi-page routes and
-representative proof system are implemented. Publication remains blocked until rendered QA, a verified
-contact destination and the ITC Avant Garde licensing/public-repository decision are resolved. See
-`docs/strategy/phase-6-publication-readiness-audit.md` and the Phase 6 report.
+**Current phase: Phase 7 — brand-system integration.** The approved homepage, multi-page routes,
+representative proof system and Artifact masterbrand are implemented. Publication remains blocked until
+a verified contact destination and the ITC Avant Garde licensing/public-repository decision are resolved.
+See `docs/design-system.md` and the Phase 6 publication-readiness audit.
 
 ## Running locally
 
@@ -19,7 +19,7 @@ Then open the URL Vite prints (typically `http://localhost:5173`). Routes:
 
 | Route | What it is |
 |---|---|
-| `/` | Artifact Learning homepage |
+| `/` | Artifact homepage |
 | `/services` | Services overview |
 | `/work` | Selected Work overview |
 | `/work/:slug` | Publication-safe Work detail |

@@ -40,12 +40,12 @@
   color: var(--color-text-subtle);
 }
 
-/* The one Signal moment: where "Build it." turns into "Improve it." */
+/* A quiet structural trace where "Build it." turns into "Improve it." */
 .home-philosophy__signal {
   position: absolute;
   top: -1.25rem;
   left: 0;
   width: 22px;
   height: 2px;
-  background: var(--color-signal);
+  background: var(--color-ink);
 }

@@ -15,7 +15,7 @@
 }
 
 .home-capability-row:hover {
-  border-inline-start-color: var(--color-signal);
+  border-inline-start-color: var(--color-ink);
 }
 
 @media (min-width: 700px) {

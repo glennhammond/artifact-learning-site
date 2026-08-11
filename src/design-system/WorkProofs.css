@@ -12,7 +12,7 @@
 .ds-judgement-proof__decision { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-2); }
 .ds-judgement-proof__decision .kicker { grid-column: 1 / -1; }
 .ds-judgement-proof__decision span { padding: var(--space-3); border: var(--border-thickness) solid var(--color-border); font-size: 0.75rem; }
-.ds-judgement-proof__decision .is-selected { border-color: var(--color-text); box-shadow: inset 4px 0 0 var(--color-signal); }
+.ds-judgement-proof__decision .is-selected { border-color: var(--color-ink); border-width: var(--border-thickness-focus); font-weight: var(--weight-body-strong); }
 .ds-judgement-proof__feedback { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: var(--space-3); padding: var(--space-3); background: var(--color-ink); color: var(--color-paper); font-size: 0.75rem; }
 .ds-judgement-proof__feedback strong { margin: 0; font-family: var(--type-ui); font-size: 0.75rem; }
 

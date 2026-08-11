@@ -18,6 +18,6 @@ export function usePageMeta(title: string, description: string) {
     setMeta('meta[property="og:title"]', "property", "og:title", title);
     setMeta('meta[property="og:description"]', "property", "og:description", description);
     setMeta('meta[property="og:type"]', "property", "og:type", "website");
-    setMeta('meta[property="og:site_name"]', "property", "og:site_name", "Artifact Learning");
+    setMeta('meta[property="og:site_name"]', "property", "og:site_name", "Artifact");
   }, [description, title]);
 }

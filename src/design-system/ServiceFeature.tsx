@@ -81,7 +81,7 @@ function RedesignMark() {
       <rect x="6" y="28" width="10" height="4" fill="var(--color-border)" />
       <rect x="32.5" y="0.5" width="27" height="43" fill="none" stroke="var(--color-text)" strokeWidth="1.5" />
       <rect x="38" y="10" width="16" height="5" fill="var(--color-text)" />
-      <rect x="38" y="20" width="16" height="4" fill="var(--color-signal)" />
+      <rect x="38" y="20" width="16" height="4" fill="var(--color-text-secondary)" />
       <rect x="38" y="28" width="16" height="4" fill="var(--color-text-secondary)" />
     </svg>
   );
@@ -92,7 +92,7 @@ function SystemMark() {
     <svg viewBox="0 0 60 44" preserveAspectRatio="none" aria-hidden="true">
       <rect x="0.5" y="0.5" width="17" height="17" fill="none" stroke="var(--color-border)" />
       <rect x="21.5" y="0.5" width="17" height="17" fill="none" stroke="var(--color-border)" />
-      <rect x="42.5" y="0.5" width="17" height="17" fill="var(--color-signal)" opacity="0.45" />
+      <rect x="42.5" y="0.5" width="17" height="17" fill="var(--color-text-secondary)" opacity="0.45" />
       <rect x="0.5" y="21.5" width="17" height="22" fill="none" stroke="var(--color-border)" />
       <rect x="21.5" y="21.5" width="38" height="22" fill="none" stroke="var(--color-text-subtle)" />
     </svg>

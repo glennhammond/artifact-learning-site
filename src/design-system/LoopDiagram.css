@@ -79,11 +79,11 @@
   border-color: var(--color-text);
 }
 
-/* Selected/active state — a legitimate, single use of Signal (v0.2 §04) */
+/* Ink structure is the persistent selected-state cue on Paper. */
 .ds-loop__node[data-active="true"] {
-  border-color: var(--color-signal);
+  border-color: var(--color-text);
   border-width: var(--border-thickness-focus);
-  box-shadow: 0 0 0 5px color-mix(in oklch, var(--color-signal), transparent 75%);
+  font-weight: var(--weight-ui-strong);
 }
 
 /* Percentage-based node coordinates so the whole diagram (ring + nodes)
@@ -132,8 +132,9 @@
 }
 
 .ds-loop__stack-node[data-active="true"] {
-  border-color: var(--color-signal);
+  border-color: var(--color-text);
   border-width: var(--border-thickness-focus);
+  font-weight: var(--weight-ui-strong);
 }
 
 .ds-loop__stack-return {
@@ -204,7 +205,8 @@
 }
 
 .ds-loop__legend-item[data-active="true"] dt {
-  color: var(--color-signal);
+  color: var(--color-text);
+  font-weight: var(--weight-body-strong);
 }
 
 @media (max-width: 700px) {

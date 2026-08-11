@@ -96,9 +96,10 @@
 }
 
 .home-hero-proof__choice--selected {
-  border-color: var(--color-text);
+  border-color: var(--color-ink);
+  border-width: var(--border-thickness-focus);
   color: var(--color-text);
-  background: color-mix(in oklch, var(--color-signal) 12%, transparent);
+  background: var(--color-surface-subtle);
 }
 
 .home-hero-proof__radio {
@@ -110,8 +111,8 @@
 }
 
 .home-hero-proof__choice--selected .home-hero-proof__radio {
-  border-color: var(--color-signal);
-  background: var(--color-signal);
+  border-color: var(--color-ink);
+  background: var(--color-ink);
   box-shadow: inset 0 0 0 3px var(--color-paper);
 }
 

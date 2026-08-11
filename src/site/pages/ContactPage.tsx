@@ -6,7 +6,7 @@ import { usePageMeta } from "../usePageMeta";
 import "./pages.css";
 
 export function ContactPage() {
-  usePageMeta("Discuss a learning challenge – Artifact Learning", "Prepare for an initial conversation with Artifact Learning about a learning, capability or experience problem.");
+  usePageMeta("Discuss a learning challenge – Artifact", "Prepare for an initial conversation with Artifact Learning about a learning, capability or experience problem.");
   return (
     <SiteShell>
       <PageIntro eyebrow="Contact" title="Discuss a learning challenge." intro="An initial conversation is most useful when it begins with what needs to change, not a predetermined format or technology." aside={<p>No public contact destination is configured yet. This page does not collect or submit information.</p>} />

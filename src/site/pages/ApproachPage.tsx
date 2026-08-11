@@ -17,7 +17,7 @@ const detail = [
 ];
 
 export function ApproachPage() {
-  usePageMeta("Approach – Artifact Learning", "Artifact's six-stage method for designing, building, measuring and improving digital learning products.");
+  usePageMeta("Approach – Artifact", "Artifact's six-stage method for designing, building, measuring and improving digital learning products.");
   return (
     <SiteShell>
       <PageIntro eyebrow="Approach" title="Digital learning as a product, not a course." intro={productPhilosophy.body} aside={<p>Not every engagement requires every stage. The method follows the problem rather than forcing a production pipeline.</p>} />

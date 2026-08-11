@@ -16,5 +16,5 @@
 
 .ds-nav-link[aria-current="true"] {
   color: var(--color-text);
-  border-block-end-color: var(--color-signal);
+  border-block-end-color: var(--color-text);
 }
