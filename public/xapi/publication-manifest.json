@@ -1,0 +1,19 @@
+{
+  "profileVersion": "0.1.0",
+  "frameworkRepository": "https://github.com/glennhammond/artifact-learning-framework.git",
+  "frameworkSourceCommit": "d9f870e395e4c3471252d416dec6094f718df115",
+  "sourcePath": "xapi/profiles/artifact-learning/0.1.0/profile.jsonld",
+  "sha256": "93ad17de4c08bcfc557a96abc2129ef1c315195ca588cc10d9d351d5c5bb003a",
+  "publishedProfilePath": "public/xapi/profiles/artifact-learning/versions/0.1.0/profile.jsonld",
+  "generatedPublicationPaths": [
+    "public/xapi/verbs/consulted/index.html",
+    "public/xapi/verbs/declared-information-sufficiency/index.html",
+    "public/xapi/activity-types/information-source/index.html",
+    "public/xapi/activity-types/decision-context/index.html",
+    "public/xapi/extensions/comparison-group/index.html",
+    "public/xapi/profiles/artifact-learning/index.html",
+    "public/xapi/profiles/artifact-learning/versions/0.1.0/index.html",
+    "public/xapi/profiles/artifact-learning/templates/consultation/0.1.0/index.html",
+    "public/xapi/profiles/artifact-learning/templates/information-sufficiency/0.1.0/index.html"
+  ]
+}

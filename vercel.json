@@ -1,5 +1,48 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "headers": [
+    {
+      "source": "/xapi/profiles/artifact-learning/versions/0.1.0/profile.jsonld",
+      "headers": [
+        { "key": "Content-Type", "value": "application/ld+json; charset=utf-8" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/xapi/verbs/consulted", "destination": "/xapi/verbs/consulted/index.html" },
+    {
+      "source": "/xapi/verbs/declared-information-sufficiency",
+      "destination": "/xapi/verbs/declared-information-sufficiency/index.html"
+    },
+    {
+      "source": "/xapi/activity-types/information-source",
+      "destination": "/xapi/activity-types/information-source/index.html"
+    },
+    {
+      "source": "/xapi/activity-types/decision-context",
+      "destination": "/xapi/activity-types/decision-context/index.html"
+    },
+    {
+      "source": "/xapi/extensions/comparison-group",
+      "destination": "/xapi/extensions/comparison-group/index.html"
+    },
+    {
+      "source": "/xapi/profiles/artifact-learning",
+      "destination": "/xapi/profiles/artifact-learning/index.html"
+    },
+    {
+      "source": "/xapi/profiles/artifact-learning/versions/0.1.0",
+      "destination": "/xapi/profiles/artifact-learning/versions/0.1.0/index.html"
+    },
+    {
+      "source": "/xapi/profiles/artifact-learning/templates/consultation/0.1.0",
+      "destination": "/xapi/profiles/artifact-learning/templates/consultation/0.1.0/index.html"
+    },
+    {
+      "source": "/xapi/profiles/artifact-learning/templates/information-sufficiency/0.1.0",
+      "destination": "/xapi/profiles/artifact-learning/templates/information-sufficiency/0.1.0/index.html"
+    },
+    { "source": "/((?!xapi(?:/|$)).*)", "destination": "/index.html" }
   ]
 }

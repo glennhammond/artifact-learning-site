@@ -1,0 +1,209 @@
+{
+  "@context": "https://w3id.org/xapi/profiles/context",
+  "id": "https://artifactlearning.com/xapi/profiles/artifact-learning",
+  "type": "Profile",
+  "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+  "prefLabel": {
+    "en": "Artifact Learning"
+  },
+  "definition": {
+    "en": "Defines the Artifact Learning xAPI concepts and statement constraints for learner-directed information seeking in version 0.1.0. It does not govern all Artifact xAPI semantics."
+  },
+  "versions": [
+    {
+      "id": "https://artifactlearning.com/xapi/profiles/artifact-learning/versions/0.1.0",
+      "generatedAtTime": "2026-08-11T00:00:00Z"
+    }
+  ],
+  "author": {
+    "type": "Organization",
+    "name": "Artifact Learning",
+    "url": "https://artifactlearning.com"
+  },
+  "concepts": [
+    {
+      "id": "https://artifactlearning.com/xapi/verbs/consulted",
+      "type": "Verb",
+      "inScheme": "https://artifactlearning.com/xapi/profiles/artifact-learning/versions/0.1.0",
+      "prefLabel": {
+        "en": "consulted"
+      },
+      "definition": {
+        "en": "Indicates that the actor deliberately requested access to an Artifact InformationSource. It does not assert delivery, attention, comprehension, agreement, completion, learning, engagement, diligence, thoroughness, or quality of review."
+      }
+    },
+    {
+      "id": "https://artifactlearning.com/xapi/verbs/declared-information-sufficiency",
+      "type": "Verb",
+      "inScheme": "https://artifactlearning.com/xapi/profiles/artifact-learning/versions/0.1.0",
+      "prefLabel": {
+        "en": "declared information sufficiency"
+      },
+      "definition": {
+        "en": "Indicates that the actor explicitly declared whether they considered the available information sufficient for the relevant DecisionContext. The subjective declaration is recorded as result.response equal to sufficient or insufficient and does not assert objective sufficiency, correctness, readiness, competence, completion, or success."
+      }
+    },
+    {
+      "id": "https://artifactlearning.com/xapi/activity-types/information-source",
+      "type": "ActivityType",
+      "inScheme": "https://artifactlearning.com/xapi/profiles/artifact-learning/versions/0.1.0",
+      "prefLabel": {
+        "en": "InformationSource"
+      },
+      "definition": {
+        "en": "An authored semantic information resource made available for learner-directed Consultation within an Artifact Experience. Its identity is presentation-independent."
+      }
+    },
+    {
+      "id": "https://artifactlearning.com/xapi/activity-types/decision-context",
+      "type": "ActivityType",
+      "inScheme": "https://artifactlearning.com/xapi/profiles/artifact-learning/versions/0.1.0",
+      "prefLabel": {
+        "en": "DecisionContext"
+      },
+      "definition": {
+        "en": "A stable Artifact semantic context relating InformationSources, Consultations, optional sufficiency declarations, and participating judgements. It is not a workflow, attempt, course section, hierarchy parent, registration, or learning component."
+      }
+    },
+    {
+      "id": "https://artifactlearning.com/xapi/extensions/comparison-group",
+      "type": "ContextExtension",
+      "inScheme": "https://artifactlearning.com/xapi/profiles/artifact-learning/versions/0.1.0",
+      "prefLabel": {
+        "en": "comparison group"
+      },
+      "definition": {
+        "en": "An authored privacy-safe technical identifier indicating that participating DecisionPoint responses are intended to be semantically comparable and use identical response ids for identical authored meanings. It does not assert progression, improvement, correctness, or causality."
+      },
+      "inlineSchema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"string\",\"minLength\":1}"
+    }
+  ],
+  "templates": [
+    {
+      "id": "https://artifactlearning.com/xapi/profiles/artifact-learning/templates/consultation/0.1.0",
+      "type": "StatementTemplate",
+      "inScheme": "https://artifactlearning.com/xapi/profiles/artifact-learning/versions/0.1.0",
+      "prefLabel": {
+        "en": "Consultation"
+      },
+      "definition": {
+        "en": "Records one deliberate request to access an InformationSource in a DecisionContext. Artifact producers require exactly one relevant DecisionContext; Profile syntax enforces at least one correctly typed DecisionContext and the producer contract enforces cardinality."
+      },
+      "verb": "https://artifactlearning.com/xapi/verbs/consulted",
+      "objectActivityType": "https://artifactlearning.com/xapi/activity-types/information-source",
+      "contextParentActivityType": [
+        "http://adlnet.gov/expapi/activities/course"
+      ],
+      "contextOtherActivityType": [
+        "https://artifactlearning.com/xapi/activity-types/decision-context"
+      ],
+      "rules": [
+        {
+          "location": "$.context.registration",
+          "presence": "included"
+        },
+        {
+          "location": "$.context.contextActivities.category[*].id",
+          "presence": "included",
+          "any": [
+            "https://artifactlearning.com/xapi/profiles/artifact-learning/versions/0.1.0"
+          ]
+        },
+        {
+          "location": "$.result",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.context.extensions['https://artifactlearning.com/xapi/extensions/comparison-group']",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.object.definition.extensions",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.object.definition.description",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.attachments",
+          "presence": "excluded"
+        }
+      ]
+    },
+    {
+      "id": "https://artifactlearning.com/xapi/profiles/artifact-learning/templates/information-sufficiency/0.1.0",
+      "type": "StatementTemplate",
+      "inScheme": "https://artifactlearning.com/xapi/profiles/artifact-learning/versions/0.1.0",
+      "prefLabel": {
+        "en": "Information Sufficiency Declaration"
+      },
+      "definition": {
+        "en": "Records one explicit subjective sufficient or insufficient declaration about a DecisionContext without success or completion semantics."
+      },
+      "verb": "https://artifactlearning.com/xapi/verbs/declared-information-sufficiency",
+      "objectActivityType": "https://artifactlearning.com/xapi/activity-types/decision-context",
+      "contextParentActivityType": [
+        "http://adlnet.gov/expapi/activities/course"
+      ],
+      "rules": [
+        {
+          "location": "$.result.response",
+          "presence": "included",
+          "all": ["sufficient", "insufficient"]
+        },
+        {
+          "location": "$.result.success",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.result.completion",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.result.score",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.result.duration",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.result.extensions",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.context.registration",
+          "presence": "included"
+        },
+        {
+          "location": "$.context.contextActivities.category[*].id",
+          "presence": "included",
+          "any": [
+            "https://artifactlearning.com/xapi/profiles/artifact-learning/versions/0.1.0"
+          ]
+        },
+        {
+          "location": "$.context.contextActivities.other",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.context.extensions['https://artifactlearning.com/xapi/extensions/comparison-group']",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.object.definition.extensions",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.object.definition.description",
+          "presence": "excluded"
+        },
+        {
+          "location": "$.attachments",
+          "presence": "excluded"
+        }
+      ]
+    }
+  ]
+}
