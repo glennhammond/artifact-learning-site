@@ -4,8 +4,8 @@
 
 .home-platform-system__experience {
   padding: var(--space-5);
-  background: var(--color-bg-raised);
-  color: var(--color-text);
+  background: var(--color-ink);
+  color: var(--color-paper);
   font-family: var(--type-heading);
   font-size: var(--text-h3);
 }
@@ -79,18 +79,13 @@
 .home-platform-proof__inspector {
   display: grid;
   gap: var(--space-2);
-  background: var(--color-bg-raised);
-  color: var(--color-text);
+  background: var(--color-ink);
+  color: var(--color-paper);
 }
 
 .home-platform-proof__inspector .kicker,
 .home-platform-proof__inspector small {
   color: var(--color-text-subtle);
-}
-
-.home-platform-proof pre strong {
-  color: var(--color-signal);
-  font-weight: 400;
 }
 
 .home-platform-proof__analytics {
