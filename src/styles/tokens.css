@@ -2,8 +2,8 @@
   Artifact production design tokens. Semantic names throughout; components
   reference roles (--color-signal, --type-heading), never raw values.
 
-  OKLCH is the source of truth for colour (v0.2 §03); a hex fallback is
-  declared first for engines without OKLCH support, then overridden.
+  Approved hex values are canonical for the three core brand colours so
+  alternate colour-space approximations cannot change their rendered output.
 */
 
 :root {
@@ -42,13 +42,10 @@
   --leading-ui: 1.4;
 
   /* ============ COLOUR ============ */
-  /* Hex fallback declared first, OKLCH overrides where supported. */
+  /* Canonical approved brand colours. */
   --color-ink: #12141b;
-  --color-ink: oklch(16% 0.016 258);
   --color-paper: #f7f5f0;
-  --color-paper: oklch(97% 0.006 95);
   --color-signal: #d7f24a;
-  --color-signal: oklch(84% 0.19 128);
 
   --color-text-secondary: #6c7078;
   --color-text-secondary: oklch(52% 0.012 258);

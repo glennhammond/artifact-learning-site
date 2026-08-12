@@ -44,13 +44,14 @@ never use the display family.
 
 ## Colour
 
-Territory C — Ink, Paper, Signal — OKLCH is the source of truth, hex is the fallback:
+Territory C — Ink, Paper, Signal. The approved hex values are the canonical production tokens; the
+OKLCH values below are documentation-only approximations and do not override rendered colour:
 
 | Token | OKLCH | Hex | Role |
 |---|---|---|---|
-| `--color-ink` | `16% 0.016 258` | `#12141b` | Text on Paper, dark surface |
-| `--color-paper` | `97% 0.006 95` | `#f7f5f0` | Default background |
-| `--color-signal` | `84% 0.19 128` | `#d7f24a` | The one accent — see below |
+| `--color-ink` | `19.24% 0.0145 272.49` | `#12141b` | Text on Paper, dark surface |
+| `--color-paper` | `97.03% 0.0070 88.64` | `#f7f5f0` | Default background |
+| `--color-signal` | `91.21% 0.1873 118.25` | `#d7f24a` | The one accent — see below |
 | `--color-text-secondary` | `52% 0.012 258` | `#6c7078` | Secondary text, ≈4.7:1 on Paper |
 | `--color-border` | `88% 0.008 258` | `#d9dade` | Dividers, panel borders |
 | `--color-surface-strong` | `22% 0.018 258` | `#1c202a` | Elevated surface on Ink |

@@ -17,7 +17,7 @@ export function Nav() {
       <Container className="home-nav__inner">
         <Link to="/" className="home-nav__wordmark">
           <ArtifactMark className="home-nav__mark" />
-          <span>Artifact</span>
+          <span className="home-nav__wordmark-text">Artifact</span>
         </Link>
 
         <button

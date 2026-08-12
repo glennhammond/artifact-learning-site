@@ -43,6 +43,11 @@
   color: var(--color-ink);
 }
 
+.home-nav__wordmark-text {
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
 .home-nav__toggle {
   display: none;
   font-family: var(--type-ui);

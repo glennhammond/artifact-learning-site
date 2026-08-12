@@ -29,9 +29,11 @@
 }
 
 .home-footer__wordmark {
+  display: inline-block;
   font-family: var(--type-heading);
   font-weight: var(--weight-heading);
   font-size: 1.1rem;
+  transform: translateY(-1px);
 }
 
 .home-footer__tagline {
