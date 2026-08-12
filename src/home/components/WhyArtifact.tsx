@@ -10,6 +10,7 @@ export function WhyArtifact() {
       heading={whyArtifact.headline}
       intro={whyArtifact.intro}
       width="page"
+      tone="ink"
     >
       <div className="home-why-grid">
         {whyArtifact.principles.map((item) => (
@@ -26,12 +27,12 @@ export function WhyArtifact() {
           <span className="kicker">Experience</span>
           <strong>Decision designed around a real judgement</strong>
         </div>
-        <span aria-hidden="true">→</span>
-        <div>
+        <span className="home-why-proof__signal-trace" aria-hidden="true">→</span>
+        <div className="home-why-proof__signal">
           <span className="kicker">Signal</span>
           <strong>Meaningful behaviour captured where useful</strong>
         </div>
-        <span aria-hidden="true">→</span>
+        <span className="home-why-proof__signal-trace" aria-hidden="true">→</span>
         <div>
           <span className="kicker">Evidence</span>
           <strong>Used carefully to improve the experience</strong>

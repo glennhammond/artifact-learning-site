@@ -33,6 +33,7 @@
 
 .home-why-item .kicker {
   margin-block-end: var(--space-4);
+  color: var(--color-signal);
 }
 
 .home-why-item h3 {
@@ -51,7 +52,7 @@
   margin-block-start: var(--space-8);
   padding: var(--space-5);
   border: var(--border-thickness) solid var(--color-border);
-  background: var(--color-bg-raised);
+  background: transparent;
 }
 
 @media (min-width: 820px) {
@@ -64,6 +65,18 @@
 .home-why-proof > span {
   color: var(--color-text-subtle);
   font-size: var(--text-lead);
+}
+
+.home-why-proof .home-why-proof__signal-trace,
+.home-why-proof__signal .kicker {
+  color: var(--color-signal);
+}
+
+@media (max-width: 819px) {
+  .home-why-proof__signal-trace {
+    justify-self: start;
+    transform: rotate(90deg);
+  }
 }
 
 .home-why-proof div {
