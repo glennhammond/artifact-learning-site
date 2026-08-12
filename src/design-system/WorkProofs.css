@@ -24,7 +24,7 @@
 .ds-wellbeing-proof__programme > div:last-child { border-inline-end: 0; }
 .ds-wellbeing-proof__programme small { color: var(--color-text-secondary); }
 .ds-wellbeing-proof__progress { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4); border-block-start: var(--border-thickness) solid var(--color-border); font-family: var(--type-ui); font-size: 0.6875rem; }
-.ds-wellbeing-proof__progress div { height: 3px; background: var(--color-border); }
+.ds-wellbeing-proof__progress div { height: 4px; background: var(--color-border); }
 .ds-wellbeing-proof__progress i { display: block; width: 50%; height: 100%; background: var(--color-signal); }
 
 .ds-project-proof--artifact-rd .ds-project-proof__visual { background: var(--color-ink); color: var(--color-paper); }

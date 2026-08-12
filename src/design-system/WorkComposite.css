@@ -181,7 +181,7 @@
 .ds-work-proof__mobile-choice.is-selected { border-color: var(--color-text); }
 
 .ds-work-proof__mobile-progress {
-  height: 3px;
+  height: 4px;
   margin-block-start: var(--space-4);
   background: var(--color-border);
 }

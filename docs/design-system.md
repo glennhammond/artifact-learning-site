@@ -67,6 +67,11 @@ OKLCH values below are documentation-only approximations and do not override ren
 happens within it. Signal marks meaningful consequence where it has enough visual presence to perform
 clearly. It is not required for every small trace, marker or selected state.
 
+**Do not change Signal to fit the surface. Change the expression of Signal to suit the surface.** On
+Paper, favour substantial fills, larger markers and thicker meaningful traces. Pair small Signal fields
+with Ink structure where appropriate, and use Ink or a neutral when Signal would be too weak at the
+required scale. On Ink, Signal can operate effectively at smaller scales.
+
 Primary CTA fills, substantial event/state fills, persistent progress/evidence fields, and meaningful
 states against Ink may use Signal with Ink text where applicable. Tiny marks, routine borders and
 dividers, body or small text on Paper, and small selected edges use Ink or a neutral instead. Selection
