@@ -111,9 +111,16 @@
 }
 
 .home-hero-proof__choice--selected .home-hero-proof__radio {
+  position: relative;
   border-color: var(--color-ink);
+  background: var(--color-paper);
+}
+
+.home-hero-proof__choice--selected .home-hero-proof__radio::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
   background: var(--color-signal);
-  box-shadow: inset 0 0 0 3px var(--color-paper);
 }
 
 .home-hero-proof__feedback {
