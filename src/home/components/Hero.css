@@ -112,7 +112,7 @@
 
 .home-hero-proof__choice--selected .home-hero-proof__radio {
   border-color: var(--color-ink);
-  background: var(--color-ink);
+  background: var(--color-signal);
   box-shadow: inset 0 0 0 3px var(--color-paper);
 }
 
