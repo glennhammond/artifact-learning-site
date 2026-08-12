@@ -26,9 +26,9 @@ export function Home() {
     <SiteShell>
       <div className="home">
         <Hero />
-        <Work />
-        <Services />
         <WhyArtifact />
+        <Services />
+        <Work />
         <Approach />
         <Platform />
         <FinalCta />
