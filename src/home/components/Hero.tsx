@@ -5,7 +5,11 @@ import "./Hero.css";
 
 function DecisionEvidenceSpecimen() {
   return (
-    <div className="home-hero-proof" aria-label="Illustrative Artifact learning decision and evidence">
+    <div
+      className="home-hero-proof"
+      role="img"
+      aria-label="Illustrative Artifact sequence: a learner requests missing evidence, the decision is recorded, and an evidence state remains."
+    >
       <div className="home-hero-proof__experience">
         <div className="home-hero-proof__topline">
           <span>DECISION 03</span>
@@ -35,8 +39,12 @@ function DecisionEvidenceSpecimen() {
         </div>
       </div>
 
+      <div className="home-hero-proof__trace" aria-hidden="true">
+        <span>Decision recorded</span>
+      </div>
+
       <div className="home-hero-proof__signal" aria-hidden="true">
-        <p className="kicker">Meaningful signal</p>
+        <p className="kicker">Evidence remains</p>
         <div className="home-hero-proof__event">
           <span>decision.responded</span>
           <strong>request_evidence</strong>
@@ -59,7 +67,6 @@ export function Hero() {
       <Container>
         <div className="home-hero__grid">
           <div className="home-hero__primary">
-            <p className="kicker">{hero.eyebrow}</p>
             <h1>
               Develop capability,
               <br />

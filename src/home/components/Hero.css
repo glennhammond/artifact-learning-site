@@ -11,14 +11,10 @@
 
 @media (min-width: 960px) {
   .home-hero__grid {
-    grid-template-columns: minmax(0, 0.9fr) minmax(520px, 1.1fr);
-    gap: clamp(3rem, 5vw, 6rem);
+    grid-template-columns: minmax(0, 0.82fr) minmax(560px, 1.18fr);
+    gap: clamp(2.5rem, 4vw, 5rem);
     align-items: center;
   }
-}
-
-.home-hero__primary .kicker {
-  margin-block-end: var(--space-5);
 }
 
 .home-hero__primary h1 {
@@ -40,14 +36,17 @@
   gap: var(--space-5);
 }
 
-/* A representative learning product, not a dashboard. */
+/* One system moment: a decision occurs, Signal registers it, evidence remains. */
 .home-hero-proof {
   position: relative;
   min-width: 0;
-  padding-block-end: var(--space-6);
+  padding-block-end: var(--space-7);
 }
 
 .home-hero-proof__experience {
+  position: relative;
+  z-index: 1;
+  width: 94%;
   border: var(--border-thickness) solid var(--color-border);
   background: var(--color-paper);
   padding: clamp(1.25rem, 2vw, 2rem);
@@ -142,13 +141,46 @@
 }
 
 .home-hero-proof__signal {
-  width: min(88%, 420px);
+  position: relative;
+  z-index: 2;
+  width: min(78%, 460px);
   margin-inline-start: auto;
-  margin-block-start: -1px;
+  margin-block-start: calc(-1 * var(--space-4));
   border: var(--border-thickness) solid var(--color-border);
   background: var(--color-ink);
   color: var(--color-paper);
   padding: var(--space-4);
+}
+
+.home-hero-proof__trace {
+  position: relative;
+  z-index: 3;
+  width: 38%;
+  height: 24px;
+  margin-inline: auto 13%;
+  margin-block-start: calc(-1 * var(--space-2));
+  border-block-end: 4px solid var(--color-signal);
+  border-inline-end: 4px solid var(--color-signal);
+}
+
+.home-hero-proof__trace::after {
+  content: "";
+  position: absolute;
+  right: -7px;
+  bottom: -7px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-signal);
+}
+
+.home-hero-proof__trace span {
+  position: absolute;
+  right: var(--space-3);
+  bottom: var(--space-2);
+  font-family: var(--type-data);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary);
 }
 
 .home-hero-proof__signal .kicker {
@@ -186,6 +218,16 @@
   }
 
   .home-hero-proof__signal {
-    width: 94%;
+    width: 92%;
+    margin-block-start: calc(-1 * var(--space-2));
+  }
+
+  .home-hero-proof__experience {
+    width: 100%;
+  }
+
+  .home-hero-proof__trace {
+    width: 42%;
+    margin-inline-end: 8%;
   }
 }
