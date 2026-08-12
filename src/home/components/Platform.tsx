@@ -11,6 +11,7 @@ export function Platform() {
       intro={platformSummary.intro}
       width="content"
       density="compact"
+      tone="ink"
     >
       <div className="home-platform-system" aria-label="Artifact platform ecosystem">
         <div className="home-platform-system__experience">Learning experience</div>
@@ -42,7 +43,7 @@ export function Platform() {
       <div className="home-platform-proof">
         <pre aria-label="Illustrative Artifact event">{`artifact.event
 type      decision.responded
-choice    request_evidence`}</pre>
+choice    `}<strong>request_evidence</strong></pre>
 
         <div className="home-platform-proof__inspector">
           <span className="kicker">Inspector</span>

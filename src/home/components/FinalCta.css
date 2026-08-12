@@ -1,6 +1,7 @@
 .home-cta {
-  margin-block-start: var(--section-y-compact);
+  margin-block-start: 0;
   padding-block: clamp(4rem, 8vw, 8rem);
+  border-block-start: var(--border-thickness) solid var(--color-surface-strong);
   background: var(--color-ink);
   color: var(--color-paper);
 }
