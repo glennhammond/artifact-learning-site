@@ -10,7 +10,7 @@ export function WorkPage() {
   usePageMeta("Work – Artifact", "Selected learning experiences, decision design, systems and evidence from Artifact Learning.");
   return (
     <SiteShell>
-      <PageIntro eyebrow="Selected work" title="Learning problems made tangible." intro="Four proof-led examples spanning experience, decision, system and evidence. Asset status appears with each visual." aside={<p>Proof roles<br />Experience · Decision · System · Evidence</p>} />
+      <PageIntro tone="ink" eyebrow="Selected work" title="Learning problems made tangible." intro="Four proof-led examples spanning experience, decision, system and evidence. Asset status appears with each visual." aside={<p>Proof roles<br />Experience · Decision · System · Evidence</p>} />
       <section className="site-section site-work-overview" aria-label="Work case studies">
         <Container>
           <WorkFeature project={featuredProject} stages={caseStudyStages} />

@@ -30,7 +30,7 @@ export function WorkDetailPage() {
 
   return (
     <SiteShell>
-      <PageIntro eyebrow={detail.eyebrow} title={detail.title} intro={detail.intro} aside={<><p className="site-status">{detail.status}</p><p><Link to="/work">← All selected work</Link></p></>} />
+      <PageIntro tone="ink" eyebrow={detail.eyebrow} title={detail.title} intro={detail.intro} aside={<><p className="site-status">{detail.status}</p><p><Link to="/work">← All selected work</Link></p></>} />
       <section className="site-section" aria-labelledby="case-proof-heading">
         <Container>
           <h2 id="case-proof-heading" className="site-section__heading">Visual proof</h2>

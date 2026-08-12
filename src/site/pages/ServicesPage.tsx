@@ -15,7 +15,7 @@ export function ServicesPage() {
 
   return (
     <SiteShell>
-      <PageIntro eyebrow="Services" title="Purpose-built learning, not a production line." intro="Four related ways to solve learning and capability problems. Most engagements begin with Bespoke Learning Experiences or a focused definition phase." />
+      <PageIntro tone="ink" eyebrow="Services" title="Purpose-built learning, not a production line." intro="Four related ways to solve learning and capability problems. Most engagements begin with Bespoke Learning Experiences or a focused definition phase." />
 
       <section className="site-section site-service-primary" aria-labelledby="service-primary-heading">
         <Container>
