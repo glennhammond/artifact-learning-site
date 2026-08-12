@@ -25,7 +25,8 @@ function DecisionEvidenceSpecimen() {
         <div className="home-hero-proof__choices" aria-hidden="true">
           <div className="home-hero-proof__choice home-hero-proof__choice--selected">
             <span className="home-hero-proof__radio" />
-            Ask for the missing evidence before approving
+            <span>Ask for the missing evidence before approving</span>
+            <span className="home-hero-proof__choice-trace" />
           </div>
           <div className="home-hero-proof__choice">
             <span className="home-hero-proof__radio" />
@@ -37,10 +38,6 @@ function DecisionEvidenceSpecimen() {
           <span>FEEDBACK</span>
           The decision preserves the evidence needed before approval.
         </div>
-      </div>
-
-      <div className="home-hero-proof__trace" aria-hidden="true">
-        <span>Decision recorded</span>
       </div>
 
       <div className="home-hero-proof__signal" aria-hidden="true">
@@ -74,7 +71,7 @@ export function Hero() {
             </h1>
             <p className="home-hero__standfirst">{hero.standfirst}</p>
             <div className="home-hero__actions">
-              <Button variant="primary" href={hero.ctaHref}>
+              <Button variant="primary" href={hero.ctaHref} className="home-hero__primary-cta">
                 {hero.cta}
               </Button>
               <Button variant="text" href={hero.ctaSecondaryHref}>
