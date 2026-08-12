@@ -3,7 +3,7 @@
 This repository is the implementation home for the Artifact Learning website: brand and UX exploration,
 the coded design system, the multi-page publication candidate, case studies and deployment configuration.
 
-**Current phase: Phase 7: brand-system integration.** The approved homepage, multi-page routes,
+**Current phase: Phase 8: whole-site convergence.** The approved homepage, multi-page routes,
 representative proof system and Artifact masterbrand are implemented. Publication remains blocked until
 a verified contact destination and the ITC Avant Garde licensing/public-repository decision are resolved.
 See `docs/design-system.md` and the Phase 6 publication-readiness audit.
@@ -83,7 +83,7 @@ and the confirmed geometry and motion values. See `docs/design-system.md` for th
 
 ## Review gate
 
-This phase stops after the consolidated homepage, design system, system model, responsive/accessibility/
-performance QA and documentation are complete and validated. Full Work archive, complete case-study
-pages, Approach/Artifact/Studio pages, Insights, Lab and public deployment are deliberately out of scope
-until Glenn reviews this phase.
+The site is a coherent publication candidate, but not approved for public launch. Contact integration,
+ITC Avant Garde licensing/public-repository rights and final rendered acceptance remain explicit gates.
+The production `noindex, nofollow` directive stays in place until launch approval. See the Phase 8
+convergence audit for the current decisions and outstanding blockers.

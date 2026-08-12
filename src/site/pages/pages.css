@@ -11,6 +11,9 @@
 .site-service-row p { color: var(--color-text-secondary); }
 .site-service-row__details { display: grid; gap: var(--space-3); font-size: var(--text-small); }
 .site-service-row__details a { color: var(--color-text); }
+.site-service-row__includes { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); margin-block-start: var(--space-1); }
+.site-service-row__includes li { position: relative; padding-inline-start: var(--space-3); }
+.site-service-row__includes li::before { content: ""; position: absolute; inset-inline-start: 0; inset-block-start: 0.68em; width: 4px; height: 4px; background: var(--color-ink); }
 @media (min-width: 820px) { .site-service-row { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-8); } }
 
 .site-definition { background: var(--color-bg-raised); }

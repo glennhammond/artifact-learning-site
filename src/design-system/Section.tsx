@@ -22,8 +22,8 @@ interface SectionProps {
 /**
  * The section/layout primitive every homepage section is built from: a
  * consistent kicker + heading head, a one-shot reveal-on-scroll, and a
- * light/dark tone switch for the one section (Model) that uses the Ink
- * surface (v0.2 treats dark as an occasional technical-context mode, not
+ * light/dark tone switch for the few sections that earn an Ink surface
+ * (v0.2 treats dark as an occasional semantic mode, not
  * the page default: see docs/consolidation-decision.md).
  */
 export function Section({

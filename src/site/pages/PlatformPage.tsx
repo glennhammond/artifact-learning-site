@@ -9,7 +9,7 @@ import { usePageMeta } from "../usePageMeta";
 import "./pages.css";
 
 export function PlatformPage() {
-  usePageMeta("Artifact Platform", "The standards-based technical architecture underneath Artifact learning experiences, events and evidence.");
+  usePageMeta("Platform – Artifact", "The standards-based technical architecture underneath Artifact learning experiences, events and evidence.");
   return (
     <SiteShell>
       <PageIntro eyebrow="Artifact R&D" title="The technology underneath the experience." intro="A standards-based architecture for structured learning experiences, meaningful events, interoperability and careful evidence. It supports the practice rather than asking clients to replace their ecosystem." aside={<p>Proprietary capability behind the practice, not a mature SaaS product or software-for-sale offer.</p>} />

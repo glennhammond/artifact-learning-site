@@ -68,7 +68,7 @@ generic Card component was introduced.
 
 `/work/:slug` uses one route architecture and project-specific content/proof.
 The eLearning Design System is the most detailed current case. Wellbeing Studio
-explains programme-based learning. Professional judgement is deliberately
+explains program-based learning. Professional judgement is deliberately
 limited and anonymous. Artifact R&D is explicitly internal capability, not
 client work or software for sale.
 
@@ -139,7 +139,7 @@ service has been introduced.
 ## 15. Real assets still required
 
 - Approved eLearning Design System interface and documentation crops.
-- Approved Wellbeing Studio product and programme media.
+- Approved Wellbeing Studio product and program media.
 - Publication-safe professional-judgement material.
 - Genuine current Framework, runtime, DecisionPoint and Inspector captures.
 - Any approved video thumbnails or URLs, with transcripts/captions as needed.
