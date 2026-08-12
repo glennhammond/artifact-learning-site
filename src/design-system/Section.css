@@ -2,7 +2,7 @@
   padding-block: var(--section-y);
 }
 
-/* Section rhythm (Phase 2.2 §9) — density varies deliberately rather than
+/* Section rhythm (Phase 2.2 §9): density varies deliberately rather than
    every section sharing the same top/bottom padding. */
 .ds-section--compact {
   padding-block: var(--section-y-compact);
@@ -17,11 +17,11 @@
   color: var(--color-text);
 }
 
-/* Bounded to the Model section only — dark is a technical-context mode,
+/* Bounded to sections with a semantic reason for Ink: dark is an occasional mode,
    not the homepage default (v0.2; docs/consolidation-decision.md). Redefines
    the semantic tokens locally (the same "surface remap" pattern used across
-   the Artifact/GH family) so every component underneath — Button, Tag,
-   DataStrip, LoopDiagram — resolves the correct dark-surface colours and
+   the Artifact/GH family) so every component underneath: Button, Tag,
+   DataStrip, LoopDiagram: resolves the correct dark-surface colours and
    focus ring without a per-component dark variant. */
 .ds-section--ink {
   --color-bg: var(--color-ink);

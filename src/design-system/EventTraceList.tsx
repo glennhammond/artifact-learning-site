@@ -9,12 +9,13 @@ interface EventTraceListProps {
 }
 
 /**
- * A vertical trace of learning events along a thin rail — a substantial
+ * A vertical trace of learning events along a thin rail: a substantial
  * editorial/technical artefact integrated into the hero (v0.4 §3), not a
- * dashboard or console. Only the active/consequential event is marked in
- * Signal; the rest read as quiet, genuine-looking instrumentation. The
+ * dashboard or console. The active/consequential event is marked with
+ * stronger structure; the rest read as quiet, genuine-looking instrumentation. The
  * label sits above the trace like a caption on a figure, giving the
- * artefact its own identity within the composition.
+ * artefact its own identity within the composition. Active state is shown
+ * structurally in Ink rather than with a tiny Signal detail on Paper.
  */
 export function EventTraceList({ events, meta, caption, className = "" }: EventTraceListProps) {
   return (

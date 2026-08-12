@@ -5,7 +5,7 @@ import { legacyModelLayers as modelLayers, legacyModelCaption as modelCaption } 
 import "./SystemsModule.css";
 
 /**
- * The hybrid's one bounded "systems moment" — everything above and below
+ * The hybrid's one bounded "systems moment": everything above and below
  * this panel is plain editorial styling; inside it, the page borrows
  * Concept B's graphite/interactive language for a single contained module.
  */

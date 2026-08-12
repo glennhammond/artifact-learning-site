@@ -7,7 +7,7 @@
 
 @media (min-width: 960px) {
   .ds-work-feature {
-    /* the figure carries real visual weight — "the work is the imagery" */
+    /* the figure carries real visual weight: "the work is the imagery" */
     grid-template-columns: minmax(0, 8fr) minmax(280px, 4fr);
     align-items: start;
   }
@@ -58,11 +58,57 @@
 }
 
 .ds-work-list li {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: var(--space-6);
   padding-block: var(--space-8);
   border-block-start: var(--border-thickness) solid var(--color-border);
+}
+
+.ds-work-list__item--ink {
+  --color-focus: var(--color-paper);
+  isolation: isolate;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  clip-path: inset(0 -100vmax);
+}
+
+.ds-work-list__item--ink::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset-block: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: var(--color-ink);
+}
+
+.ds-work-list__item--ink .ds-work-list__body .kicker,
+.ds-work-list__item--ink .ds-work-list__framing,
+.ds-work-list__item--ink .ds-work-list__status {
+  color: var(--color-text-subtle);
+}
+
+.ds-work-list__item--ink .ds-work-list__status {
+  display: block;
+  width: fit-content;
+}
+
+.ds-work-list__item--ink .ds-work-list__body .ds-btn--text {
+  display: flex;
+  width: fit-content;
+  color: var(--color-signal);
+}
+
+.ds-work-list__item--ink .ds-work-list__body .ds-btn--text:hover {
+  color: var(--color-paper);
+}
+
+.ds-work-list__item--ink .ds-work-list__proof {
+  background: var(--color-paper);
+  color: var(--color-ink);
 }
 
 @media (min-width: 820px) {

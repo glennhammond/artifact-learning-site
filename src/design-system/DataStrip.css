@@ -20,8 +20,7 @@
   border-width: var(--border-thickness-focus);
 }
 
-/* The one Signal mark in the pairing — a small corner flag identifying
-   which panel carries the consequence, not a filled background. */
+/* A supplementary Signal field; the stronger Ink border identifies active state independently. */
 .ds-data-strip__mark {
   position: absolute;
   top: -1px;

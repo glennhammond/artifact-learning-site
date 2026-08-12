@@ -2,6 +2,7 @@ import { Button } from "./Button";
 import { Tag } from "./Tag";
 import { WorkComposite } from "./WorkComposite";
 import { ArtifactRdProof, ProfessionalJudgementProof, WellbeingStudioProof } from "./WorkProofs";
+import type { ReactNode } from "react";
 import type { CaseStudyStage, Project } from "../content/shared";
 import { workVisuals } from "../content/workAssets";
 import "./WorkFeature.css";
@@ -18,7 +19,7 @@ interface WorkFeatureProps {
 }
 
 /**
- * The one full featured case study — problem-led, evidence at the end.
+ * The one full featured case study: problem-led, evidence at the end.
  * Deliberately not a card in a grid: this is the only work item that gets
  * a figure, and the case-study chain is shown as a labelled sequence with
  * definitions rather than expanded into a full case-study page (out of
@@ -62,21 +63,26 @@ export function WorkFeature({ project, stages }: WorkFeatureProps) {
 
 interface WorkListProps {
   projects: Project[];
+  inkProjectSlug?: string;
 }
 
-/** Secondary work items — a short text-led list, not a card grid. */
-export function WorkList({ projects }: WorkListProps) {
-  const proofs = [
-    <ProfessionalJudgementProof asset={workVisuals.professionalJudgement} />,
-    <WellbeingStudioProof asset={workVisuals.wellbeingStudio} />,
-    <ArtifactRdProof asset={workVisuals.artifactRd} />,
-  ];
+function proofForProject(slug: string): ReactNode {
+  if (slug === "professional-judgement") return <ProfessionalJudgementProof asset={workVisuals.professionalJudgement} />;
+  if (slug === "wellbeing-studio") return <WellbeingStudioProof asset={workVisuals.wellbeingStudio} />;
+  if (slug === "artifact-rd") return <ArtifactRdProof asset={workVisuals.artifactRd} />;
+  return null;
+}
 
+/** Secondary work items: a short text-led list, not a card grid. */
+export function WorkList({ projects, inkProjectSlug }: WorkListProps) {
   return (
     <ul className="ds-work-list">
-      {projects.map((project, index) => (
-        <li key={project.question}>
-          <div className="ds-work-list__proof">{proofs[index]}</div>
+      {projects.map((project) => (
+        <li
+          key={project.question}
+          className={`ds-work-list__item ds-work-list__item--${project.slug}${project.slug === inkProjectSlug ? " ds-work-list__item--ink" : ""}`}
+        >
+          <div className="ds-work-list__proof">{proofForProject(project.slug)}</div>
           <div className="ds-work-list__body">
             <p className="kicker">{project.eyebrow}</p>
             <p className="ds-work-list__title">{project.question}</p>

@@ -10,12 +10,12 @@ import { usePageMeta } from "../usePageMeta";
 import "./pages.css";
 
 export function ServicesPage() {
-  usePageMeta("Services – Artifact Learning", "Purpose-built digital learning services for complex capability, judgement and performance problems.");
+  usePageMeta("Services – Artifact", "Purpose-built digital learning services for complex capability, judgement and performance problems.");
   const [primary, ...secondary] = serviceDetails;
 
   return (
     <SiteShell>
-      <PageIntro eyebrow="Services" title="Purpose-built learning, not a production line." intro="Four related ways to solve learning and capability problems. Most engagements begin with Bespoke Learning Experiences or a focused definition phase." />
+      <PageIntro tone="ink" eyebrow="Services" title="Purpose-built learning, not a production line." intro="Four related ways to solve learning and capability problems. Most engagements begin with Bespoke Learning Experiences or a focused definition phase." />
 
       <section className="site-section site-service-primary" aria-labelledby="service-primary-heading">
         <Container>
@@ -41,7 +41,12 @@ export function ServicesPage() {
             {secondary.map((service, index) => (
               <article key={service.slug} className="site-service-row">
                 <div><span className="kicker">{secondaryServices[index].index}</span><h3>{service.name}</h3><p>{secondaryServices[index].framing}</p></div>
-                <div className="site-service-row__details"><p><strong>The situation:</strong> {service.situation}</p><p><strong>Work may include:</strong> {service.includes.join(" · ")}</p><p><strong>Output:</strong> {service.outputs}</p><Link to={`/work/${service.related}`}>See related work</Link></div>
+                <div className="site-service-row__details">
+                  <p><strong>The situation:</strong> {service.situation}</p>
+                  <div><strong>Work may include:</strong><ul className="site-service-row__includes">{service.includes.map((item) => <li key={item}>{item}</li>)}</ul></div>
+                  <p><strong>Output:</strong> {service.outputs}</p>
+                  <Link to={`/work/${service.related}`}>See related work</Link>
+                </div>
               </article>
             ))}
           </div>

@@ -1,16 +1,28 @@
 import { Container } from "../../components/layout/Container";
-import { contactPrompts, definitionEngagement } from "../../content/site";
+import { definitionEngagement } from "../../content/site";
+import { ContactForm } from "../ContactForm";
 import { PageIntro } from "../PageIntro";
 import { SiteShell } from "../SiteShell";
 import { usePageMeta } from "../usePageMeta";
 import "./pages.css";
 
 export function ContactPage() {
-  usePageMeta("Discuss a learning challenge – Artifact Learning", "Prepare for an initial conversation with Artifact Learning about a learning, capability or experience problem.");
+  usePageMeta("Discuss a learning challenge – Artifact", "Prepare for an initial conversation with Artifact Learning about a learning, capability or experience problem.");
   return (
     <SiteShell>
-      <PageIntro eyebrow="Contact" title="Discuss a learning challenge." intro="An initial conversation is most useful when it begins with what needs to change, not a predetermined format or technology." aside={<p>No public contact destination is configured yet. This page does not collect or submit information.</p>} />
-      <section className="site-section" aria-labelledby="bring-heading"><Container width="content"><p className="kicker">Useful context</p><h2 id="bring-heading" className="site-section__heading">What to bring to the conversation</h2><ul className="site-contact-prompts">{contactPrompts.map((prompt) => <li key={prompt}>{prompt}</li>)}</ul><div className="site-contact-hook"><h2>Contact method not yet available.</h2><p>A verified public email or form endpoint has not been supplied. No form is shown because it would imply functionality that does not exist.</p></div></Container></section>
+      <PageIntro tone="ink" eyebrow="Contact" title="Discuss a learning challenge." intro="An initial conversation is most useful when it begins with what needs to change, not a predetermined format or technology." />
+      <section className="site-section" aria-labelledby="enquiry-heading">
+        <Container width="content">
+          <div className="site-contact-layout">
+            <div className="site-contact-context">
+              <p className="kicker">Start with the problem</p>
+              <h2 id="enquiry-heading">Share the context that matters.</h2>
+              <p>You do not need a finished brief. It is useful to know who needs to do something differently, what exists already, and which constraints or timeframes are known.</p>
+            </div>
+            <ContactForm />
+          </div>
+        </Container>
+      </section>
       <section className="site-section" aria-labelledby="definition-contact-heading"><Container width="content"><div className="site-prose-grid"><div className="site-prose-block"><p className="kicker">Possible next step</p><h2 id="definition-contact-heading">{definitionEngagement.name}</h2><p>{definitionEngagement.intro}</p></div><div className="site-prose-block"><h2>Not a compulsory package.</h2><p>{definitionEngagement.note}</p></div></div></Container></section>
     </SiteShell>
   );

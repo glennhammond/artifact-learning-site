@@ -1,12 +1,13 @@
-# Artifact Learning — website
+# Artifact Learning: website
 
 This repository is the implementation home for the Artifact Learning website: brand and UX exploration,
 the coded design system, the multi-page publication candidate, case studies and deployment configuration.
 
-**Current phase: Phase 6 — publication-readiness candidate.** The approved homepage, multi-page routes and
-representative proof system are implemented. Publication remains blocked until rendered QA, a verified
-contact destination and the ITC Avant Garde licensing/public-repository decision are resolved. See
-`docs/strategy/phase-6-publication-readiness-audit.md` and the Phase 6 report.
+**Current phase: Phase 8: whole-site convergence.** The approved homepage, multi-page routes,
+representative proof system and Artifact masterbrand are implemented. The Formspree contact destination
+is integrated and verified. Publication remains blocked until the ITC Avant Garde licensing/public-repository
+decision and final privacy/legal review are resolved.
+See `docs/design-system.md` and the Phase 6 publication-readiness audit.
 
 ## Running locally
 
@@ -19,7 +20,7 @@ Then open the URL Vite prints (typically `http://localhost:5173`). Routes:
 
 | Route | What it is |
 |---|---|
-| `/` | Artifact Learning homepage |
+| `/` | Artifact homepage |
 | `/services` | Services overview |
 | `/work` | Selected Work overview |
 | `/work/:slug` | Publication-safe Work detail |
@@ -49,7 +50,7 @@ docs/
   consolidation-decision.md     Phase 2 Keep/Adapt/Remove/New decision record
   design-system.md              Phase 2 design system reference (tokens, components, system model)
 src/
-  design-system/                The coded Artifact design system — Button, NavLink, Tag,
+  design-system/                The coded Artifact design system: Button, NavLink, Tag,
                                  MetadataRow, Section, LoopDiagram, DataStrip, WorkFeature.
                                  Reads tokens only; no hardcoded colour or concept-specific styling.
   home/                         The consolidated homepage (the primary `/` route) and its sections.
@@ -78,12 +79,12 @@ Licence, self-hosted from `@fontsource`.
 ## Status of colour and typography
 
 Colour and typography are now resolved against `Artifact Learning Brand Identity & Digital Design
-Language v0.2` — Territory C (Ink / Paper / Signal), the real Avant Garde/Source Sans 3/IBM Plex family,
+Language v0.2`: Territory C (Ink / Paper / Signal), the real Avant Garde/Source Sans 3/IBM Plex family,
 and the confirmed geometry and motion values. See `docs/design-system.md` for the full reference.
 
 ## Review gate
 
-This phase stops after the consolidated homepage, design system, system model, responsive/accessibility/
-performance QA and documentation are complete and validated. Full Work archive, complete case-study
-pages, Approach/Artifact/Studio pages, Insights, Lab and public deployment are deliberately out of scope
-until Glenn reviews this phase.
+The site is a coherent publication candidate, but not approved for public launch. Privacy/legal review,
+ITC Avant Garde licensing/public-repository rights and final rendered acceptance remain explicit gates.
+The production `noindex, nofollow` directive stays in place until launch approval. See the Phase 8
+convergence audit for the current decisions and outstanding blockers.

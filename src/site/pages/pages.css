@@ -11,6 +11,9 @@
 .site-service-row p { color: var(--color-text-secondary); }
 .site-service-row__details { display: grid; gap: var(--space-3); font-size: var(--text-small); }
 .site-service-row__details a { color: var(--color-text); }
+.site-service-row__includes { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); margin-block-start: var(--space-1); }
+.site-service-row__includes li { position: relative; padding-inline-start: var(--space-3); }
+.site-service-row__includes li::before { content: ""; position: absolute; inset-inline-start: 0; inset-block-start: 0.68em; width: 4px; height: 4px; background: var(--color-ink); }
 @media (min-width: 820px) { .site-service-row { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-8); } }
 
 .site-definition { background: var(--color-bg-raised); }
@@ -38,10 +41,3 @@
 .site-platform-layer { display: grid; grid-template-columns: 1fr; gap: var(--space-4); padding-block: var(--space-6); border-block-end: var(--border-thickness) solid var(--color-border); }
 .site-platform-layer p { color: var(--color-text-secondary); }
 @media (min-width: 760px) { .site-platform-layer { grid-template-columns: minmax(220px, 4fr) minmax(0, 8fr); } }
-
-.site-contact-prompts { display: grid; grid-template-columns: 1fr; margin-block-start: var(--space-7); border-block-start: var(--border-thickness) solid var(--color-border); }
-.site-contact-prompts li { padding: var(--space-5) 0; border-block-end: var(--border-thickness) solid var(--color-border); font-family: var(--type-heading); font-size: var(--text-h3); }
-@media (min-width: 760px) { .site-contact-prompts { grid-template-columns: repeat(2, 1fr); } .site-contact-prompts li { padding-inline: var(--space-5); border-inline-end: var(--border-thickness) solid var(--color-border); } .site-contact-prompts li:nth-child(2n) { border-inline-end: 0; } }
-.site-contact-hook { max-width: 62ch; margin-block-start: var(--space-8); padding: var(--space-6); border: var(--border-thickness) dashed var(--color-border); }
-.site-contact-hook h2 { margin-block-end: var(--space-4); }
-.site-contact-hook p { color: var(--color-text-secondary); }

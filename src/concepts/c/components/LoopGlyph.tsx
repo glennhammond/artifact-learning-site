@@ -1,4 +1,4 @@
-/** A small inline signal — the hybrid's one hint, in the hero, that there's a systems layer beneath the editorial surface. */
+/** A small inline signal: the hybrid's one hint, in the hero, that there's a systems layer beneath the editorial surface. */
 export function LoopGlyph() {
   const size = 22;
   const r = 8;

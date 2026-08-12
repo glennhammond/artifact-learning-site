@@ -41,7 +41,7 @@ function DecisionSpecimen({ label }: { label: string }) {
 }
 
 /**
- * The one featured offer — Bespoke Learning Experiences — given the same
+ * The one featured offer: Bespoke Learning Experiences: given the same
  * editorial-hierarchy treatment as WorkFeature/WorkList: one full-weight
  * item, everything else a short text-led list. Deliberately not a reuse of
  * WorkFeature: a service describes a kind of engagement, not a delivered
@@ -71,7 +71,7 @@ export function ServiceFeature({ service }: ServiceFeatureProps) {
   );
 }
 
-/** Three small, distinct specimens for the secondary offers — not icons. */
+/** Three small, distinct specimens for the secondary offers: not icons. */
 function RedesignMark() {
   return (
     <svg viewBox="0 0 60 44" preserveAspectRatio="none" aria-hidden="true">
@@ -81,7 +81,7 @@ function RedesignMark() {
       <rect x="6" y="28" width="10" height="4" fill="var(--color-border)" />
       <rect x="32.5" y="0.5" width="27" height="43" fill="none" stroke="var(--color-text)" strokeWidth="1.5" />
       <rect x="38" y="10" width="16" height="5" fill="var(--color-text)" />
-      <rect x="38" y="20" width="16" height="4" fill="var(--color-signal)" />
+      <rect x="38" y="20" width="16" height="4" fill="var(--color-text-secondary)" />
       <rect x="38" y="28" width="16" height="4" fill="var(--color-text-secondary)" />
     </svg>
   );
@@ -92,7 +92,7 @@ function SystemMark() {
     <svg viewBox="0 0 60 44" preserveAspectRatio="none" aria-hidden="true">
       <rect x="0.5" y="0.5" width="17" height="17" fill="none" stroke="var(--color-border)" />
       <rect x="21.5" y="0.5" width="17" height="17" fill="none" stroke="var(--color-border)" />
-      <rect x="42.5" y="0.5" width="17" height="17" fill="var(--color-signal)" opacity="0.45" />
+      <rect x="42.5" y="0.5" width="17" height="17" fill="var(--color-text-secondary)" opacity="0.45" />
       <rect x="0.5" y="21.5" width="17" height="22" fill="none" stroke="var(--color-border)" />
       <rect x="21.5" y="21.5" width="38" height="22" fill="none" stroke="var(--color-text-subtle)" />
     </svg>
@@ -115,7 +115,7 @@ interface ServiceListProps {
   services: ServiceOffer[];
 }
 
-/** Secondary offers — a short text-led list, not a card grid. */
+/** Secondary offers: a short text-led list, not a card grid. */
 export function ServiceList({ services }: ServiceListProps) {
   return (
     <ul className="ds-service-list">

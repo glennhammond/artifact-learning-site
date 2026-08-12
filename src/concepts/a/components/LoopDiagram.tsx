@@ -1,7 +1,7 @@
 import { legacyModelLayers as modelLayers } from "../../../content/legacy";
 
 /**
- * Static quiet loop diagram — four nodes, one highlighted return arrow from
+ * Static quiet loop diagram: four nodes, one highlighted return arrow from
  * Insight back to Experience. Deliberately not animated in this concept;
  * Direction B/C carry the moving version of this idea.
  */

@@ -13,11 +13,11 @@ interface ContainerProps {
 }
 
 /**
- * The page's containment primitive — three tiers (Phase 2.2 §4):
- * "page" (the editorial grid max, ~1440px — nav, hero, Work, the dark
- * model section), "content" (inset, ~1180px — quieter sections that
+ * The page's containment primitive: three tiers (Phase 2.2 §4):
+ * "page" (the editorial grid max, ~1440px: nav, hero, Work, the dark
+ * model section), "content" (inset, ~1180px: quieter sections that
  * shouldn't claim the full grid width) and "narrow" (reading measure,
- * ~66ch — long-form prose, the final CTA). The gutter is fluid and keeps
+ * ~66ch: long-form prose, the final CTA). The gutter is fluid and keeps
  * growing on very wide screens rather than capping, so outer whitespace
  * increases gracefully instead of the grid stretching edge to edge.
  */

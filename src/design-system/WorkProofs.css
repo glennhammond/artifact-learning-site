@@ -1,4 +1,7 @@
 .ds-project-proof { min-width: 0; }
+.ds-project-proof--wellbeing-studio { background: var(--color-paper); color: var(--color-ink); }
+.ds-project-proof--wellbeing-studio .ds-project-proof__visual { background: var(--color-paper); }
+.ds-project-proof--wellbeing-studio figcaption { min-height: 52px; align-items: baseline; padding: var(--space-4); line-height: var(--leading-ui); }
 .ds-project-proof__visual { border-block: var(--border-thickness) solid var(--color-border); background: var(--color-bg-raised); }
 .ds-project-proof figcaption { display: flex; justify-content: space-between; gap: var(--space-3); padding-block-start: var(--space-3); font-family: var(--type-ui); font-size: var(--text-ui); color: var(--color-text-subtle); }
 .ds-project-proof figcaption span:last-child { flex: none; font-family: var(--type-data); text-transform: uppercase; }
@@ -12,11 +15,11 @@
 .ds-judgement-proof__decision { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-2); }
 .ds-judgement-proof__decision .kicker { grid-column: 1 / -1; }
 .ds-judgement-proof__decision span { padding: var(--space-3); border: var(--border-thickness) solid var(--color-border); font-size: 0.75rem; }
-.ds-judgement-proof__decision .is-selected { border-color: var(--color-text); box-shadow: inset 4px 0 0 var(--color-signal); }
+.ds-judgement-proof__decision .is-selected { border-color: var(--color-ink); border-width: var(--border-thickness-focus); font-weight: var(--weight-body-strong); }
 .ds-judgement-proof__feedback { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: var(--space-3); padding: var(--space-3); background: var(--color-ink); color: var(--color-paper); font-size: 0.75rem; }
 .ds-judgement-proof__feedback strong { margin: 0; font-family: var(--type-ui); font-size: 0.75rem; }
 
-.ds-wellbeing-proof__feature { padding: var(--space-6); background: var(--color-ink); color: var(--color-paper); }
+.ds-wellbeing-proof__feature { padding: var(--space-6) var(--space-4); background: var(--color-ink); color: var(--color-paper); }
 .ds-wellbeing-proof__feature strong { display: block; margin-block: var(--space-2); font-family: var(--type-heading); font-size: clamp(1.35rem, 1rem + 1.2vw, 2rem); }
 .ds-wellbeing-proof__feature > span { color: var(--color-text-subtle); font-size: 0.75rem; }
 .ds-wellbeing-proof__programme { display: grid; grid-template-columns: repeat(2, 1fr); }
@@ -24,7 +27,7 @@
 .ds-wellbeing-proof__programme > div:last-child { border-inline-end: 0; }
 .ds-wellbeing-proof__programme small { color: var(--color-text-secondary); }
 .ds-wellbeing-proof__progress { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4); border-block-start: var(--border-thickness) solid var(--color-border); font-family: var(--type-ui); font-size: 0.6875rem; }
-.ds-wellbeing-proof__progress div { height: 3px; background: var(--color-border); }
+.ds-wellbeing-proof__progress div { height: 4px; background: var(--color-border); }
 .ds-wellbeing-proof__progress i { display: block; width: 50%; height: 100%; background: var(--color-signal); }
 
 .ds-project-proof--artifact-rd .ds-project-proof__visual { background: var(--color-ink); color: var(--color-paper); }

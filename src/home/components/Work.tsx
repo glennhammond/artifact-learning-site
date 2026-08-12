@@ -6,7 +6,7 @@ export function Work() {
   return (
     <Section id="work" kicker={workIntro.eyebrow} heading={workIntro.headline} intro={workIntro.intro}>
       <WorkFeature project={featuredProject} stages={caseStudyStages} />
-      <WorkList projects={secondaryProjects} />
+      <WorkList projects={secondaryProjects} inkProjectSlug="wellbeing-studio" />
     </Section>
   );
 }

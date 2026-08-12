@@ -4,7 +4,7 @@ import { SiteShell } from "../site/SiteShell";
 import { usePageMeta } from "../site/usePageMeta";
 
 export function NotFound() {
-  usePageMeta("Page not found – Artifact Learning", "The requested Artifact Learning page could not be found.");
+  usePageMeta("Page not found – Artifact", "The requested Artifact Learning page could not be found.");
   return (
     <SiteShell>
       <section className="site-page-intro" aria-labelledby="not-found-heading">

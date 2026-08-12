@@ -4,7 +4,7 @@ import { practice } from "../../content/shared";
 import "./Practice.css";
 
 /**
- * Replaces CommercialStatement — not a founder biography (brief §14/§20):
+ * Replaces CommercialStatement: not a founder biography (brief §14/§20):
  * explains why the integrated practice matters to the client, not years of
  * experience or a personal story.
  */

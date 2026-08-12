@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-/** True once the page has scrolled past `threshold` — drives the nav's subtle scrolled surface (v0.4 §1). */
+/** True once the page has scrolled past `threshold`: drives the nav's subtle scrolled surface (v0.4 §1). */
 export function useScrolled(threshold = 8) {
   const [scrolled, setScrolled] = useState(false);
 

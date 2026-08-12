@@ -24,13 +24,13 @@ export function WorkDetailPage() {
   const { slug = "" } = useParams();
   const validSlug = workSlugs.find((item) => item === slug);
   const detail = validSlug ? workDetails[validSlug] : null;
-  usePageMeta(detail ? `${detail.title} – Artifact Learning` : "Work – Artifact Learning", detail?.intro ?? "Selected Artifact Learning work.");
+  usePageMeta(detail ? `${detail.title} – Artifact` : "Work – Artifact", detail?.intro ?? "Selected Artifact Learning work.");
 
   if (!validSlug || !detail) return <Navigate to="/work" replace />;
 
   return (
     <SiteShell>
-      <PageIntro eyebrow={detail.eyebrow} title={detail.title} intro={detail.intro} aside={<><p className="site-status">{detail.status}</p><p><Link to="/work">← All selected work</Link></p></>} />
+      <PageIntro tone="ink" eyebrow={detail.eyebrow} title={detail.title} intro={detail.intro} aside={<><p className="site-status">{detail.status}</p><p><Link to="/work">← All selected work</Link></p></>} />
       <section className="site-section" aria-labelledby="case-proof-heading">
         <Container>
           <h2 id="case-proof-heading" className="site-section__heading">Visual proof</h2>

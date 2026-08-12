@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Container } from "../../components/layout/Container";
+import { ArtifactMark } from "../../components/brand/ArtifactMark";
 import { Button } from "../../design-system/Button";
 import { useScrolled } from "../../hooks/useScrolled";
 import { nav, navCta } from "../../content/shared";
@@ -15,8 +16,8 @@ export function Nav() {
     <header className="home-nav" data-scrolled={scrolled}>
       <Container className="home-nav__inner">
         <Link to="/" className="home-nav__wordmark">
-          <span className="home-nav__mark" aria-hidden="true" />
-          Artifact
+          <ArtifactMark className="home-nav__mark" />
+          <span className="home-nav__wordmark-text">Artifact</span>
         </Link>
 
         <button

@@ -8,7 +8,7 @@
     border-color var(--duration-state) var(--ease-in-out);
 }
 
-/* Subtle paper/translucent surface only once the page has scrolled — at
+/* Subtle paper/translucent surface only once the page has scrolled: at
    rest, the header reads as part of the hero rather than a fixed chrome
    bar (v0.4 §1). No shadow, ever. */
 .home-nav[data-scrolled="true"] {
@@ -36,14 +36,16 @@
   color: var(--color-text);
 }
 
-/* A restrained device derived from the Artifact visual language — the
-   same signal mark used to identify a consequential/active state
-   elsewhere — standing in for the brand, not a logo. */
 .home-nav__mark {
-  width: 9px;
-  height: 9px;
-  background: var(--color-signal);
-  border-radius: var(--radius-control);
+  width: 27px;
+  height: 27px;
+  flex: none;
+  color: var(--color-ink);
+}
+
+.home-nav__wordmark-text {
+  display: inline-block;
+  transform: translateY(-1px);
 }
 
 .home-nav__toggle {
@@ -74,7 +76,7 @@
 }
 
 .home-nav__menu .ds-nav-link[aria-current="page"] {
-  border-block-end-color: var(--color-signal);
+  border-block-end-color: var(--color-text);
 }
 
 @media (max-width: 760px) {

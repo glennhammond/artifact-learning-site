@@ -48,9 +48,9 @@
   background: var(--color-text-subtle);
 }
 
-/* The one active/consequential event — the single Signal moment in the trace */
+/* Active events use Ink, size and weight so state never depends on colour alone. */
 li[data-active="true"] .ds-trace-list__dot {
-  background: var(--color-signal);
+  background: var(--color-ink);
   width: 9px;
   height: 9px;
   left: calc(-1 * var(--space-5) - 1px);

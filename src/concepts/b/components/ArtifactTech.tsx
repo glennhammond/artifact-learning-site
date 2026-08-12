@@ -30,7 +30,7 @@ export function ArtifactTech() {
             ))}
           </div>
           <p className="b-tech__footnote">
-            This is early. We're building it the same way we'd build it for a client — designed
+            This is early. We're building it the same way we'd build it for a client: designed
             before it's coded, and honest about what stage it's at.
           </p>
         </Reveal>

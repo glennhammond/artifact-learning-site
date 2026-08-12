@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 /**
  * Reveals an element once, the first time it enters the viewport.
  * Falls back to visible-by-default if IntersectionObserver is unavailable.
- * Deliberately a single one-shot reveal — not a repeating scroll animation.
+ * Deliberately a single one-shot reveal: not a repeating scroll animation.
  */
 export function useRevealOnScroll<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

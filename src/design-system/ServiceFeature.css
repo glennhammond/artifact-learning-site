@@ -7,7 +7,7 @@
 
 @media (min-width: 960px) {
   .ds-service-feature {
-    /* text carries the primacy here, not the imagery — the reverse
+    /* text carries the primacy here, not the imagery: the reverse
        weighting from WorkFeature, which is proof-led */
     grid-template-columns: 7fr 5fr;
     align-items: start;
@@ -92,8 +92,8 @@
 .ds-service-specimen__choices { display: grid; gap: var(--space-2); }
 .ds-service-specimen__choices > div { display: flex; gap: var(--space-3); padding: var(--space-3); border: var(--border-thickness) solid var(--color-border); font-size: var(--text-small); }
 .ds-service-specimen__choices span { flex: none; width: 13px; height: 13px; margin-block-start: 0.2em; border: var(--border-thickness-focus) solid var(--color-text-subtle); }
-.ds-service-specimen__choices .is-selected { border-color: var(--color-text); }
-.ds-service-specimen__choices .is-selected span { border-color: var(--color-signal); background: var(--color-signal); box-shadow: inset 0 0 0 3px var(--color-bg-raised); }
+.ds-service-specimen__choices .is-selected { border-color: var(--color-ink); border-width: var(--border-thickness-focus); }
+.ds-service-specimen__choices .is-selected span { border-color: var(--color-ink); background: var(--color-ink); box-shadow: inset 0 0 0 3px var(--color-bg-raised); }
 .ds-service-specimen__feedback { display: grid; gap: var(--space-1); margin-block-start: var(--space-4); padding: var(--space-3); border-block-start: var(--border-thickness) solid var(--color-border); }
 .ds-service-specimen__evidence { display: grid; grid-template-columns: 1fr auto; gap: var(--space-2) var(--space-4); padding: var(--space-4); background: var(--color-ink); color: var(--color-paper); font-family: var(--type-data); font-size: 0.6875rem; }
 .ds-service-specimen__evidence strong { color: var(--color-signal); font-weight: 400; }

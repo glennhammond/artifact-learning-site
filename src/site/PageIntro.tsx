@@ -6,11 +6,12 @@ interface PageIntroProps {
   title: string;
   intro: ReactNode;
   aside?: ReactNode;
+  tone?: "paper" | "ink";
 }
 
-export function PageIntro({ eyebrow, title, intro, aside }: PageIntroProps) {
+export function PageIntro({ eyebrow, title, intro, aside, tone = "paper" }: PageIntroProps) {
   return (
-    <header className="site-page-intro">
+    <header className={`site-page-intro site-page-intro--${tone}${tone === "ink" ? " on-ink" : ""}`}>
       <Container>
         <div className="site-page-intro__grid">
           <div>

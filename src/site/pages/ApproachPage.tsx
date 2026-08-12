@@ -17,10 +17,10 @@ const detail = [
 ];
 
 export function ApproachPage() {
-  usePageMeta("Approach – Artifact Learning", "Artifact's six-stage method for designing, building, measuring and improving digital learning products.");
+  usePageMeta("Approach – Artifact", "Artifact's six-stage method for designing, building, measuring and improving digital learning products.");
   return (
     <SiteShell>
-      <PageIntro eyebrow="Approach" title="Digital learning as a product, not a course." intro={productPhilosophy.body} aside={<p>Not every engagement requires every stage. The method follows the problem rather than forcing a production pipeline.</p>} />
+      <PageIntro tone="ink" eyebrow="Approach" title="Digital learning as a product, not a course." intro={productPhilosophy.body} aside={<p>Not every engagement requires every stage. The method follows the problem rather than forcing a production pipeline.</p>} />
       <section className="site-section" aria-labelledby="method-heading">
         <Container>
           <p className="kicker">Working method</p><h2 id="method-heading" className="site-section__heading">Discover → Design → Build → Instrument → Measure → Improve.</h2>

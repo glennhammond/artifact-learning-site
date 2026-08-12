@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Container } from "../../components/layout/Container";
+import { ArtifactMark } from "../../components/brand/ArtifactMark";
 import { nav } from "../../content/shared";
 import "./Footer.css";
 
@@ -9,8 +10,11 @@ export function Footer() {
       <Container>
         <div className="home-footer__top">
           <div>
-            <span className="home-footer__wordmark">Artifact Learning</span>
-            <p className="home-footer__tagline">Digital learning as a product, not a course.</p>
+            <Link to="/" className="home-footer__brand" aria-label="Artifact home">
+              <ArtifactMark className="home-footer__mark" />
+              <span className="home-footer__wordmark">Artifact</span>
+            </Link>
+            <p className="home-footer__tagline">Designed with intent. Built to leave evidence.</p>
           </div>
           <nav aria-label="Footer">
             <ul className="home-footer__nav">
