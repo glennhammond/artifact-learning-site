@@ -4,7 +4,7 @@ import { problem, completionAbstraction } from "../../content/shared";
 import "./Problem.css";
 
 /**
- * Kept deliberately short — the plain-language version of the gap. The
+ * Kept deliberately short: the plain-language version of the gap. The
  * fuller completion-vs-event comparison now lives in Evidence, where there's
  * room to make the "does not prove transfer" distinction properly (see
  * docs/strategy/phase-1-strategic-ia-homepage-definition.md §3a).

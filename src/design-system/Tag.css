@@ -12,7 +12,7 @@
   background: transparent;
 }
 
-/* Signal marks consequence, never decoration (v0.2 §04) — this tone is for
+/* Signal marks consequence, never decoration (v0.2 §04): this tone is for
    a genuinely meaningful/active state (e.g. a live event), not routine
    metadata. Ink text on Signal fill keeps contrast well above AA (~10:1). */
 .ds-tag--signal {

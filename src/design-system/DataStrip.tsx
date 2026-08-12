@@ -8,11 +8,11 @@ interface DataStripProps {
 }
 
 /**
- * A labelled strip of genuine event/data lines, set in IBM Plex Mono — the
+ * A labelled strip of genuine event/data lines, set in IBM Plex Mono: the
  * one place mono is used as language rather than decoration (v0.2 §02).
  * `active` marks the strip carrying the meaningful contrast (e.g. "what an
  * instrumented experience can also show") with a single Signal corner mark
- * — Signal identifies consequence, never a filled background. `muted`
+ *: Signal identifies consequence, never a filled background. `muted`
  * recedes the strip that represents the limited/status-quo view (e.g. a
  * completion report), so the pairing reads as a visual transformation
  * rather than two equally-weighted panels.

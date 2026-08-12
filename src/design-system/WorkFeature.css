@@ -7,7 +7,7 @@
 
 @media (min-width: 960px) {
   .ds-work-feature {
-    /* the figure carries real visual weight — "the work is the imagery" */
+    /* the figure carries real visual weight: "the work is the imagery" */
     grid-template-columns: minmax(0, 8fr) minmax(280px, 4fr);
     align-items: start;
   }

@@ -15,7 +15,7 @@ import "./ConceptA.css";
 
 export function ConceptA() {
   useEffect(() => {
-    document.title = "Concept A — Editorial Product Studio · Artifact Learning";
+    document.title = "Concept A: Editorial Product Studio · Artifact Learning";
   }, []);
 
   return (

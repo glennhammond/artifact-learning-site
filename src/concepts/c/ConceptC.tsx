@@ -15,7 +15,7 @@ import "./ConceptC.css";
 
 export function ConceptC() {
   useEffect(() => {
-    document.title = "Concept C — Editorial + Experimental Hybrid · Artifact Learning";
+    document.title = "Concept C: Editorial + Experimental Hybrid · Artifact Learning";
   }, []);
 
   return (

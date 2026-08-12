@@ -9,7 +9,7 @@ const ANNOTATIONS: Record<number, string> = {
 };
 
 /**
- * The fuller measurement-restraint section — the before/after comparison
+ * The fuller measurement-restraint section: the before/after comparison
  * relocated here from Problem (Phase 1 strategy §3a), plus the explicit
  * boundary between learning-experience evidence and workplace transfer /
  * behaviour change / organisational performance (brief §12).

@@ -18,7 +18,7 @@ interface WorkFeatureProps {
 }
 
 /**
- * The one full featured case study — problem-led, evidence at the end.
+ * The one full featured case study: problem-led, evidence at the end.
  * Deliberately not a card in a grid: this is the only work item that gets
  * a figure, and the case-study chain is shown as a labelled sequence with
  * definitions rather than expanded into a full case-study page (out of
@@ -64,7 +64,7 @@ interface WorkListProps {
   projects: Project[];
 }
 
-/** Secondary work items — a short text-led list, not a card grid. */
+/** Secondary work items: a short text-led list, not a card grid. */
 export function WorkList({ projects }: WorkListProps) {
   const proofs = [
     <ProfessionalJudgementProof asset={workVisuals.professionalJudgement} />,

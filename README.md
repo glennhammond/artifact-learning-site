@@ -1,9 +1,9 @@
-# Artifact Learning — website
+# Artifact Learning: website
 
 This repository is the implementation home for the Artifact Learning website: brand and UX exploration,
 the coded design system, the multi-page publication candidate, case studies and deployment configuration.
 
-**Current phase: Phase 7 — brand-system integration.** The approved homepage, multi-page routes,
+**Current phase: Phase 7: brand-system integration.** The approved homepage, multi-page routes,
 representative proof system and Artifact masterbrand are implemented. Publication remains blocked until
 a verified contact destination and the ITC Avant Garde licensing/public-repository decision are resolved.
 See `docs/design-system.md` and the Phase 6 publication-readiness audit.
@@ -49,7 +49,7 @@ docs/
   consolidation-decision.md     Phase 2 Keep/Adapt/Remove/New decision record
   design-system.md              Phase 2 design system reference (tokens, components, system model)
 src/
-  design-system/                The coded Artifact design system — Button, NavLink, Tag,
+  design-system/                The coded Artifact design system: Button, NavLink, Tag,
                                  MetadataRow, Section, LoopDiagram, DataStrip, WorkFeature.
                                  Reads tokens only; no hardcoded colour or concept-specific styling.
   home/                         The consolidated homepage (the primary `/` route) and its sections.
@@ -78,7 +78,7 @@ Licence, self-hosted from `@fontsource`.
 ## Status of colour and typography
 
 Colour and typography are now resolved against `Artifact Learning Brand Identity & Digital Design
-Language v0.2` — Territory C (Ink / Paper / Signal), the real Avant Garde/Source Sans 3/IBM Plex family,
+Language v0.2`: Territory C (Ink / Paper / Signal), the real Avant Garde/Source Sans 3/IBM Plex family,
 and the confirmed geometry and motion values. See `docs/design-system.md` for the full reference.
 
 ## Review gate

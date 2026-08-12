@@ -14,7 +14,7 @@
   --type-ui: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --type-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
-  /* Display/heading weights — confirmed usable range is Medium 500–Bold 700 (v0.2 §02) */
+  /* Display/heading weights: confirmed usable range is Medium 500–Bold 700 (v0.2 §02) */
   --weight-display: 700;
   --weight-heading: 600;
   --weight-heading-alt: 500;
@@ -24,7 +24,7 @@
   --weight-ui-strong: 500;
 
   /* Fluid type scale. Avant Garde is reserved for display/H1/H2/selected H3
-     and never drops below ~20px (v0.2 §02 — "the practical lower limit"). */
+     and never drops below ~20px (v0.2 §02: "the practical lower limit"). */
   --text-display: clamp(2.75rem, 2rem + 3.2vw, 4.75rem);
   --text-h1: clamp(2.25rem, 1.75rem + 2.2vw, 3.5rem);
   --text-h2: clamp(1.75rem, 1.5rem + 1.1vw, 2.375rem);
@@ -67,14 +67,14 @@
   --color-semantic-info: #3f74a8;
   --color-semantic-info: oklch(58% 0.1 240);
 
-  /* Semantic roles — light (Paper-led) surface, the homepage default */
+  /* Semantic roles: light (Paper-led) surface, the homepage default */
   --color-bg: var(--color-paper);
   --color-bg-raised: var(--color-surface-subtle);
   --color-text: var(--color-ink);
   --color-text-inverse: var(--color-paper);
   --color-focus: var(--color-ink);
 
-  /* Data-series palette for the loop diagram / data strip — Ink neutrals
+  /* Data-series palette for the loop diagram / data strip: Ink neutrals
      plus Signal reserved for the single active/consequential item only. */
   --color-data-series-1: var(--color-ink);
   --color-data-series-2: var(--color-text-secondary);
@@ -94,16 +94,16 @@
 
   --section-y: clamp(3rem, 4vw + 1.5rem, 7rem);
 
-  /* Section-rhythm variants (Phase 2.2 §9) — sections alternate density
+  /* Section-rhythm variants (Phase 2.2 §9): sections alternate density
      rather than sharing one uniform padding-block value. */
   --section-y-compact: clamp(2rem, 2.5vw + 1rem, 3.5rem);
   --section-y-expansive: clamp(4rem, 6vw + 2rem, 9rem);
 
   /* ============ LAYOUT ============
-     Three containment tiers (Phase 2.2 §4): page (the editorial grid max —
-     nav, hero, the dark model section, Work), content (inset — Approach,
+     Three containment tiers (Phase 2.2 §4): page (the editorial grid max,
+     nav, hero, the dark model section, Work), content (inset: Approach,
      ecosystem; quieter sections that shouldn't claim the full grid width)
-     and narrow (reading measure — long-form prose, the final CTA). The
+     and narrow (reading measure: long-form prose, the final CTA). The
      gutter is fluid and keeps growing past the old fixed 3rem cap, so
      outer whitespace increases gracefully on very wide screens instead of
      the page grid feeling like it stretches edge to edge. */
@@ -154,7 +154,7 @@
      prototypes under /archive still render correctly. Names are unique
      (no --neutral-* token exists in the v0.2 system above), so this cannot
      leak into or override anything on the consolidated homepage. Do not
-     reference these from new work — remove this block once the archive is
+     reference these from new work: remove this block once the archive is
      retired (see docs/design-system.md "Archive"). */
   --neutral-0: #ffffff;
   --neutral-50: #f6f7f8;
@@ -179,7 +179,7 @@
   }
 }
 
-/* Breakpoints (documented, used literally in media queries — no custom-media
+/* Breakpoints (documented, used literally in media queries: no custom-media
    support without a build plugin, and the brief asks us not to add a
    dependency for something native CSS already does):
    480  – small phone

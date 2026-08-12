@@ -1,5 +1,5 @@
 /**
- * Homepage content — Artifact Learning Homepage Content & Visual Direction
+ * Homepage content: Artifact Learning Homepage Content & Visual Direction
  * v0.4 (Phase 2 commercial repositioning), refined through the publication
  * candidate. No client outcomes, metrics, names or approvals are invented
  * anywhere in this file; interface/event/data examples are
@@ -16,7 +16,7 @@ export const nav = [
   { label: "About", href: "/about" },
 ];
 
-/** Differentiated with restraint (outline, not a filled button) — v0.4 §1. */
+/** Differentiated with restraint (outline, not a filled button): v0.4 §1. */
 export const navCta = { label: "Discuss a learning challenge", href: "/contact" };
 
 // ---- 2. Hero ----
@@ -205,7 +205,7 @@ export const secondaryProjects: Project[] = [
     eyebrow: "Wellbeing Studio",
     question: "Can a digital learning practice model something that isn't a course at all?",
     framing:
-      "A programme-based learning experience using recurring practice, asynchronous video and live sessions to explore learning beyond a single module.",
+      "A program-based learning experience using recurring practice, asynchronous video and live sessions to explore learning beyond a single module.",
     status: "Case study in development",
   },
   {
@@ -244,12 +244,12 @@ export interface ModelLayer {
 }
 
 /**
- * Retained per Phase 1 strategy §11 — Experience → Signals → Data → Insight
+ * Retained per Phase 1 strategy §11: Experience → Signals → Data → Insight
  * → Improvement, looping back to Experience. This describes the ongoing
  * product cycle a shipped experience runs on; it is a distinct model from
  * the six-stage delivery methodology below (`lifecycle`), which describes
  * how a single engagement is run. Platform is deliberately not a stage in
- * this sequence — see `platform` below.
+ * this sequence: see `platform` below.
  */
 export const modelLayers: ModelLayer[] = [
   {
@@ -369,7 +369,7 @@ export const capabilityGroups: CapabilityGroup[] = [
   },
 ];
 
-/** Retained as the closing principle of Integrated Capability, not a standalone section — Phase 2 §11. */
+/** Retained as the closing principle of Integrated Capability, not a standalone section: Phase 2 §11. */
 export const transitionToolFollows = {
   statement: "The tool follows the problem.",
   supporting:
@@ -424,7 +424,7 @@ export const platformIntro = {
   eyebrow: "Under the experience",
   headline: "A learning platform built around meaningful events.",
   paragraphs: [
-    "Introduced last, deliberately — after the proposition, the services, the work, the philosophy, the approach and the evidence. The technology supports Artifact's practice; it is not the practice itself.",
+    "Introduced last, deliberately, after the proposition, the services, the work, the philosophy, the approach and the evidence. The technology supports Artifact's practice; it is not the practice itself.",
     "Some parts already exist. Others are deliberately still in development. Each is described at the stage it genuinely occupies.",
   ],
 };

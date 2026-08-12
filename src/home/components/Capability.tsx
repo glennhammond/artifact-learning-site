@@ -2,7 +2,7 @@ import { Section } from "../../design-system/Section";
 import { capabilityGroups, capabilityIntro, transitionToolFollows } from "../../content/shared";
 import "./Capability.css";
 
-/** A quiet low→high fidelity progression — no icons (content doc §9.01, §9.04). */
+/** A quiet low→high fidelity progression: no icons (content doc §9.01, §9.04). */
 function Progression({ steps }: { steps: string[] }) {
   return (
     <p className="home-capability-progression" aria-hidden="true">

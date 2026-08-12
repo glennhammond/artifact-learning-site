@@ -1,6 +1,6 @@
 import { legacyModelLayers as modelLayers } from "../../../content/legacy";
 
-/** Decorative, non-interactive ring used in the hero — the full interactive version lives in the Model section. */
+/** Decorative, non-interactive ring used in the hero: the full interactive version lives in the Model section. */
 export function LoopPreview() {
   const size = 220;
   const radius = 84;

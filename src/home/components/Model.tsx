@@ -4,7 +4,7 @@ import { modelLayers, modelCaption, modelIntro, platform } from "../../content/s
 import "./Model.css";
 
 /**
- * The one section on the homepage that uses the Ink surface — bounded here,
+ * The one section on the homepage that uses the Ink surface: bounded here,
  * not spread across the page (Concept C's compositional instinct, corrected
  * to a single accent). See docs/consolidation-decision.md.
  */

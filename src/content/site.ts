@@ -57,10 +57,10 @@ export const workDetails = {
   "wellbeing-studio": {
     eyebrow: "Selected work · Experience",
     title: "Wellbeing Studio",
-    intro: "A programme-based learning product shaped around recurring practice rather than a one-off course.",
+    intro: "A program-based learning product shaped around recurring practice rather than a one-off course.",
     challenge: "Some learning develops through rhythm, participation and reflection over time. A module-and-completion model does not naturally support that form of experience.",
-    decisions: ["A monthly programme hub rather than a course menu", "Asynchronous video and guided practice", "Upcoming live sessions kept in the same experience", "Participation shown without turning practice into a score"],
-    significance: "The concept demonstrates how platform thinking can support an ongoing programme while keeping the learning experience coherent.",
+    decisions: ["A monthly program hub rather than a course menu", "Asynchronous video and guided practice", "Upcoming live sessions kept in the same experience", "Participation shown without turning practice into a score"],
+    significance: "The concept demonstrates how platform thinking can support an ongoing program while keeping the learning experience coherent.",
     status: "The direction is real; the interface shown is an Artifact representative prototype pending approved media.",
   },
   "professional-judgement": {

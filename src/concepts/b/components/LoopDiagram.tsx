@@ -3,7 +3,7 @@ import { legacyModelLayers as modelLayers } from "../../../content/legacy";
 import "./LoopDiagram.css";
 
 /**
- * Interactive animated loop — a pulse travels the ring continuously (slow,
+ * Interactive animated loop: a pulse travels the ring continuously (slow,
  * low-amplitude; the concept's one signature motion), and each node is a
  * real button that sets the active description below. Reduced-motion users
  * get a static ring with the Insight→Experience arrow already highlighted.

@@ -8,7 +8,7 @@
     border-color var(--duration-state) var(--ease-in-out);
 }
 
-/* Subtle paper/translucent surface only once the page has scrolled — at
+/* Subtle paper/translucent surface only once the page has scrolled: at
    rest, the header reads as part of the hero rather than a fixed chrome
    bar (v0.4 §1). No shadow, ever. */
 .home-nav[data-scrolled="true"] {

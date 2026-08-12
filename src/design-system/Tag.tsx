@@ -10,7 +10,7 @@ interface TagProps {
   className?: string;
 }
 
-/** Small label/tag primitive — status pills, maturity labels, filter chips. */
+/** Small label/tag primitive: status pills, maturity labels, filter chips. */
 export function Tag({ children, tone = "neutral", mono = false, className = "" }: TagProps) {
   return (
     <span className={`ds-tag ds-tag--${tone} ${mono ? "ds-tag--mono" : ""} ${className}`.trim()}>

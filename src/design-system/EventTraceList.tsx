@@ -9,7 +9,7 @@ interface EventTraceListProps {
 }
 
 /**
- * A vertical trace of learning events along a thin rail — a substantial
+ * A vertical trace of learning events along a thin rail: a substantial
  * editorial/technical artefact integrated into the hero (v0.4 §3), not a
  * dashboard or console. The active/consequential event is marked with
  * stronger structure; the rest read as quiet, genuine-looking instrumentation. The

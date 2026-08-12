@@ -42,7 +42,7 @@ export function ProfessionalJudgementProof({ asset }: ProofProps) {
 export function WellbeingStudioProof({ asset }: ProofProps) {
   return (
     <ProofFigure asset={asset}>
-      <div className="ds-wellbeing-proof__mast"><span>Wellbeing Studio</span><span>August programme</span></div>
+      <div className="ds-wellbeing-proof__mast"><span>Wellbeing Studio</span><span>August program</span></div>
       <div className="ds-wellbeing-proof__feature">
         <p className="kicker">This month</p><strong>Recovering attention</strong>
         <span>One guided practice · one live session · reflection over time</span>
@@ -51,7 +51,7 @@ export function WellbeingStudioProof({ asset }: ProofProps) {
         <div><span className="kicker">Practice 01</span><strong>Five-minute reset</strong><small>Video + guided practice</small></div>
         <div><span className="kicker">Live</span><strong>Working with attention</strong><small>Thursday · 12:30</small></div>
       </div>
-      <div className="ds-wellbeing-proof__progress"><span>Programme participation</span><div><i /></div><strong>2 / 4</strong></div>
+      <div className="ds-wellbeing-proof__progress"><span>Program participation</span><div><i /></div><strong>2 / 4</strong></div>
     </ProofFigure>
   );
 }

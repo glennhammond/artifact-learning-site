@@ -41,7 +41,7 @@ function DecisionSpecimen({ label }: { label: string }) {
 }
 
 /**
- * The one featured offer — Bespoke Learning Experiences — given the same
+ * The one featured offer: Bespoke Learning Experiences: given the same
  * editorial-hierarchy treatment as WorkFeature/WorkList: one full-weight
  * item, everything else a short text-led list. Deliberately not a reuse of
  * WorkFeature: a service describes a kind of engagement, not a delivered
@@ -71,7 +71,7 @@ export function ServiceFeature({ service }: ServiceFeatureProps) {
   );
 }
 
-/** Three small, distinct specimens for the secondary offers — not icons. */
+/** Three small, distinct specimens for the secondary offers: not icons. */
 function RedesignMark() {
   return (
     <svg viewBox="0 0 60 44" preserveAspectRatio="none" aria-hidden="true">
@@ -115,7 +115,7 @@ interface ServiceListProps {
   services: ServiceOffer[];
 }
 
-/** Secondary offers — a short text-led list, not a card grid. */
+/** Secondary offers: a short text-led list, not a card grid. */
 export function ServiceList({ services }: ServiceListProps) {
   return (
     <ul className="ds-service-list">

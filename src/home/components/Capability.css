@@ -25,7 +25,7 @@
     gap: var(--space-6);
   }
 
-  /* Alternate indentation on the body column — a staggered rhythm rather
+  /* Alternate indentation on the body column: a staggered rhythm rather
      than four/five identical rows (brief §15). */
   .home-capability-row:nth-child(even) .home-capability-row__body {
     margin-inline-start: var(--space-8);

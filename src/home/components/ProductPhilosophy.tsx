@@ -6,9 +6,9 @@ const ANNOTATIONS = ["scenario.designed", "experience.built", "iteration.shipped
 
 /**
  * The relocated hero philosophy (Phase 1 strategy §3a: REPOSITION, not
- * REPLACE) — now earned rather than assumed, sitting after Services and
+ * REPLACE): now earned rather than assumed, sitting after Services and
  * Work rather than leading the page. Signal appears once, at "Improve it.",
- * the one moment observation turns into consequence — same device as the
+ * the one moment observation turns into consequence: same device as the
  * original TransitionDesignObserve this replaces.
  */
 export function ProductPhilosophy() {

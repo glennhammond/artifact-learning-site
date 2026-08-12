@@ -9,7 +9,7 @@ export function Footer() {
         <span className="c-footer__wordmark">Artifact Learning</span>
         <span>artifactlearning.com · artifactlearning.com.au</span>
         <span>
-          Concept C — Editorial + Experimental Hybrid (archived) ·{" "}
+          Concept C: Editorial + Experimental Hybrid (archived) ·{" "}
           <Link to="/archive">All archived concepts</Link>
         </span>
       </Container>

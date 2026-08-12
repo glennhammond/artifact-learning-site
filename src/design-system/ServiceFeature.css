@@ -7,7 +7,7 @@
 
 @media (min-width: 960px) {
   .ds-service-feature {
-    /* text carries the primacy here, not the imagery — the reverse
+    /* text carries the primacy here, not the imagery: the reverse
        weighting from WorkFeature, which is proof-led */
     grid-template-columns: 7fr 5fr;
     align-items: start;

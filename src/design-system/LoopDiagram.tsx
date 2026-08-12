@@ -14,18 +14,18 @@ function prefersReducedMotion() {
 }
 
 /**
- * The signature system visual — Direction 1 (circular loop, Platform as a
+ * The signature system visual: Direction 1 (circular loop, Platform as a
  * base plane) as the primary diagram, with a Direction 2 (layered stack)
  * compact fallback for narrow layouts, swapped by CSS `display` at the
  * nav-collapse breakpoint so only one set of controls is ever in the tab
  * order at a time.
  *
  * Selecting a node reveals its definition, detail and one representative
- * illustrative artefact — content doc v0.3 §5's "optionally reveal one
+ * illustrative artefact: content doc v0.3 §5's "optionally reveal one
  * representative event or artefact associated with it."
  *
  * Motion: a single dot travels the ring once when the diagram is revealed
- * (280ms/node, ease-out) — never a continuous loop — and replays once when
+ * (280ms/node, ease-out): never a continuous loop: and replays once when
  * a node is activated. Reduced motion drops the travel entirely; the
  * loop-back arrow is drawn statically either way.
  */
@@ -77,7 +77,7 @@ export function LoopDiagram({ layers, platform }: LoopDiagramProps) {
         {activeLayer.definition} {activeLayer.detail}
       </p>
 
-      {/* Direction 1 — circular loop, Platform as base plane (default) */}
+      {/* Direction 1: circular loop, Platform as base plane (default) */}
       <div className="ds-loop__circular">
         <div className="ds-loop__plane" aria-hidden="true">
           <span className="kicker">{platform.definition}</span>
@@ -97,7 +97,7 @@ export function LoopDiagram({ layers, platform }: LoopDiagramProps) {
           </desc>
           <circle cx={center} cy={center} r={radius} fill="none" stroke="var(--color-border)" strokeWidth={1} />
           <path d={pathD} fill="none" stroke="var(--color-border)" strokeWidth={1} strokeDasharray="3 5" />
-          {/* Loop-back arc drawn heavier — the one relationship the whole diagram exists to show */}
+          {/* Loop-back arc drawn heavier: the one relationship the whole diagram exists to show */}
           <path
             d={`M ${last.x},${last.y} L ${first.x},${first.y}`}
             fill="none"
@@ -142,7 +142,7 @@ export function LoopDiagram({ layers, platform }: LoopDiagramProps) {
         </div>
       </div>
 
-      {/* Direction 2 — layered stack, Platform as foundation (compact fallback) */}
+      {/* Direction 2: layered stack, Platform as foundation (compact fallback) */}
       <div className="ds-loop__stacked">
         <div className="ds-loop__stack-row">
           {layers.map((layer, i) => (
@@ -164,7 +164,7 @@ export function LoopDiagram({ layers, platform }: LoopDiagramProps) {
           ↺ Improvement returns to Experience
         </p>
         <div className="ds-loop__stack-platform">
-          <span className="kicker">{platform.name} — foundation, not a stage</span>
+          <span className="kicker">{platform.name}: foundation, not a stage</span>
         </div>
       </div>
 
@@ -173,11 +173,11 @@ export function LoopDiagram({ layers, platform }: LoopDiagramProps) {
           <strong>{activeLayer.definition}</strong> {activeLayer.detail}
         </p>
         <div className="ds-loop__artefact">
-          <DataStrip label={`${activeLayer.name} — illustrative artefact`} lines={activeLayer.artefact} />
+          <DataStrip label={`${activeLayer.name}: illustrative artefact`} lines={activeLayer.artefact} />
         </div>
       </div>
 
-      {/* Always-present, works without motion or interaction (brief §11) —
+      {/* Always-present, works without motion or interaction (brief §11).
           the interactive description above is a shortcut to this, not a
           replacement for it. */}
       <dl className="ds-loop__legend">

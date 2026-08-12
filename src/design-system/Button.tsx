@@ -20,7 +20,7 @@ type ButtonProps = ButtonAsButton | ButtonAsAnchor;
 
 /**
  * The three button/link roles defined in v0.2 §08: primary (Signal fill,
- * Ink text — reserved for the page's one primary action per view), secondary
+ * Ink text: reserved for the page's one primary action per view), secondary
  * (bordered, Ink) and text (underline link). Disabled and focus states are
  * handled here once rather than per-section.
  */

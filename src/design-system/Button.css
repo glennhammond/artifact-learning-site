@@ -1,5 +1,5 @@
 /*
-  Signal is reserved for the primary button fill only — the one place on the
+  Signal is reserved for the primary button fill only: the one place on the
   page where colour marks the single primary action (v0.2 §04, §08).
   Secondary and text variants stay in Ink; nothing here uses a second accent.
 */
@@ -61,7 +61,7 @@
 }
 
 /* Expands the tap target to the 24px WCAG 2.2 AA minimum without changing
-   the visible underline size (v0.2 restraint principle — no visible padding). */
+   the visible underline size (v0.2 restraint principle: no visible padding). */
 .ds-btn--text::before {
   content: "";
   position: absolute;
@@ -80,5 +80,5 @@
 }
 
 /* Secondary and text variants read var(--color-text)/var(--color-bg), which
-   Section.css remaps inside .ds-section--ink — no separate dark variant
+   Section.css remaps inside .ds-section--ink: no separate dark variant
    needed here (v0.2 §05, single-accent, no second colour on dark). */

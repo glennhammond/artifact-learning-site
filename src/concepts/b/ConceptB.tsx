@@ -15,7 +15,7 @@ import "./ConceptB.css";
 
 export function ConceptB() {
   useEffect(() => {
-    document.title = "Concept B — Digital Learning Laboratory · Artifact Learning";
+    document.title = "Concept B: Digital Learning Laboratory · Artifact Learning";
   }, []);
 
   return (
