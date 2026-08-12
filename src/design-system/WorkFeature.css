@@ -91,12 +91,19 @@
   color: var(--color-text-subtle);
 }
 
+.ds-work-list__item--wellbeing-studio .ds-work-list__status {
+  display: block;
+  width: fit-content;
+}
+
 .ds-work-list__item--wellbeing-studio .ds-work-list__body .ds-btn--text {
-  color: var(--color-paper);
+  display: flex;
+  width: fit-content;
+  color: var(--color-signal);
 }
 
 .ds-work-list__item--wellbeing-studio .ds-work-list__body .ds-btn--text:hover {
-  color: var(--color-text-subtle);
+  color: var(--color-paper);
 }
 
 .ds-work-list__item--wellbeing-studio .ds-work-list__proof {
