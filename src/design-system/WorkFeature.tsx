@@ -75,7 +75,7 @@ export function WorkList({ projects }: WorkListProps) {
   return (
     <ul className="ds-work-list">
       {projects.map((project, index) => (
-        <li key={project.question}>
+        <li key={project.question} className={`ds-work-list__item ds-work-list__item--${project.slug}`}>
           <div className="ds-work-list__proof">{proofs[index]}</div>
           <div className="ds-work-list__body">
             <p className="kicker">{project.eyebrow}</p>

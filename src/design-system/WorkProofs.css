@@ -1,4 +1,5 @@
 .ds-project-proof { min-width: 0; }
+.ds-project-proof--wellbeing-studio { background: var(--color-paper); color: var(--color-ink); }
 .ds-project-proof__visual { border-block: var(--border-thickness) solid var(--color-border); background: var(--color-bg-raised); }
 .ds-project-proof figcaption { display: flex; justify-content: space-between; gap: var(--space-3); padding-block-start: var(--space-3); font-family: var(--type-ui); font-size: var(--text-ui); color: var(--color-text-subtle); }
 .ds-project-proof figcaption span:last-child { flex: none; font-family: var(--type-data); text-transform: uppercase; }
