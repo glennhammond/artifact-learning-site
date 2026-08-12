@@ -82,12 +82,3 @@ export const workDetails = {
     status: "Maturity is stated per layer; representative proof is used where real captures are not publication-ready.",
   },
 } as const;
-
-export const contactPrompts = [
-  "What needs to change?",
-  "Who needs to do something differently?",
-  "What exists already?",
-  "What constraints are known?",
-  "What are you trying to understand or measure?",
-  "Is there a target timeframe?",
-];

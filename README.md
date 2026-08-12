@@ -4,8 +4,9 @@ This repository is the implementation home for the Artifact Learning website: br
 the coded design system, the multi-page publication candidate, case studies and deployment configuration.
 
 **Current phase: Phase 8: whole-site convergence.** The approved homepage, multi-page routes,
-representative proof system and Artifact masterbrand are implemented. Publication remains blocked until
-a verified contact destination and the ITC Avant Garde licensing/public-repository decision are resolved.
+representative proof system and Artifact masterbrand are implemented. The Formspree contact destination
+is integrated and verified. Publication remains blocked until the ITC Avant Garde licensing/public-repository
+decision and final privacy/legal review are resolved.
 See `docs/design-system.md` and the Phase 6 publication-readiness audit.
 
 ## Running locally
@@ -83,7 +84,7 @@ and the confirmed geometry and motion values. See `docs/design-system.md` for th
 
 ## Review gate
 
-The site is a coherent publication candidate, but not approved for public launch. Contact integration,
+The site is a coherent publication candidate, but not approved for public launch. Privacy/legal review,
 ITC Avant Garde licensing/public-repository rights and final rendered acceptance remain explicit gates.
 The production `noindex, nofollow` directive stays in place until launch approval. See the Phase 8
 convergence audit for the current decisions and outstanding blockers.

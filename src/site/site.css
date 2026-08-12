@@ -42,10 +42,13 @@
   font-size: var(--text-small);
 }
 
-.site-page-intro--ink .kicker,
 .site-page-intro--ink .site-page-intro__lead,
 .site-page-intro--ink .site-page-intro__aside {
   color: var(--color-text-subtle);
+}
+
+.site-page-intro--ink .kicker {
+  color: var(--color-signal);
 }
 
 .site-page-intro--ink .site-page-intro__aside {

@@ -17,11 +17,11 @@
 
 ## Deliberately unchanged
 
-The hero composition, Anchor, brand colours, typography roles, Why Artifact benchmark section, Wellbeing Studio specimen, Approach loop, Platform maturity language and public information architecture remain unchanged. No new Ink sections, Signal treatments, animation or speculative content are introduced.
+The homepage hero composition, Anchor, brand colours, typography roles, Why Artifact benchmark section, Wellbeing Studio specimen, Approach loop, Platform maturity language and public information architecture remain unchanged. Contact now joins the shared Ink destination-hero system, and Ink hero eyebrows use Signal as the destination label. No animation or speculative content is introduced.
 
 ## Publication gates
 
-- A verified public contact destination is still required.
+- The Formspree contact destination is integrated and endpoint-verified; final privacy/legal review remains required.
 - ITC Avant Garde self-hosting and public-repository rights are still unconfirmed.
 - `noindex, nofollow` must remain until launch approval.
 - Final rendered keyboard, zoom, reflow and breakpoint acceptance requires an available browser session.
